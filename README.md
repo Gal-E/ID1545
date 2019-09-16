@@ -2,4 +2,4 @@
 
 A prototype of connected product
 
-By Gal Elbo
+By Gal Elbo AND Niels Weggeman
