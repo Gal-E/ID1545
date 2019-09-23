@@ -16,7 +16,7 @@ my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 # We can fetch the details of our thing
 my_thing.read()
 
-# print(my_thing.to_json())
+#print(my_thing.to_json())
 
 # If we have no properties, let's create a random one
 my_property = my_thing.find_or_create_property("My Random Property",
@@ -35,3 +35,4 @@ while True:
     generate_dum_property_values(my_property)
     # Have a 2-second break
     time.sleep(2)
+    print("yay")
