@@ -6,7 +6,7 @@ __pycache__/
 # C extensions
 *.so
 
-#.env
+.env
 
 # Distribution / packaging
 .Python
@@ -84,13 +84,13 @@ celerybeat-schedule
 *.sage.py
 
 # Environments
-#.env
-#.venv
-#env/
-#venv/
-#ENV/
-#env.bak/
-#venv.bak/
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
 # Spyder project settings
 .spyderproject
