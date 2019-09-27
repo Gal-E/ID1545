@@ -35,4 +35,3 @@ while True:
     generate_dum_property_values(my_property)
     # Have a 2-second break
     time.sleep(2)
-    print("yay")
