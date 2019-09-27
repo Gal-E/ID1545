@@ -13,3 +13,7 @@
 
 <img src="/images/img1.png"/> ![](/images/img1.png)
 
+
+### Progress in Tutorials:
+
+- Still need to finish step 4 in tutorial https://datacentricdesign.github.io/docs/2019/04/30/com-gatt-notify; couldn't do that because the 'things' on the dcd don't work yet.
