@@ -11,7 +11,7 @@
 - Create a community
 - Teach basic wheelchair skills
 
-![](/images/img1.png)
+<img src="images/img1.png" style="border: none;box-shadow: none;"/>
 
 - System: App > User > Physical world > Wheelchair > App
 - Optional Sensors: Movement, Acceleration, Touch, Measure the angle 
@@ -20,7 +20,7 @@
 <div style="color: cadetblue;font-style: italic;">Eg task: “Drive in a circle and use your hands 8 times or less”
 The task can become more difficult over time by doing the same thing while going uphill or on a different surface such as grass or sand</div>
 
-<div style="margin: 0 auto;text-align: center;"><img src="images/img2.png" style="width: 60%;"/></div>
+<div style="margin: 0 auto;text-align: center;"><img src="images/img2.png" style="width: 60%;border: none;box-shadow: none;"/></div>
 
 #### Data:
 - Data collected: Speed on different surfaces, angles
