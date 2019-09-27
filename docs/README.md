@@ -12,5 +12,3 @@
 - Teach basic wheelchair skills
 
 ![GitHub Logo](/images/img1.png)
-Format: ![Alt Text](/images/img1.png)
-
