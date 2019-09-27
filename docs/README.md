@@ -20,7 +20,7 @@
 <div style="color:gray">Eg task: “Drive in a circle and use your hands 8 times or less”
 The task can become more difficult over time by doing the same thing while going uphill or on a different surface such as grass or sand</div>
 
-<img src="/images/img2.png" width="42">
+<img src="images/img2.png" width="60%">
 
 
 #### Progress in Tutorials:
