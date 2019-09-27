@@ -11,7 +11,7 @@
 - Create a community
 - Teach basic wheelchair skills
 
-![](/images/img1.png)
+![](/images/Sandpit 1.png)
 
 - System: App > User > Physical world > Wheelchair > App
 - Optional Sensors: Movement, Acceleration, Touch, Measure the angle 
