@@ -11,4 +11,4 @@
 - Create a community
 - Teach basic wheelchair skills
 
-![System](images/img1.png)
+![System](/images/img1.png)
