@@ -20,7 +20,7 @@
 <div style="color: cadetblue;font-style: italic;">Eg task: “Drive in a circle and use your hands 8 times or less”
 The task can become more difficult over time by doing the same thing while going uphill or on a different surface such as grass or sand</div>
 
-<div style="margin: 0 auto;text-align: center;"><img src="/images/img2.png"></div>
+<div style="margin: 0 auto;text-align: center;"><img src="images/img2.png" style="width: 60%;"/></div>
 
 #### Data:
 - Data collected: Speed on different surfaces, angles
