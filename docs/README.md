@@ -11,8 +11,12 @@
 - Create a community
 - Teach basic wheelchair skills
 
-![](/images/img2.png)
+![](/images/img1.png)
 
+<div style="color=gray">Eg task: “Drive in a circle and use your hands 8 times or less”
+The task can become more difficult over time by doing the same thing while going uphill or on a different surface such as grass or sand<div>
+  
+![](/images/img2.png)
 
 #### Progress in Tutorials:
 
