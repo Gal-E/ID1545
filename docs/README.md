@@ -11,7 +11,7 @@
 - Create a community
 - Teach basic wheelchair skills
 
-![](/images/Sandpit 1.png)
+![](/images/img1.png)
 
 - System: App > User > Physical world > Wheelchair > App
 - Optional Sensors: Movement, Acceleration, Touch, Measure the angle 
@@ -20,7 +20,7 @@
 <div style="color: cadetblue;font-style: italic;">Eg task: “Drive in a circle and use your hands 8 times or less”
 The task can become more difficult over time by doing the same thing while going uphill or on a different surface such as grass or sand</div>
 
-<img src="images/img2.png" width="60%">
+![](/images/img2.png)
 
 - Data collected: Speed on different surfaces, angles
 - The data collected can teach us about the behaviour of kids when they use a wheelchair for the first time
