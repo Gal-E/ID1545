@@ -15,8 +15,6 @@ void setup() {
 
 void loop() {
 
-  char command = Serial.read();
-  
   // PWM takes values from 0 to 255, in our case, we want to make
   // a pulse effect, so we detect out of bounds behaviour and go to 127
 
@@ -31,6 +29,7 @@ void loop() {
 }
 
 void vibrationPattern() {
+  char command = Serial.read();
   if (command == 0) {
     i = 0;
   } else if (command == 1) {
