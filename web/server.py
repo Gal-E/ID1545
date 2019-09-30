@@ -1,19 +1,9 @@
-from flask import Flask
+from flask import Flask, request, render_template
+
 app = Flask(__name__)
-
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
-
-#if __name__ == '__main__':
-#    app.run()
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
-
-from flask import Flask, request
-
-app = Flask(__name__)
 
 sensors = ['sensor1', 'sensor2', 'sensor3']
 
@@ -34,12 +24,6 @@ def read(sensor_id):
 def create():
     sensors.append(request.json["sensorName"])
     return 'Added sensor!'
-
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
-
-from flask import Flask, request, render_template
 
 @app.route('/home')
 def home():
