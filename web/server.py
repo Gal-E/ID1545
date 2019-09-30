@@ -1,15 +1,24 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, render_template, request
+from flask_socketio import SocketIO, emit
+
 app = Flask(__name__)
 
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+app.config['SECRET_KEY'] = 'secret!'
+socketio = SocketIO(app)
 
 sensors = ['sensor1', 'sensor2', 'sensor3']
 
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
+
+@app.route('/home')
+def home():
+    return render_template('index.html')
+
+@app.route('/gauge')
+def gauge():
+    return render_template('gauge.html')
 
 @app.route('/api/sensors', methods = ['GET'])
 def list():
@@ -25,6 +34,11 @@ def create():
     sensors.append(request.json["sensorName"])
     return 'Added sensor!'
 
-@app.route('/home')
-def home():
-    return render_template('index.html')
+@socketio.on('json')
+def handle_json(json):
+  print('received json: ' + str(json))
+  emit('json', json, broadcast=True)
+
+if __name__ == '__main__':
+    # app.run(host='0.0.0.0')
+    socketio.run(app, host='0.0.0.0')
