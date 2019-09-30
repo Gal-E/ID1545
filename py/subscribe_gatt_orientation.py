@@ -8,17 +8,18 @@ from dotenv import \
     load_dotenv  # To load the environment variables from the .env file
 
 # DCD Hub
-from dcd.entities.thing import Thing
-from dcd.entities.property import PropertyType
+#from dcd.entities.thing import Thing
+#from dcd.entities.property import PropertyType
 
 # The thing ID and access token
 load_dotenv()
-THING_ID = os.environ['THING_ID']
-THING_TOKEN = os.environ['THING_TOKEN']
-BLUETOOTH_DEVICE_MAC = os.environ['BLUETOOTH_DEVICE_MAC']
+#THING_ID = os.environ['THING_ID']
+#THING_TOKEN = os.environ['THING_TOKEN']
+BLUETOOTH_DEVICE_MAC = os.environ['BLUETOOTH_DEVICE_IMU']
 
 # UUID of the GATT characteristic to subscribe
 GATT_CHARACTERISTIC_ORIENTATION = "MY_GATT_ORIENTATION_SERVICE_UUID"
+#GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFF"
 
 # Many devices, e.g. Fitbit, use random addressing, this is required to connect.
 ADDRESS_TYPE = pygatt.BLEAddressType.random
@@ -65,8 +66,8 @@ def keyboard_interrupt_handler(signal_num, frame):
 
 
 # Instantiate a thing with its credential, then read its properties from the DCD Hub
-my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
-my_thing.read()
+#my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
+#my_thing.read()
 
 # Start a BLE adapter
 bleAdapter = pygatt.GATTToolBackend()
