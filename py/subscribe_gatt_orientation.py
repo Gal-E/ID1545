@@ -4,8 +4,9 @@
 import pygatt  # To access BLE GATT support
 import signal  # To catch the Ctrl+C and end the program properly
 import os  # To access environment variables
-from dotenv import \
-    load_dotenv  # To load the environment variables from the .env file
+from dotenv import load_dotenv  # To load the environment variables from the .env file
+from time import sleep
+
 
 # DCD Hub
 #from dcd.entities.thing import Thing
@@ -18,8 +19,8 @@ load_dotenv()
 BLUETOOTH_DEVICE_MAC = os.environ['BLUETOOTH_DEVICE_IMU']
 
 # UUID of the GATT characteristic to subscribe
-GATT_CHARACTERISTIC_ORIENTATION = "MY_GATT_ORIENTATION_SERVICE_UUID"
-#GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFF"
+#GATT_CHARACTERISTIC_ORIENTATION = "MY_GATT_ORIENTATION_SERVICE_UUID"
+GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-aabbccddeeff"
 
 # Many devices, e.g. Fitbit, use random addressing, this is required to connect.
 ADDRESS_TYPE = pygatt.BLEAddressType.random
@@ -38,10 +39,14 @@ def handle_orientation_data(handle, value_bytes):
     handle -- integer, characteristic read handle the data was received on
     value_bytes -- bytearray, the data returned in the notification
     """
-    print("Received data: %s (handle %d)" % (str(value_bytes), handle))
+    #print("Received data: %s (handle %d)" % (str(value_bytes), handle))
     values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
-    find_or_create("Left Wheel Orientation",
-                   PropertyType.THREE_DIMENSIONS).update_values(values)
+
+    myCmd = 'clear'
+    os.system(myCmd)
+    print(F"BNOvalues {values}")
+    #find_or_create("Left Wheel Orientation",
+    #               PropertyType.THREE_DIMENSIONS).update_values(values)
 
 
 def discover_characteristic(device):
@@ -82,3 +87,6 @@ left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
 
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
+
+while True :
+    sleep(5)
