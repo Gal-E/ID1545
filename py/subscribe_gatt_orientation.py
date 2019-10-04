@@ -39,14 +39,25 @@ def handle_orientation_data(handle, value_bytes):
     handle -- integer, characteristic read handle the data was received on
     value_bytes -- bytearray, the data returned in the notification
     """
-    #print("Received data: %s (handle %d)" % (str(value_bytes), handle))
     values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
 
-    myCmd = 'clear'
-    os.system(myCmd)
+    #myCmd = 'clear'
+    #os.system(myCmd)
     print(F"BNOvalues {values}")
     #find_or_create("Left Wheel Orientation",
-    #               PropertyType.THREE_DIMENSIONS).update_values(values)
+    #PropertyType.THREE_DIMENSIONS).update_values(values)
+
+    varX = values[0]
+
+    calCircle(varX, 1)
+
+def calCircle(varX, y):
+    if y == 1:
+        y = y+1
+        secondFun(varX)
+
+def secondFun(varX):
+    print('hello')
 
 
 def discover_characteristic(device):
@@ -82,8 +93,7 @@ bleAdapter.start()
 left_wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
 
 # Subscribe to the GATT service
-left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
-                     callback=handle_orientation_data)
+left_wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION, callback=handle_orientation_data)
 
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
