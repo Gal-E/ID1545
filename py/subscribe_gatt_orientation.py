@@ -26,8 +26,11 @@ GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-aabbccddeeff"
 ADDRESS_TYPE = pygatt.BLEAddressType.random
 
 cur_loc = (-666, -666, -666)
-initialVar = -8
+initialVar = 0
+circleCounter = 0
+circlesMade = 0
 
+rotationError = False
 
 def find_or_create(property_name, property_type):
     """Search a property by name, create it if not found, then return it."""
@@ -44,8 +47,8 @@ def handle_orientation_data(handle, value_bytes):
     """
     values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
 
-    #myCmd = 'clear'
-    #os.system(myCmd)
+    myCmd = 'clear'
+    os.system(myCmd)
     print(F"BNOvalues {values}")
     #find_or_create("Left Wheel Orientation",
     #PropertyType.THREE_DIMENSIONS).update_values(values)
@@ -54,12 +57,33 @@ def handle_orientation_data(handle, value_bytes):
     calCircle(cur_loc[0])
 
 def calCircle(varX):
-    global initialVar	
-    print(varX)
-    print(initialVar)
+    global initialVar
+    global circleCounter
+    global circlesMade
+    global rotationError
+
+    if initialVar > 330 and varX < 100 and circleCounter <= circlesMade:
+            circleCounter = circleCounter + 1
+            circlesMade = circlesMade + 1
+            initialVar = 0
+            varX = 0
+            if circleCounter == circlesMade:
+                print("You completed a circle! Well done!")
+                sleep(5)
+
+    if initialVar < 100 and varX > 330 and rotationError == False:
+        print("Wrong way!")
+        circleCounter = circleCounter - 1
+        rotationError = True
+        initialVar = 0
+
+
     if initialVar < varX:
         initialVar = varX
-        print(initialVar)
+        rotationError = False
+
+    print("last value = " + str(initialVar) + "  current value = " + str(varX))
+    print("circles counted = " + str(circleCounter) + "  circles made: " + str(circlesMade))
 
 
 def discover_characteristic(device):
