@@ -28,7 +28,6 @@ ADDRESS_TYPE = pygatt.BLEAddressType.random
 cur_loc = (-666, -666, -666)
 initialVar = -8
 
-
 def find_or_create(property_name, property_type):
     """Search a property by name, create it if not found, then return it."""
     if my_thing.find_property_by_name(property_name) is None:
@@ -54,12 +53,11 @@ def handle_orientation_data(handle, value_bytes):
     calCircle(cur_loc[0])
 
 def calCircle(varX):
-    print(varX)
-    print(initialVar)
+    print(" varx " + str(varX)
+    print("Initial var " + str(initialVar)
     if initialVar < varX:
         initialVar = varX
         print(initialVar)
-        print("f-ing work man.")
 
 
 def discover_characteristic(device):
