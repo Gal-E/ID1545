@@ -26,7 +26,7 @@ GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-aabbccddeeff"
 ADDRESS_TYPE = pygatt.BLEAddressType.random
 
 cur_loc = (-666, -666, -666)
-initialVar = -8
+initialVar = -9
 
 def find_or_create(property_name, property_type):
     """Search a property by name, create it if not found, then return it."""
