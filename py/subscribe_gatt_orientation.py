@@ -59,6 +59,7 @@ def calCircle(varX):
     if initialVar < varX:
         initialVar = varX
         print(initialVar)
+        print("f-ing work man.")
 
 
 def discover_characteristic(device):
