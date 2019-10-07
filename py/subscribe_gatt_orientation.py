@@ -54,7 +54,7 @@ def handle_orientation_data(handle, value_bytes):
     calCircle(cur_loc[0])
 
 def calCircle(varX):
-    initialVar = -8
+    global initialVar	
     print(varX)
     print(initialVar)
     if initialVar < varX:
