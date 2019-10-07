@@ -25,6 +25,9 @@ GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-aabbccddeeff"
 # Many devices, e.g. Fitbit, use random addressing, this is required to connect.
 ADDRESS_TYPE = pygatt.BLEAddressType.random
 
+cur_loc = (-666, -666, -666)
+initialVar = -8
+
 
 def find_or_create(property_name, property_type):
     """Search a property by name, create it if not found, then return it."""
@@ -47,17 +50,15 @@ def handle_orientation_data(handle, value_bytes):
     #find_or_create("Left Wheel Orientation",
     #PropertyType.THREE_DIMENSIONS).update_values(values)
 
-    varX = values[0]
+    cur_loc = values
+    calCircle(cur_loc[0])
 
-    calCircle(varX, 1)
-
-def calCircle(varX, y):
-    if y == 1:
-        y = y+1
-        secondFun(varX)
-
-def secondFun(varX):
-    print('hello')
+def calCircle(varX):
+    print(varX)
+    print(initialVar)
+    if initialVar < varX:
+        initialVar = varX
+        print(initialVar)
 
 
 def discover_characteristic(device):
