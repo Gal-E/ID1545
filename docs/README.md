@@ -31,6 +31,15 @@ The task can become more difficult over time by doing the same thing while going
 #### First milestone:
 - Create a system that detects when a user has driven a circle.
 
-#### Progress in Tutorials:
+#### Progress made:
+Monday 23rd September:
+- Finished tutorial 
 
-- Still need to finish step 4 in tutorial https://datacentricdesign.github.io/docs/2019/04/30/com-gatt-notify; couldn't do that because the 'things' on the dcd don't work yet.
+Friday 27th September:
+- 
+
+Monday 30th September:
+- 
+
+Friday 4th October:
+- Almost got our circle detection code to work.
