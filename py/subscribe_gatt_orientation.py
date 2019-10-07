@@ -26,11 +26,19 @@ GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-aabbccddeeff"
 ADDRESS_TYPE = pygatt.BLEAddressType.random
 
 cur_loc = (-666, -666, -666)
-initialVar = 0
-circleCounter = 0
-circlesMade = 0
+degreesRotated = 0
+increment = 5
 
-rotationError = False
+initialAngleCheck = True
+initialAngle = 0
+
+old_val = 0
+cur_val = 0
+
+checkpoint = 0
+checkpointCheck = True
+
+rotationDirection = "right"
 
 def find_or_create(property_name, property_type):
     """Search a property by name, create it if not found, then return it."""
@@ -56,7 +64,47 @@ def handle_orientation_data(handle, value_bytes):
     cur_loc = values
     calCircle(cur_loc[0])
 
-def calCircle(varX):
+def calCircle(new_val):
+    global initialAngle
+    global initialAngleCheck
+
+    global old_val
+    global cur_val
+
+    global degreesRotated
+    global rotationDirection
+    global checkpoint
+    global increment
+
+    if initialAngleCheck:
+        initialAngle = new_val
+        old_val = initialAngle
+        initialAngleCheck = False
+
+    if old_val - new_val > increment:
+        old_val = new_val
+        degreesRotated = old_val - initialAngle + checkpoint * 360
+        rotationDirection = "left"
+        checkpointCheck = True
+    elif old_val - new_val < -increment:
+        old_val = new_val
+        degreesRotated = old_val - initialAngle - checkpoint * 360
+        rotationDirection = "right"
+        checkpointCheck = True
+    elif old_val >= 360 - increment and new_val < 180 and checkpointCheck:
+        checkpoint += 1
+        checkpointCheck = False
+    elif old_val <= increment and new_val > 180 and checkpointCheck:
+        checkpoint -= 1
+        checkpointCheck = False
+
+    print("initial angle = " + str(initialAngle))
+    print("rotation direction = " + rotationDirection)
+    print("old value = " + str(old_val) + "  new value = " + str(new_val))
+    print("degrees rotated = " + str(round(degreesRotated,0)))
+
+
+    """
     global initialVar
     global circleCounter
     global circlesMade
@@ -78,12 +126,12 @@ def calCircle(varX):
         initialVar = 0
 
 
-    if initialVar < varX:
+    if initialVar - varX > 10:
         initialVar = varX
-        rotationError = False
 
     print("last value = " + str(initialVar) + "  current value = " + str(varX))
     print("circles counted = " + str(circleCounter) + "  circles made: " + str(circlesMade))
+    """
 
 
 def discover_characteristic(device):
