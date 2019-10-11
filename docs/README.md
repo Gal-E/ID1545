@@ -39,7 +39,8 @@ Friday 4th October:
 - Almost got our circle detection code to work! :-)
 
 #### Architecture
-<img src="images/Architecture.png" style="border: none;box-shadow: none;"/>
+<img src="images/Architecture.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
+
 
 
 Friday 11th October: 
