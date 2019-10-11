@@ -35,16 +35,10 @@ The task can become more difficult over time by doing the same thing while going
 Monday 23rd September:
 - Finished tutorial 
 
-Friday 27th September:
-- 
-
-Monday 30th September:
-- 
-
 Friday 4th October:
-- Almost got our circle detection code to work.
-
+- Almost got our circle detection code to work! :-)
 
 #### Architecture
 <img src="images/Architecture.png" style="border: none;box-shadow: none;"/>
 
+Friday 11th October: Managed to write circle detection code in Processing! Created simulator to fully understand how it works (ATTACH SCREEN SHOT HERE!). We translated code to python and we're testing it to make sure it detects circles to both sides
