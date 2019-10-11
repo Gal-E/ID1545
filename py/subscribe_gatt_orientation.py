@@ -29,7 +29,12 @@ cur_loc = (-666, -666, -666)
 degreesRotated = 0
 increment = 5
 
-initialAngleCheck = True
+measuredAngle = 0
+initialAngle = 10
+absoluteAngle = 0
+circleCounter = 0
+
+activator = True
 initialAngle = 0
 
 old_val = 0
@@ -37,6 +42,7 @@ cur_val = 0
 
 checkpoint = 0
 checkpointCheck = True
+pause = True
 
 rotationDirection = "right"
 
@@ -65,8 +71,10 @@ def handle_orientation_data(handle, value_bytes):
     calCircle(cur_loc[0])
 
 def calCircle(new_val):
+    global measuredAngle
     global initialAngle
-    global initialAngleCheck
+    global absoluteAngle
+    global circleCounter
 
     global old_val
     global cur_val
@@ -75,6 +83,38 @@ def calCircle(new_val):
     global rotationDirection
     global checkpoint
     global increment
+    global activator
+    global pause
+
+    if old_val-new_val>increment:
+        measuredAngle = old_val
+        absoluteAngle = measuredAngle-initialAngle+circleCounter*360
+        print(measuredAngle=" "+round(absoluteAngle*10)/10.0)
+        activator = True
+
+            if old_val>360-increment:
+                circleCounter+=1
+
+    elif old_val-new_val<-1*increment:
+        measuredAngle=old_val
+        absoluteAngle=measuredAngle-initialAngle+circleCounter*360
+        print(measuredAngle+" "+round(absoluteAngle*10)/10.0)
+
+    if old_val<increment and new_val>(360-increment) and activator:
+        circleCounter+=1
+        activator=False
+    elif old_val>(360-increment) and new_val<increment and activator:
+        circleCounter-=1
+        activator=False
+
+    if absoluteAngle < 0:
+        if round(absoluteAngle/10.0)%36 == 0 and round(absoluteAngle/10.0) != 0 :
+            print("circle to the left complete!!")
+            pause = True
+    elif absoluteAngle>0:
+        if round(absoluteAngle/10.0)%36 == 0 and round(absoluteAngle/10.0) != 0 :
+            print("circle to the right complete!!")
+            pause = True
 
     old_val = new_val
 
