@@ -27,18 +27,19 @@ ADDRESS_TYPE = pygatt.BLEAddressType.random
 
 cur_loc = (-666, -666, -666)
 degreesRotated = 0
-increment = 5
+increment = 20
 
 measuredAngle = 0
-initialAngle = 10
+initialAngle = 20
 absoluteAngle = 0
 circleCounter = 0
 
 activator = True
-initialAngle = 0
+activator2 = True
 
-old_val = 0
+#old_val = 0
 cur_val = 0
+new_val = 0
 
 checkpoint = 0
 checkpointCheck = True
@@ -70,41 +71,54 @@ def handle_orientation_data(handle, value_bytes):
     cur_loc = values
     calCircle(cur_loc[0])
 
-def calCircle(new_val):
+def calCircle(old_val):
     global measuredAngle
     global initialAngle
     global absoluteAngle
     global circleCounter
 
-    global old_val
+    #global old_val
     global cur_val
+    global new_val
 
     global degreesRotated
     global rotationDirection
     global checkpoint
     global increment
     global activator
+    global activator2
     global pause
+
+    print("absoluteAngle " + str(absoluteAngle))
+    print("circleCounter " + str(circleCounter))
+    print("measuredAngle " + str(measuredAngle))
+    print("initialAngle " + str(initialAngle))
+    print("old_val " + str(old_val))
+    print("new_val " + str(new_val))
+
+    if activator2:
+        initialAngle = old_val
+        activator2 = False
 
     if old_val-new_val>increment:
         measuredAngle = old_val
-        absoluteAngle = measuredAngle-initialAngle+circleCounter*360
-        print(measuredAngle=" "+round(absoluteAngle*10)/10.0)
+        absoluteAngle = measuredAngle-initialAngle+(circleCounter*360)
+        #print(str(measuredAngle)+" "+str(round(absoluteAngle)*10/10.0))
         activator = True
 
-            if old_val>360-increment:
-                circleCounter+=1
-
-    elif old_val-new_val<-1*increment:
+    elif old_val-new_val < (-1)*increment :
         measuredAngle=old_val
         absoluteAngle=measuredAngle-initialAngle+circleCounter*360
-        print(measuredAngle+" "+round(absoluteAngle*10)/10.0)
+        print(str(measuredAngle)+" "+str(round(absoluteAngle)*10/10.0))
 
     if old_val<increment and new_val>(360-increment) and activator:
-        circleCounter+=1
+        #circleCounter+=1
+        circleCounter = circleCounter+1
         activator=False
+
     elif old_val>(360-increment) and new_val<increment and activator:
-        circleCounter-=1
+        #circleCounter-=1
+        circleCounter = circleCounter-1
         activator=False
 
     if absoluteAngle < 0:
