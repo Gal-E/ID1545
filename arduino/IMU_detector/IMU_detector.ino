@@ -93,11 +93,12 @@ void setup(void) {
   ble.echo(false);
 
   // Print Bluefruit information
+  
   ble.info();
   ble.verbose(true);
 
   // Change the device name to fit its purpose
-  if (! ble.sendCommandCheckOK(F("AT+GAPDEVNAME=Harry")) ) {
+  if (! ble.sendCommandCheckOK(F("AT+GAPDEVNAME=Kenny")) ) {
     error(F("Could not set device name."));
   }
 
