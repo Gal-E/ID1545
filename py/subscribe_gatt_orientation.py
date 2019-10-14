@@ -27,16 +27,23 @@ ADDRESS_TYPE = pygatt.BLEAddressType.random
 
 cur_loc = (-666, -666, -666)
 degreesRotated = 0
-increment = 5
+increment = 20
 
-initialAngleCheck = True
-initialAngle = 0
+measuredAngle = 0
+initialAngle = 20
+absoluteAngle = 0
+circleCounter = 0
 
-old_val = 0
+activator = True
+activator2 = True
+
+#old_val = 0
 cur_val = 0
+new_val = 0
 
 checkpoint = 0
 checkpointCheck = True
+pause = True
 
 rotationDirection = "right"
 
@@ -64,74 +71,66 @@ def handle_orientation_data(handle, value_bytes):
     cur_loc = values
     calCircle(cur_loc[0])
 
-def calCircle(new_val):
+def calCircle(old_val):
+    global measuredAngle
     global initialAngle
-    global initialAngleCheck
+    global absoluteAngle
+    global circleCounter
 
-    global old_val
+    #global old_val
     global cur_val
+    global new_val
 
     global degreesRotated
     global rotationDirection
     global checkpoint
     global increment
+    global activator
+    global activator2
+    global pause
 
-    if initialAngleCheck:
-        initialAngle = new_val
-        old_val = initialAngle
-        initialAngleCheck = False
+    print("absoluteAngle " + str(absoluteAngle))
+    print("circleCounter " + str(circleCounter))
+    print("measuredAngle " + str(measuredAngle))
+    print("initialAngle " + str(initialAngle))
+    print("old_val " + str(old_val))
+    print("new_val " + str(new_val))
 
-    if old_val - new_val > increment:
-        old_val = new_val
-        degreesRotated = old_val - initialAngle + checkpoint * 360
-        rotationDirection = "left"
-        checkpointCheck = True
-    elif old_val - new_val < -increment:
-        old_val = new_val
-        degreesRotated = old_val - initialAngle - checkpoint * 360
-        rotationDirection = "right"
-        checkpointCheck = True
-    elif old_val >= 360 - increment and new_val < 180 and checkpointCheck:
-        checkpoint += 1
-        checkpointCheck = False
-    elif old_val <= increment and new_val > 180 and checkpointCheck:
-        checkpoint -= 1
-        checkpointCheck = False
+    if activator2:
+        initialAngle = old_val
+        activator2 = False
 
-    print("initial angle = " + str(initialAngle))
-    print("rotation direction = " + rotationDirection)
-    print("old value = " + str(old_val) + "  new value = " + str(new_val))
-    print("degrees rotated = " + str(round(degreesRotated,0)))
+    if old_val-new_val>increment:
+        measuredAngle = old_val
+        absoluteAngle = measuredAngle-initialAngle+(circleCounter*360)
+        #print(str(measuredAngle)+" "+str(round(absoluteAngle)*10/10.0))
+        activator = True
 
+    elif old_val-new_val < (-1)*increment :
+        measuredAngle=old_val
+        absoluteAngle=measuredAngle-initialAngle+circleCounter*360
+        print(str(measuredAngle)+" "+str(round(absoluteAngle)*10/10.0))
 
-    """
-    global initialVar
-    global circleCounter
-    global circlesMade
-    global rotationError
+    if old_val<increment and new_val>(360-increment) and activator:
+        #circleCounter+=1
+        circleCounter = circleCounter+1
+        activator=False
 
-    if initialVar > 330 and varX < 100 and circleCounter <= circlesMade:
-            circleCounter = circleCounter + 1
-            circlesMade = circlesMade + 1
-            initialVar = 0
-            varX = 0
-            if circleCounter == circlesMade:
-                print("You completed a circle! Well done!")
-                sleep(5)
+    elif old_val>(360-increment) and new_val<increment and activator:
+        #circleCounter-=1
+        circleCounter = circleCounter-1
+        activator=False
 
-    if initialVar < 100 and varX > 330 and rotationError == False:
-        print("Wrong way!")
-        circleCounter = circleCounter - 1
-        rotationError = True
-        initialVar = 0
+    if absoluteAngle < 0:
+        if round(absoluteAngle/10.0)%36 == 0 and round(absoluteAngle/10.0) != 0 :
+            print("circle to the left complete!!")
+            pause = True
+    elif absoluteAngle>0:
+        if round(absoluteAngle/10.0)%36 == 0 and round(absoluteAngle/10.0) != 0 :
+            print("circle to the right complete!!")
+            pause = True
 
-
-    if initialVar - varX > 10:
-        initialVar = varX
-
-    print("last value = " + str(initialVar) + "  current value = " + str(varX))
-    print("circles counted = " + str(circleCounter) + "  circles made: " + str(circlesMade))
-    """
+    old_val = new_val
 
 
 def discover_characteristic(device):
