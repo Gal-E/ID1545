@@ -44,18 +44,15 @@ Friday 4th October:
 Monday 7th October:
 - Managed to get circle counting code to work in SGO file.
 
-Friday 11th October:
-- Added rotatition detection code, but bluetooth chip died and there still is some final debugging to do.
+Friday 11th October: 
+- Managed to write circle detection code in Processing! 
+- Created simulator to fully understand how it works. 
+- We translated code to python and we're testing it to make sure it detects circles to both sides
+
+<img src="images/Architecture.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
 
 Monday 14th October:
 - Bluetooth chip is still not working, so we cannot progress with anything, since the circle detection can only be debugged if we can see how the data from the bluetooth chip is being handled.
 
 #### Architecture
 <img src="images/Architecture.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
-
-
-
-Friday 11th October: 
-- Managed to write circle detection code in Processing! 
-- Created simulator to fully understand how it works (ATTACH SCREEN SHOT HERE!). 
-- We translated code to python and we're testing it to make sure it detects circles to both sides
