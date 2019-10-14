@@ -35,15 +35,24 @@ The task can become more difficult over time by doing the same thing while going
 Monday 23rd September:
 - Finished tutorial 
 
+Monday 30th September:
+- Made it possible to communicate data between the raspberry Pi and a connected arduino. The LED seems to be responding to the device, however it is doing so in a very arythmic fashion. Needs some more work then.
+
 Friday 4th October:
 - Almost got our circle detection code to work! :-)
 
-#### Architecture
-<img src="images/Architecture.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
-
-
+Monday 7th October:
+- Managed to get circle counting code to work in SGO file.
 
 Friday 11th October: 
 - Managed to write circle detection code in Processing! 
-- Created simulator to fully understand how it works (ATTACH SCREEN SHOT HERE!). 
+- Created simulator to fully understand how it works. 
 - We translated code to python and we're testing it to make sure it detects circles to both sides
+
+<img src="images/Simulator.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
+
+Monday 14th October:
+- Bluetooth chip is still not working, so we cannot progress with anything, since the circle detection can only be debugged if we can see how the data from the bluetooth chip is being handled.
+
+#### Architecture
+<img src="images/Architecture.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
