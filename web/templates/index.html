@@ -3,13 +3,28 @@
         <title>Our App</title>
         <link rel="stylesheet" type="text/css"
               href="{{ url_for('static', filename='css/style.css') }}">
-        <script data-main="scripts/main" src="web/scripts/require.js"></script>
+        <link rel="stylesheet" type="text/css"
+        href="{{ url_for('static', filename='css/loading-bar.css') }}">
+        <script src="{{ url_for('static', filename='js/loading-bar.js') }}" language="JavaScript"></script>
+        <script src="{{ url_for('static', filename='js/require.js') }}" language="JavaScript"></script>
 
     </head>
     <body>
-      <h1>Welcome !!!!!</h1>
+      <h1>Make a circle</h1>
+      <h3>Try and create a circle in 20 second or less</h3>
 
-      <div id="container"></div>
+        <script>
+          var bar1 = new ldBar("#myItem1");
+          var bar2 = document.getElementById('myItem1').ldBar;
+          bar1.set(60);
+        </script>
+        <div
+          class="ldBar label-center"
+          style="width:50%;height:50%;margin:auto"
+          data-value="60"
+          data-preset="circle"
+          data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"
+        ></div>
 </body>
 
 

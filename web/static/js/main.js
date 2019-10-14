@@ -4,7 +4,6 @@ alert('this is working!');
 
 var ProgressBar = requirejs('progressbar.js');
 var line = new ProgressBar.Line('#container');
-
 var bar = new ProgressBar.Circle(container, {
   strokeWidth: 6,
   easing: 'easeInOut',
