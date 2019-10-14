@@ -2,11 +2,11 @@ from flask import Flask, request, render_template, render_template, request
 from flask_socketio import SocketIO, emit
 
 app = Flask(__name__)
+sensors = ['sensor1', 'sensor2', 'sensor3']
 
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 
-sensors = ['sensor1', 'sensor2', 'sensor3']
 
 @app.route('/')
 def hello_world():

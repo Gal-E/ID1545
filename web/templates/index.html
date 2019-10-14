@@ -7,11 +7,29 @@
         href="{{ url_for('static', filename='css/loading-bar.css') }}">
         <script src="{{ url_for('static', filename='js/loading-bar.js') }}" language="JavaScript"></script>
         <script src="{{ url_for('static', filename='js/require.js') }}" language="JavaScript"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
+                  integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I="
+                  crossorigin="anonymous"></script>
+      <script type="text/javascript" charset="utf-8">
+        var socket = io();
+        socket.on('connect', function() {
+          // socket.emit('json', {data: 'I\'m connected!'});
+        });
+        socket.on('json', function(msg, cb) {
+          if (msg.distance !== undefined) {
+            document.getElementById("myBar").with = msg.distance;
+          }
+        });
+        socket.on('distance', function(dist_obj) {
+          const json = JSON.parse(dist_obj);
+          console.log(json);
+          console.log(json.distance);
+          if (json.distance !== undefined) {
+            document.getElementById("myBar").with = json.distance;
+          }
+        });
+        </script>
         <script>
-            
-
-            var progressCir = document.getElementById('progressCircle');
-            var dataVal = progressCir.getAttribute('data-value');
 
             function getVal(){
               //  progressCir.setAttribute('dataVal','40');
