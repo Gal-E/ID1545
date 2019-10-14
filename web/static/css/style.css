@@ -5,3 +5,8 @@ body {
     font-family: Helvetica;
     font-weight: bold;
 }
+#container {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+}
