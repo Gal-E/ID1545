@@ -8,13 +8,7 @@ import time                     # To sleep for a few seconds
 load_dotenv()
 
 # Start reading the serial port
-ser = serial.Serial(
-    port = os.environ['SERIAL'],
-    baudrate = 9600,
-    write_timeout = 0)
+ser = serial.Serial('/dev/ttyACM0', 9600)
 
 while True:
-    ser.write('1'.encode())
-    time.sleep(5)
-    ser.write('0'.encode())
-    time.sleep(2)
+    ser.write('2'.encode())
