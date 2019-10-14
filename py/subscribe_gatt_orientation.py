@@ -27,7 +27,8 @@ ADDRESS_TYPE = pygatt.BLEAddressType.random
 
 cur_loc = (-666, -666, -666)
 degreesRotated = 0
-increment = 20
+increment = 10
+increment2 = increment + 5
 
 measuredAngle = 0
 initialAngle = 20
@@ -37,13 +38,10 @@ circleCounter = 0
 activator = True
 activator2 = True
 
-#old_val = 0
-cur_val = 0
-new_val = 0
+old_val = 0
 
 checkpoint = 0
 checkpointCheck = True
-pause = True
 
 rotationDirection = "right"
 
@@ -71,66 +69,69 @@ def handle_orientation_data(handle, value_bytes):
     cur_loc = values
     calCircle(cur_loc[0])
 
-def calCircle(old_val):
+def calCircle(cur_val):
     global measuredAngle
     global initialAngle
     global absoluteAngle
     global circleCounter
 
-    #global old_val
-    global cur_val
-    global new_val
+    global old_val
 
     global degreesRotated
     global rotationDirection
     global checkpoint
     global increment
+    global increment2
     global activator
     global activator2
-    global pause
+
+    print(str(activator))
 
     print("absoluteAngle " + str(absoluteAngle))
     print("circleCounter " + str(circleCounter))
     print("measuredAngle " + str(measuredAngle))
     print("initialAngle " + str(initialAngle))
     print("old_val " + str(old_val))
-    print("new_val " + str(new_val))
+    print("cur_val " + str(cur_val))
 
     if activator2:
-        initialAngle = old_val
+        initialAngle = cur_val
+        old_val = cur_val
         activator2 = False
 
-    if old_val-new_val>increment:
-        measuredAngle = old_val
-        absoluteAngle = measuredAngle-initialAngle+(circleCounter*360)
-        #print(str(measuredAngle)+" "+str(round(absoluteAngle)*10/10.0))
-        activator = True
 
-    elif old_val-new_val < (-1)*increment :
-        measuredAngle=old_val
-        absoluteAngle=measuredAngle-initialAngle+circleCounter*360
-        print(str(measuredAngle)+" "+str(round(absoluteAngle)*10/10.0))
-
-    if old_val<increment and new_val>(360-increment) and activator:
+    if old_val < increment2 and cur_val > (360-increment2):
         #circleCounter+=1
         circleCounter = circleCounter+1
         activator=False
 
-    elif old_val>(360-increment) and new_val<increment and activator:
+    if old_val > (360-increment2) and cur_val < increment2:
         #circleCounter-=1
         circleCounter = circleCounter-1
         activator=False
 
+    if old_val-cur_val>increment:
+        old_val = cur_val
+        measuredAngle = old_val
+        absoluteAngle = measuredAngle-initialAngle-(circleCounter*360)
+        #print(str(measuredAngle)+" "+str(round(absoluteAngle)*10/10.0))
+        activator = True
+
+    elif old_val-cur_val < (-1)*increment :
+        old_val = cur_val
+        measuredAngle=old_val
+        absoluteAngle=measuredAngle-initialAngle-(circleCounter*360)
+        #print(str(measuredAngle)+" "+str(round(absoluteAngle)*10/10.0))
+        activator = True
+
     if absoluteAngle < 0:
         if round(absoluteAngle/10.0)%36 == 0 and round(absoluteAngle/10.0) != 0 :
             print("circle to the left complete!!")
-            pause = True
+            sleep(10)
     elif absoluteAngle>0:
         if round(absoluteAngle/10.0)%36 == 0 and round(absoluteAngle/10.0) != 0 :
             print("circle to the right complete!!")
-            pause = True
-
-    old_val = new_val
+            sleep(10)
 
 
 def discover_characteristic(device):
