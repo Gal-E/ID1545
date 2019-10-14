@@ -49,7 +49,7 @@ Friday 11th October:
 - Created simulator to fully understand how it works. 
 - We translated code to python and we're testing it to make sure it detects circles to both sides
 
-<img src="images/Architecture.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
+<img src="images/Simulator.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
 
 Monday 14th October:
 - Bluetooth chip is still not working, so we cannot progress with anything, since the circle detection can only be debugged if we can see how the data from the bluetooth chip is being handled.
