@@ -7,7 +7,7 @@ import os  # To access environment variables
 from dotenv import load_dotenv  # To load the environment variables from the .env file
 from time import sleep
 
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, render_template, request
 from flask_socketio import SocketIO, emit, send
 
 
@@ -31,8 +31,9 @@ ADDRESS_TYPE = pygatt.BLEAddressType.random
 # ==== ==== ===== == =====  Web server
 
 app = Flask(__name__)
+sensors = ['sensor1', 'sensor2', 'sensor3']
 
-app.config['SECRET KEY'] = 'secret!'
+app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 
 # ==== ==== ===== == =====  Initializing Values
@@ -78,12 +79,18 @@ def handle_orientation_data(handle, value_bytes):
 
     myCmd = 'clear'
     os.system(myCmd)
-    print(F"BNOvalues {values}")
+    #print(F"BNOvalues {values}")
     #find_or_create("Left Wheel Orientation",
     #PropertyType.THREE_DIMENSIONS).update_values(values)
 
     cur_loc = values
     calCircle(cur_loc[0])
+
+    try:
+       socketio.emit('distance', '{"orientation": "%s"}' % str(avgAbsoluteAngle), broadcast=True)
+    except:
+       print("No socket?")
+    return distVal
 
 def calCircle(cur_val):
     global measuredAngle
@@ -106,6 +113,7 @@ def calCircle(cur_val):
     global avgListCounter
     global avgAbsoluteAngle
 
+    '''
     print(str(activator))
 
     print("absoluteAngle " + str(absoluteAngle))
@@ -114,6 +122,7 @@ def calCircle(cur_val):
     print("initialAngle " + str(initialAngle))
     print("old_val " + str(old_val))
     print("cur_val " + str(cur_val))
+    '''
 
     if activator2:
         initialAngle = cur_val
@@ -188,6 +197,9 @@ def keyboard_interrupt_handler(signal_num, frame):
     wheel.unsubscribe(GATT_CHARACTERISTIC_ORIENTATION)
     exit(0)
 
+# ===================== this is where we copied in the code from that other group: ===============
+
+'''
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
@@ -205,46 +217,49 @@ def handle_json(json):
 @socketio.on('distance')
 def handle_distance(json):
     print( float(json['distance']))
+'''
+
+#============= so down here i'm adding our own server.py code to see whether I can make some frankenstein combination that implements our angular data.
 
 
 
 
-def handle_distance_data(handle, value_bytes):
-    #handle -- integer, characteristic read handle the data was received on
-    #value_bytes -- bytearray, the data returned in the notification
-    print("Received data: %s (handle %d)" % (str(value_bytes), handle))
-    values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
-    global distVal
-    distVal = (float(value_bytes))
-    print(distVal)
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
 
-    #print(distVal)
-    try:
-       socketio.emit('distance', '{"distance": "%s"}' % str(distVal), broadcast=True)
-    except:
-       print("No socket?")
-    return distVal
+@app.route('/home')
+def home():
+    return render_template('index.html')
 
+@app.route('/gauge')
+def gauge():
+    return render_template('gauge.html')
 
-def discover_characteristic(device):
-    #List characteristics of a device
-    for uuid in device.discover_characteristics().keys():
-        try:
-            print("Read UUID" + str(uuid) + "   " + str(device.char_read(uuid)))
-        except:
-            print("Something wrong with " + str(uuid))
+@app.route('/api/sensors', methods = ['GET'])
+def list():
+    return str(sensors)
 
+@app.route('/api/sensors/<path:sensor_id>', methods = ['GET'])
+def read(sensor_id):
+    global sensors
+    return sensors[sensor_id]
 
-def read_characteristic(device, characteristic_id):
-    #Read a characteristic
-    return device.char_read(characteristic_id)
+@app.route('/api/sensors', methods = ['POST'])
+def create():
+    sensors.append(request.json["sensorName"])
+    return 'Added sensor!'
 
+@socketio.on('json')
+def handle_json(json):
+  print('received json: ' + str(json))
+  emit('json', json, broadcast=True)
 
-def keyboard_interrupt_handler(signal_num, frame):
-    #Make sure we close our program properly
-    print("Exiting...".format(signal_num))
-    wheel.unsubscribe(GATT_CHARACTERISTIC_DISTANCE)
-    exit(0)
+if __name__ == '__main__':
+    # app.run(host='0.0.0.0')
+    socketio.run(app, host='0.0.0.0')
+
+app.use("/scripts", express.scripts('./scripts/'));
 
 # Instantiate a thing with its credential, then read its properties from the DCD Hub
 #my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
