@@ -93,11 +93,12 @@ void setup(void) {
   ble.echo(false);
 
   // Print Bluefruit information
+  
   ble.info();
   ble.verbose(true);
 
   // Change the device name to fit its purpose
-  if (! ble.sendCommandCheckOK(F("AT+GAPDEVNAME=Harry")) ) {
+  if (! ble.sendCommandCheckOK(F("AT+GAPDEVNAME=Kenny")) ) {
     error(F("Could not set device name."));
   }
 
@@ -130,7 +131,7 @@ void orientation() {
   
   // Command is sent when \n (\r) or println is called
   // AT+GATTCHAR=CharacteristicID,value
-  ble.print( F("AT+GATTCHAR=") );
+//  ble.print( F("AT+GATTCHAR=") );
   ble.print( orientationCharId );
   ble.print( F(",") );
   ble.print(String(angleX));

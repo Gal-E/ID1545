@@ -7,6 +7,8 @@ import os  # To access environment variables
 from dotenv import load_dotenv  # To load the environment variables from the .env file
 from time import sleep
 
+from flask_socketio import SocketIO, emit, send
+
 
 # DCD Hub
 #from dcd.entities.thing import Thing
@@ -39,6 +41,10 @@ activator = True
 activator2 = True
 
 old_val = 0
+
+avgList = []
+avgListLength = 5
+avgListCounter = 0
 
 checkpoint = 0
 checkpointCheck = True
@@ -85,6 +91,11 @@ def calCircle(cur_val):
     global activator
     global activator2
 
+    global avgList
+    global avgListLength
+    global avgListCounter
+    global avgAbsoluteAngle
+
     print(str(activator))
 
     print("absoluteAngle " + str(absoluteAngle))
@@ -98,6 +109,8 @@ def calCircle(cur_val):
         initialAngle = cur_val
         old_val = cur_val
         activator2 = False
+        for i in avgListLength:
+            avgList.append(initialAngle)
 
 
     if old_val < increment2 and cur_val > (360-increment2):
@@ -132,6 +145,17 @@ def calCircle(cur_val):
         if round(absoluteAngle/10.0)%36 == 0 and round(absoluteAngle/10.0) != 0 :
             print("circle to the right complete!!")
             sleep(10)
+
+
+    if avgListCounter < avgListLength:
+        avgListCounter = avgListCounter + 1
+    else:
+        avgListCounter = 0
+
+    avgList[avgListCounter] = absoluteAngle
+    avgAbsoluteAngle = sum(avgList)/avgListLength
+    print(str(avgAbsoluteAngle))
+
 
 
 def discover_characteristic(device):
