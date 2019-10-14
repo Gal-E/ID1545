@@ -272,5 +272,7 @@ connect_bluetooth()
 if __name__ == '__main__':
     socketio.run(app, host = '0.0.0.0')
 
+#let's hope this works...
+
 while True :
     sleep(5)
