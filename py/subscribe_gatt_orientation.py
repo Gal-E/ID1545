@@ -109,7 +109,7 @@ def calCircle(cur_val):
         initialAngle = cur_val
         old_val = cur_val
         activator2 = False
-        for i in avgListLength:
+        for i in range(avgListLength):
             avgList.append(initialAngle)
 
 
@@ -147,7 +147,7 @@ def calCircle(cur_val):
             sleep(10)
 
 
-    if avgListCounter < avgListLength:
+    if avgListCounter < avgListLength - 1:
         avgListCounter = avgListCounter + 1
     else:
         avgListCounter = 0
