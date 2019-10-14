@@ -173,7 +173,7 @@ def calCircle(cur_val):
 
     avgList[avgListCounter] = absoluteAngle
     avgAbsoluteAngle = sum(avgList)/avgListLength
-    print(str(avgAbsoluteAngle))
+    print(str(round(avgAbsoluteAngle)))
 
 
 
@@ -225,10 +225,6 @@ def handle_distance(json):
 
 
 @app.route('/')
-def hello_world():
-    return 'Hello, World!'
-
-@app.route('/home')
 def home():
     return render_template('index.html')
 
