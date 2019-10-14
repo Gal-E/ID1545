@@ -2,11 +2,11 @@ from flask import Flask, request, render_template, render_template, request
 from flask_socketio import SocketIO, emit
 
 app = Flask(__name__)
+sensors = ['sensor1', 'sensor2', 'sensor3']
 
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 
-sensors = ['sensor1', 'sensor2', 'sensor3']
 
 @app.route('/')
 def hello_world():
@@ -42,3 +42,5 @@ def handle_json(json):
 if __name__ == '__main__':
     # app.run(host='0.0.0.0')
     socketio.run(app, host='0.0.0.0')
+
+app.use("/scripts", express.scripts('./scripts/'));
