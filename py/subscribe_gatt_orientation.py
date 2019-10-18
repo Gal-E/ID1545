@@ -257,11 +257,7 @@ def handle_json(json):
 def handle_orientation(json):
   print(float(json['orientation']))
 
-if __name__ == '__main__':
-    # app.run(host='0.0.0.0')
-    socketio.run(app, host='0.0.0.0')
 
-app.use("/scripts", express.scripts('./scripts/'));
 
 # Instantiate a thing with its credential, then read its properties from the DCD Hub
 #my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
@@ -287,12 +283,12 @@ signal.signal(signal.SIGINT, keyboard_interrupt_handler)
 
 #connect_bluetooth()
 
-
-thread = Thread(target=connect_bluetooth)
-thread.start()
-
 if __name__ == '__main__':
+    thread = Thread(target=connect_bluetooth)
+    thread.start()
     socketio.run(app, host = '0.0.0.0')
+
+app.use("/scripts", express.scripts('./scripts/'));
 
 #let's hope this works...
 
