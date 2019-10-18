@@ -55,13 +55,22 @@ activator2 = True
 old_val = 0
 
 avgList = []
-avgListLength = 5
+avgListLength = 10
 avgListCounter = 0
 
 checkpoint = 0
 checkpointCheck = True
 
 rotationDirection = "right"
+
+def reset():
+    initialAngle = cur_val
+    old_val = cur_val
+    measuredAngle = 0
+    initialAngle = 30
+    absoluteAngle = 0
+    circleCounter = 0
+    checkpoint = 0
 
 def find_or_create(property_name, property_type):
     """Search a property by name, create it if not found, then return it."""
@@ -86,9 +95,8 @@ def handle_orientation_data(handle, value_bytes):
 
     cur_loc = values
     calCircle(cur_loc[0])
-    PRINT("HELLO?")
     try:
-        socketio.emit('orientation', '{"orientation": "%s"}' % str(avgAbsoluteAngle), broadcast=True)
+        socketio.emit('orientation', '{"orientation": "%s"}' % str(abs(round(avgAbsoluteAngle,0))), broadcast=True)
     except:
         print("No socket?")
     return avgAbsoluteAngle
@@ -161,11 +169,13 @@ def calCircle(cur_val):
     if absoluteAngle < 0:
         if round(absoluteAngle/10.0)%36 == 0 and round(absoluteAngle/10.0) != 0 :
             print("circle to the left complete!!")
-            sleep(10)
+            sleep(3)
+            reset()
     elif absoluteAngle>0:
         if round(absoluteAngle/10.0)%36 == 0 and round(absoluteAngle/10.0) != 0 :
             print("circle to the right complete!!")
-            sleep(10)
+            sleep(3)
+            reset()
 
 
     if avgListCounter < avgListLength - 1:
@@ -174,8 +184,7 @@ def calCircle(cur_val):
         avgListCounter = 0
 
     avgList[avgListCounter] = absoluteAngle
-    avgAbsoluteAngle = sum(avgList)/avgListLength
-    print(str(round(avgAbsoluteAngle)))
+    avgAbsoluteAngle = 100*(sum(avgList)/avgListLength)/360
 
 
 
