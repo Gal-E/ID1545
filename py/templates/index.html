@@ -6,7 +6,6 @@
         <link rel="stylesheet" type="text/css"
         href="{{ url_for('static', filename='css/loading-bar.css') }}">
         <script src="{{ url_for('static', filename='js/loading-bar.js') }}" language="JavaScript"></script>
-        <script src="{{ url_for('static', filename='js/require.js') }}" language="JavaScript"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
                   integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I="
                   crossorigin="anonymous"></script>
@@ -14,18 +13,19 @@
         var socket = io();
         socket.on('connect', function() {
           // socket.emit('json', {data: 'I\'m connected!'});
+	  console.log('connected');
         });
         socket.on('json', function(msg, cb) {
           if (msg.distance !== undefined) {
             document.getElementById("myBar").with = msg.distance;
           }
         });
-        socket.on('distance', function(dist_obj) {
+        socket.on('orientation', function(dist_obj) {
           const json = JSON.parse(dist_obj);
           console.log(json);
-          console.log(json.distance);
-          if (json.distance !== undefined) {
-            document.getElementById("myBar").with = json.distance;
+          console.log(json.orientation);
+          if (json.orientation !== undefined) {
+           // document.getElementById("loadingBar").data-value = json.orientation;
           }
         });
         </script>
@@ -42,6 +42,7 @@
       <h3 class="task_desc">Try and create a circle in 20 second or less</h3>
 
         <div
+	  id = "loadingBar"
           class="ldBar label-center"
           style="width:50%;height:50%;margin:auto"
           data-value="50"

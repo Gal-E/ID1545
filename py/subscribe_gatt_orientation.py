@@ -4,6 +4,7 @@
 import pygatt  # To access BLE GATT support
 import signal  # To catch the Ctrl+C and end the program properly
 import os  # To access environment variables
+from threading import Thread
 from dotenv import load_dotenv  # To load the environment variables from the .env file
 from time import sleep
 
@@ -85,12 +86,13 @@ def handle_orientation_data(handle, value_bytes):
 
     cur_loc = values
     calCircle(cur_loc[0])
-
+    PRINT("HELLO?")
     try:
-       socketio.emit('distance', '{"orientation": "%s"}' % str(avgAbsoluteAngle), broadcast=True)
+        socketio.emit('orientation', '{"orientation": "%s"}' % str(avgAbsoluteAngle), broadcast=True)
     except:
-       print("No socket?")
-    return distVal
+        print("No socket?")
+    return avgAbsoluteAngle
+
 
 def calCircle(cur_val):
     global measuredAngle
@@ -251,6 +253,10 @@ def handle_json(json):
   print('received json: ' + str(json))
   emit('json', json, broadcast=True)
 
+@socketio.on('orientation')
+def handle_orientation(json):
+  print(float(json['orientation']))
+
 if __name__ == '__main__':
     # app.run(host='0.0.0.0')
     socketio.run(app, host='0.0.0.0')
@@ -260,6 +266,7 @@ app.use("/scripts", express.scripts('./scripts/'));
 # Instantiate a thing with its credential, then read its properties from the DCD Hub
 #my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 #my_thing.read()
+
 
 def connect_bluetooth():
     print("Starting Bluetooth...")
@@ -278,12 +285,16 @@ def connect_bluetooth():
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
 
-connect_bluetooth()
+#connect_bluetooth()
+
+
+thread = Thread(target=connect_bluetooth)
+thread.start()
 
 if __name__ == '__main__':
     socketio.run(app, host = '0.0.0.0')
 
 #let's hope this works...
 
-while True :
-    sleep(5)
+#while True :
+#    sleep(5)
