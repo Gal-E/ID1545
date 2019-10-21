@@ -31,32 +31,31 @@ socket.on('orientation', function(dist_obj) {
     // var bar = document.getElementById("value").ldBar;
     // bar.set(json.orientation);
     console.log(json.orientation);
-    d3.select("#data").html("data-1=" + json.orientation);
+    getData(json.orientation);
   }
 });
 </script>
 <script>
 
-var getData = function(){
-  var size = 3;
+var getData = function(value){
   var data = {};
   var text = "";
-  for(var i=0; i<size; i++){
-    data["data-"+(i+1)] = Math.round(Math.random() * 100);
-    text += "data-"+ (i+1) +" = " + data["data-"+(i+1)] + "<br/>";
-  };
+  data["data-1"] = value;
+  text += "data-1 = " + data["data-1"] + "<br/>";
+  data["data-2"] = 100-value;
+  text += "data-2 = " + data["data-2"] + "<br/>";
   d3.select("#data").html(text);
   return data;
 };
 
 var chart = donut()
               .$el(d3.select("#chart"))
-              .data(getData())
+              .data(getData(0))
               .render();
 
 
-d3.select("#refresh").on("click", function(){
-  chart.data(getData()).render();
-});
+// d3.select("#refresh").on("click", function(){
+//   chart.data(getData()).render();
+// });
 
 </script>
