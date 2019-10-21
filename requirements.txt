@@ -4,4 +4,7 @@ python-dotenv
 pyserial
 requests
 jwt
+<<<<<<< HEAD
+=======
 numpy
+>>>>>>> 3f0f3bb8614c1a27e00bed969fa87c24dd372de8
