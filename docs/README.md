@@ -52,7 +52,16 @@ Friday 11th October:
 <img src="images/Simulator.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
 
 Monday 14th October:
-- Bluetooth chip is still not working, so we cannot progress with anything, since the circle detection can only be debugged if we can see how the data from the bluetooth chip is being handled.
+- Bluetooth chip is finally working! 
+- We managed to debug the circle detection, and now aim to figure out how to display it on the server
+
+Friday 18th October:
+- We got the circle progress to show on the server running on the Pi, but it is a bit jumpy.
+
+Monday 20th October:
+- Turns out the jumpy data was just a poorly placed send to the server, so that was easily solved.
+
+Friday 
 
 #### Architecture
 <img src="images/Architecture.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
