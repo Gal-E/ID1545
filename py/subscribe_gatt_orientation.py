@@ -171,7 +171,7 @@ def calCircle(cur_val):
     avgAbsoluteAngle = 100*(sum(avgList)/avgListLength)/360
 
     try:
-        socketio.emit('orientation', '{"orientation": "%s"}' % str(avgAbsoluteAngle), broadcast=True)
+        socketio.emit('orientation', '{"orientation": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
     except:
         print("No socket?")
     return avgAbsoluteAngle
