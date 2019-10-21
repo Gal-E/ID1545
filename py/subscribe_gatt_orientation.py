@@ -53,6 +53,7 @@ activator = True
 activator2 = True
 
 old_val = 0
+cur_val = 0
 
 avgList = []
 avgListLength = 10
@@ -97,13 +98,14 @@ def handle_orientation_data(handle, value_bytes):
     calCircle(cur_loc[0])
 
 
-def calCircle(cur_val):
+def calCircle(zAngle):
     global measuredAngle
     global initialAngle
     global absoluteAngle
     global circleCounter
 
     global old_val
+    global cur_val
 
     global degreesRotated
     global rotationDirection
@@ -119,32 +121,32 @@ def calCircle(cur_val):
     global avgAbsoluteAngle
 
     if activator2:
-        initialAngle = cur_val
-        old_val = cur_val
+        initialAngle = zAngle
+        old_val = zAngle
         activator2 = False
         for i in range(avgListLength):
             avgList.append(initialAngle)
 
 
-    if old_val < increment2 and cur_val > (360-increment2):
+    if old_val < increment2 and zAngle > (360-increment2):
         #circleCounter+=1
         circleCounter = circleCounter+1
         activator=False
 
-    if old_val > (360-increment2) and cur_val < increment2:
+    if old_val > (360-increment2) and zAngle < increment2:
         #circleCounter-=1
         circleCounter = circleCounter-1
         activator=False
 
-    if old_val-cur_val>increment:
-        old_val = cur_val
+    if old_val-zAngle>increment:
+        old_val = zAngle
         measuredAngle = old_val
         absoluteAngle = measuredAngle-initialAngle-(circleCounter*360)
         #print(str(measuredAngle)+" "+str(round(absoluteAngle)*10/10.0))
         activator = True
 
-    elif old_val-cur_val < (-1)*increment :
-        old_val = cur_val
+    elif old_val-zAngle < (-1)*increment :
+        old_val = zAngle
         measuredAngle=old_val
         absoluteAngle=measuredAngle-initialAngle-(circleCounter*360)
         #print(str(measuredAngle)+" "+str(round(absoluteAngle)*10/10.0))
@@ -170,11 +172,14 @@ def calCircle(cur_val):
     avgList[avgListCounter] = absoluteAngle
     avgAbsoluteAngle = 100*(sum(avgList)/avgListLength)/360
 
+    cur_val = zAngle
+
     try:
         socketio.emit('orientation', '{"orientation": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
     except:
         print("No socket?")
     return avgAbsoluteAngle
+
 
 
 
