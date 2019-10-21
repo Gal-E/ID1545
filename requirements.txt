@@ -1,5 +1,7 @@
-dcd-sdk>=0.0.18
+dcd-sdk>=0.0.22
 paho-mqtt
 python-dotenv
 pyserial
 requests
+jwt
+numpy

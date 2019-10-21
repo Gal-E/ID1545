@@ -25,9 +25,8 @@
           console.log(json);
           console.log(json.orientation);
           if (json.orientation !== undefined) {
-            document.getElementById("value2").setAttribute("data-value",json.orientation);
             document.getElementById("value").innerHTML=json.orientation;
-	    var bar = document.getElementById("value2").ldBar;
+	    var bar = document.getElementById("value").ldBar;
             bar.set(json.orientation);
           }
         });
