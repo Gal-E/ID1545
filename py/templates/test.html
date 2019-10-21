@@ -31,7 +31,7 @@ socket.on('orientation', function(dist_obj) {
     // var bar = document.getElementById("value").ldBar;
     // bar.set(json.orientation);
     console.log(json.orientation);
-    getData(json.orientation);
+    chart.data(getData(json.orientation)).render();
   }
 });
 </script>
