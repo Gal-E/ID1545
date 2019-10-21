@@ -22,19 +22,20 @@
         });
         socket.on('orientation', function(dist_obj) {
           const json = JSON.parse(dist_obj);
-          console.log(json);
-          console.log(json.orientation);
           if (json.orientation !== undefined) {
+<<<<<<< HEAD
             document.getElementById("value2").setAttribute("data-value",json.orientation);
             document.getElementById("value").innerHTML=json.orientation;
 	          var bar = document.getElementById("value2").ldBar;
+=======
+	          var bar = document.getElementById("value").ldBar;
+>>>>>>> 3f0f3bb8614c1a27e00bed969fa87c24dd372de8
             bar.set(json.orientation);
+            console.log(json.orientation);
           }
-
         });
         </script>
         <script>
-
             function getVal(){
               //  progressCir.setAttribute('dataVal','40');
               alert('hey!');
@@ -43,22 +44,21 @@
     </head>
     <body>
       <h1>Make a circle</h1>
-	 <p
-	   id = "value"
+	 <p>
 	 </p>
       <h3 class="task_desc">Try and create a circle in 20 second or less</h3>
 
         <div
-	  id = "value2"
+	  id = "value"
           class="ldBar label-center"
           style="width:50%;height:50%;margin:auto"
           data-preset="circle"
           data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)"
         ></div>
 	<script>
-		var bar1 = new ldBar("#value2");
-		var bar2 = document.getElementById('value2').ldBar;
-		bar1.set(bar2);
+	//	var bar1 = new ldBar("#value2");
+	//	var bar2 = document.getElementById('value2').ldBar;
+	//	bar1.set(bar2);
 	</script>
         <div class="startWrapper">
           <button id="start" onclick="getVal()">Start Circle!</button>

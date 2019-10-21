@@ -118,17 +118,6 @@ def calCircle(cur_val):
     global avgListCounter
     global avgAbsoluteAngle
 
-    '''
-    print(str(activator))
-
-    print("absoluteAngle " + str(absoluteAngle))
-    print("circleCounter " + str(circleCounter))
-    print("measuredAngle " + str(measuredAngle))
-    print("initialAngle " + str(initialAngle))
-    print("old_val " + str(old_val))
-    print("cur_val " + str(cur_val))
-    '''
-
     if activator2:
         initialAngle = cur_val
         old_val = cur_val
@@ -182,7 +171,7 @@ def calCircle(cur_val):
     avgAbsoluteAngle = 100*(sum(avgList)/avgListLength)/360
 
     try:
-        socketio.emit('orientation', '{"orientation": "%s"}' % str(avgAbsoluteAngle), broadcast=True)
+        socketio.emit('orientation', '{"orientation": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
     except:
         print("No socket?")
     return avgAbsoluteAngle
@@ -243,6 +232,10 @@ def home():
 @app.route('/gauge')
 def gauge():
     return render_template('gauge.html')
+
+@app.route('/test')
+def test():
+    return render_template('test.html')
 
 @app.route('/api/sensors', methods = ['GET'])
 def list():

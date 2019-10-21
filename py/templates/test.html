@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+</style>
+<body>
+  <button id="refresh">Refresh Data</button>
+  <div id="chart"></div>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="http://bl.ocks.org/nnattawat/raw/9368297/d3.donut.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
+          integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I="
+          crossorigin="anonymous"></script>
+<script type="text/javascript" charset="utf-8">
+var socket = io();
+socket.on('connect', function() {
+  // socket.emit('json', {data: 'I\'m connected!'});
+console.log('connected');
+});
+socket.on('json', function(msg, cb) {
+  if (msg.distance !== undefined) {
+    document.getElementById("myBar").with = msg.distance;
+  }
+});
+socket.on('orientation', function(dist_obj) {
+  const json = JSON.parse(dist_obj);
+  if (json.orientation !== undefined) {
+    // var bar = document.getElementById("value").ldBar;
+    // bar.set(json.orientation);
+    console.log(json.orientation);
+    chart.data(getData(json.orientation)).render();
+  }
+});
+</script>
+<script>
+
+var getData = function(value){
+  var data = {};
+  var text = "";
+  data["data-1"] = value;
+  text += "data-1 = " + data["data-1"] + "<br/>";
+  data["data-2"] = 100-value;
+  text += "data-2 = " + data["data-2"] + "<br/>";
+  d3.select("#data").html(text);
+  return data;
+};
+
+var chart = donut()
+              .$el(d3.select("#chart"))
+              .data(getData(0))
+              .render();
+
+
+// d3.select("#refresh").on("click", function(){
+//   chart.data(getData()).render();
+// });
+
+</script>
