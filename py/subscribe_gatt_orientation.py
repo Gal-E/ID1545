@@ -153,12 +153,12 @@ def calCircle(cur_val):
     if absoluteAngle < 0:
         if round(absoluteAngle/10.0)%36 == 0 and round(absoluteAngle/10.0) != 0 :
             print("circle to the left complete!!")
-            sleep(3)
+            #sleep(3)
             reset()
     elif absoluteAngle>0:
         if round(absoluteAngle/10.0)%36 == 0 and round(absoluteAngle/10.0) != 0 :
             print("circle to the right complete!!")
-            sleep(3)
+            #sleep(3)
             reset()
 
 
