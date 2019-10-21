@@ -23,7 +23,6 @@
         socket.on('orientation', function(dist_obj) {
           const json = JSON.parse(dist_obj);
           if (json.orientation !== undefined) {
-            document.getElementById("value").setAttribute("data-value",json.orientation);
 	          var bar = document.getElementById("value").ldBar;
             bar.set(json.orientation);
             console.log("value");
