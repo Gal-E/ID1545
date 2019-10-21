@@ -28,8 +28,8 @@ socket.on('json', function(msg, cb) {
 socket.on('orientation', function(dist_obj) {
   const json = JSON.parse(dist_obj);
   if (json.orientation !== undefined) {
-    var bar = document.getElementById("value").ldBar;
-    bar.set(json.orientation);
+    // var bar = document.getElementById("value").ldBar;
+    // bar.set(json.orientation);
     console.log(json.orientation);
     d3.select("#data").html("data-1=" + json.orientation);
   }
