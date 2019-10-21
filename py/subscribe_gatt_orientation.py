@@ -95,7 +95,6 @@ def handle_orientation_data(handle, value_bytes):
 
     cur_loc = values
     calCircle(cur_loc[0])
-    PRINT("HELLO?")
 
 
 def calCircle(cur_val):
