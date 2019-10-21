@@ -87,11 +87,6 @@ def handle_orientation_data(handle, value_bytes):
     cur_loc = values
     calCircle(cur_loc[0])
     PRINT("HELLO?")
-    try:
-        socketio.emit('orientation', '{"orientation": "%s"}' % str(avgAbsoluteAngle), broadcast=True)
-    except:
-        print("No socket?")
-    return avgAbsoluteAngle
 
 
 def calCircle(cur_val):
@@ -176,6 +171,12 @@ def calCircle(cur_val):
     avgList[avgListCounter] = absoluteAngle
     avgAbsoluteAngle = sum(avgList)/avgListLength
     print(str(round(avgAbsoluteAngle)))
+
+    try:
+        socketio.emit('orientation', '{"orientation": "%s"}' % str(avgAbsoluteAngle), broadcast=True)
+    except:
+        print("No socket?")
+    return avgAbsoluteAngle
 
 
 
