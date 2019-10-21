@@ -25,9 +25,9 @@
           console.log(json);
           console.log(json.orientation);
           if (json.orientation !== undefined) {
-            document.getElementById("value").innerHTML=json.orientation;
-	    var bar = document.getElementById("value").ldBar;
-            bar.set(json.orientation);
+             document.getElementById("value").innerHTML=json.orientation;
+	           var bar = document.getElementById("value").ldBar;
+             bar.set(json.orientation);
           }
         });
         </script>
@@ -41,12 +41,12 @@
     <body>
       <h1>Make a circle</h1>
 	 <p
-	   id = "value"
+	   //id = "value"
 	 </p>
       <h3 class="task_desc">Try and create a circle in 20 second or less</h3>
 
         <div
-	  id = "value2"
+	        //id = "value2"
           class="ldBar label-center"
           style="width:50%;height:50%;margin:auto"
           data-preset="circle"
