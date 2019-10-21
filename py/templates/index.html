@@ -27,14 +27,12 @@
           if (json.orientation !== undefined) {
             document.getElementById("value2").setAttribute("data-value",json.orientation);
             document.getElementById("value").innerHTML=json.orientation;
-	          var bar = document.getElementById("value2").ldBar;
+	    var bar = document.getElementById("value2").ldBar;
             bar.set(json.orientation);
           }
-
         });
         </script>
         <script>
-
             function getVal(){
               //  progressCir.setAttribute('dataVal','40');
               alert('hey!');
@@ -49,7 +47,7 @@
       <h3 class="task_desc">Try and create a circle in 20 second or less</h3>
 
         <div
-	        id = "value2"
+	  id = "value2"
           class="ldBar label-center"
           style="width:50%;height:50%;margin:auto"
           data-preset="circle"
