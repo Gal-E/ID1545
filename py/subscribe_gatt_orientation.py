@@ -234,7 +234,7 @@ def gauge():
     return render_template('gauge.html')
 
 @app.route('/test')
-def gauge():
+def test():
     return render_template('test.html')
 
 @app.route('/api/sensors', methods = ['GET'])
