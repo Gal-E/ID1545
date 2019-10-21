@@ -118,17 +118,6 @@ def calCircle(cur_val):
     global avgListCounter
     global avgAbsoluteAngle
 
-    '''
-    print(str(activator))
-
-    print("absoluteAngle " + str(absoluteAngle))
-    print("circleCounter " + str(circleCounter))
-    print("measuredAngle " + str(measuredAngle))
-    print("initialAngle " + str(initialAngle))
-    print("old_val " + str(old_val))
-    print("cur_val " + str(cur_val))
-    '''
-
     if activator2:
         initialAngle = cur_val
         old_val = cur_val
