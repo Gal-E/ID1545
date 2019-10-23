@@ -36,7 +36,7 @@
 </div>
 
 <div id="#brainstorm">
-  <div class="headline">Kick Off - Brief Brainstorm:</div>
+  <h3>Kick Off - Brief Brainstorm:</h3>
   <div>
   To start off by investigating the challenges and opportunities that could be gained by upgrading a wheelchair to a digitally connected one, we began by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. </br>
 
@@ -44,7 +44,7 @@
   </div>
   
   <div class="brainstorm_idea">
-  <h3>1 - Giving the users superpowers</h3>
+  <h4>1 - Giving the users superpowers</h4>
   <br>
   A bit of research taught us that while using a wheelchair, things are often out of reach or missplaced. Some things might be too high for a wheel chair user, for example, a mirror in the bathroom or the heater button.
   <br>
@@ -52,7 +52,7 @@
   </div>
   
   <div class="brainstorm_idea">
-   <h3>2 - Getting around</h3>
+   <h4>2 - Getting around</h4>
     <br>
     Can we help people to get around more easily?
     <br>
@@ -61,7 +61,7 @@
   </div>
 
   <div class="brainstorm_idea">
-    <h3>3 - Increasing safety</h3>
+    <h4>3 - Increasing safety</h4>
     <br>
     Can we make it safer to use a wheelchair on the go?
     <br>
@@ -76,7 +76,7 @@
   </div>
 
   <div class="brainstorm_idea">
-    <h3> 4 - Sports</h3>
+    <h4> 4 - Sports</h4>
     <br>
     How can we help wheelchair users to enjoy physical activity more?
     <br>
@@ -90,7 +90,7 @@
   </div>
 
   <div class="brainstorm_idea">
-    <h3> 5 - Gamify it</h3>
+    <h4> 5 - Gamify it</h4>
     <br>
     Might especially be fun for kids, or people who are in the wheelchairs for short-term revalidation
     In hospitals? → getting around or over obstacles, finding the best route
@@ -99,7 +99,7 @@
 </div>
 
 <div id="theidea">
-#### Target Users:
+  <h3>Target Users:</h3>
 
 - kids age 8-10
 - temporary users in hospital
