@@ -18,10 +18,10 @@
 </style>
 
 <div id="second-header">
-  <a href="test">TEST LINK</a>
-  <a href="test">TEST LINK</a>
-  <a href="test">TEST LINK</a>
-  <a href="test">TEST LINK</a>
+  <a href="test">Brief Brainstorm</a>
+  <a href="#theidea">The Idea</a>
+  <a href="test">The Process</a>
+  <a href="test">The Prototype</a>
 </div>
 
 #### Kick Off - Brief Brainstorm:
@@ -54,7 +54,7 @@ Driving backwards indicators
 
 5 - 
 
-
+<div id="theidea"></div>
 #### Target Users:
 
 - kids age 8-10
