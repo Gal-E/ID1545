@@ -24,7 +24,11 @@
     margin: 0 2%;
   }
 .headline {
-  font-size: 22px;
+    font-family: monospace;
+    color: #4285F4;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
   }
 </style>
 
