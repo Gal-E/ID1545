@@ -3,11 +3,12 @@
   background: white;
   }
 #header_wrap {
-  background: #34A853;
+  background: white;
   }
 #project_tagline, #project_title {
   text-shadow: none;
   font-family: monospace;
+  color: #34A853;
   }
 #main_content_wrap {
   border: none;
@@ -18,12 +19,14 @@
   padding: 10px 0 40px 0;
 }  
 #second-header a {
-    color: #34A853;
+    color: #4285F4;
     font-family: monospace;
     font-size: 18px;
     margin: 0 2%;
   }
-  
+.headline {
+  font-size: 22px;
+  }
 </style>
 
 <div id="second-header">
@@ -34,7 +37,7 @@
 </div>
 
 <div id="#brainstorm">
-#### Kick Off - Brief Brainstorm:
+  <div class="headline">Kick Off - Brief Brainstorm:</div>
 To start off by investigating the challenges and opportunities that could be gained by upgrading a wheelchair to a digitally connected one, we began by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. 
 
 We used this overview to gather potential applications and map our primary associations. This session helped us form several ideas for a connected wheelchair:
