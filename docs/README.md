@@ -2,6 +2,12 @@
 #main_content_wrap {
   background: white;
   }
+#header_wrap {
+  background: #34A853;
+  }
+#project_tagline, #project_title {
+  text-shadow: none;
+  }
 </style>
 
 #### Target Users:
