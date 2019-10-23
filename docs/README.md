@@ -14,13 +14,13 @@
   }
 #second-header {
   margin-bottom: 60px;
-  
-    a {
+}  
+#second-header a {
     color: #34A853;
     font-family: monospace;
     font-size: 18px;
-    }
   }
+  
 </style>
 
 <div id="second-header">
