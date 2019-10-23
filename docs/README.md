@@ -103,7 +103,7 @@
 </div><br>
 
 <div id="theidea">
-  <h3 class="headline">The chosen concept</div>
+  <h3 class="headline">The chosen concept</h3>
   explaination about idea
   <br>
   <h3>Target Users:</h3>
@@ -141,6 +141,7 @@ The task can become more difficult over time by doing the same thing while going
 <img src="images/Architecture.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
 
 <div id="process">
+  <h3 class="headline">The process</h3>
 #### First milestone:
 - Create a system that detects when a user has driven a circle.
 
@@ -178,3 +179,4 @@ Friday
 </div>
 
 <div id="prototype"></div>
+<h3 class="headline">The prototype</h3>
