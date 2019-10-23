@@ -24,12 +24,13 @@
 </style>
 
 <div id="second-header">
-  <a href="test">Brief Brainstorm</a>
+  <a href="#brainstorm">Brief Brainstorm</a>
   <a href="#theidea">The Idea</a>
-  <a href="test">The Process</a>
-  <a href="test">The Prototype</a>
+  <a href="#process">The Process</a>
+  <a href="#prototype">The Prototype</a>
 </div>
 
+<div id="#brainstorm">
 #### Kick Off - Brief Brainstorm:
 To start off by investigating the challenges and opportunities that could be gained by upgrading a wheelchair to a digitally connected one, we began by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. 
 
@@ -61,11 +62,26 @@ Panic button
 Collision detection
 Driving backwards indicators
 
-4 - 
+4 - Sports
 
-5 - 
+How can we help wheelchair users to enjoy physical activity more?
 
-<div id="theidea"></div>
+Distances covered 
+App with fitness data
+That actively motivates you to be more active
+Gloves to help keep your hands clean
+Measure the amount of force put on the wheels
+Revalidation?
+
+
+5 - Gamify it
+
+Might especially be fun for kids, or people who are in the wheelchairs for short-term revalidation
+In hospitals? → getting around or over obstacles, finding the best route
+Hide and seek. Inspiration: Pokemon Go
+</div>
+
+<div id="theidea">
 #### Target Users:
 
 - kids age 8-10
@@ -95,7 +111,12 @@ The task can become more difficult over time by doing the same thing while going
 - The data collected can teach us about the behaviour of kids when they use a wheelchair for the first time
 - Maybe we can learn about what skills are more challenging for kids to learn when using a wheelchair for the first time
 - Possible stakeholders who can benefit from this information: wheelchairs engineers and designers that could improve functionality based on that, doctors and families of kids with wheelchair that can help kids get easily adjusted to the chair etc
+</div>
 
+#### Architecture
+<img src="images/Architecture.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
+
+<div id="process">
 #### First milestone:
 - Create a system that detects when a user has driven a circle.
 
@@ -130,6 +151,6 @@ Monday 20th October:
 - Turns out the jumpy data was just a poorly placed send to the server, so that was easily solved.
 
 Friday 
+</div>
 
-#### Architecture
-<img src="images/Architecture.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
+<div id="prototype"></div>
