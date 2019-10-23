@@ -1,3 +1,9 @@
+<style>
+#main_content_wrap {
+  background: white;
+  }
+</style>
+
 #### Target Users:
 
 - kids age 8-10
