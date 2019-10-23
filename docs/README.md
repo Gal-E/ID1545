@@ -14,11 +14,14 @@
   }
 #second-header {
   margin-bottom: 60px;
+  border-bottom: 1px solid #34A853;
+  padding: 10px 0 40px 0;
 }  
 #second-header a {
     color: #34A853;
     font-family: monospace;
     font-size: 18px;
+    margin: 0 2%;
   }
   
 </style>
