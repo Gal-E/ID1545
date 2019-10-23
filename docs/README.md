@@ -3,12 +3,11 @@
   background: white;
   }
 #header_wrap {
-  background: white;
+  background: #34A853;
   }
 #project_tagline, #project_title {
   text-shadow: none;
   font-family: monospace;
-  color: #34A853;
   }
 #main_content_wrap {
   border: none;
@@ -19,7 +18,7 @@
   padding: 10px 0 40px 0;
 }  
 #second-header a {
-    color: #4285F4;
+    color: #34A853;
     font-family: monospace;
     font-size: 18px;
     margin: 0 2%;
