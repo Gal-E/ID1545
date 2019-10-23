@@ -12,7 +12,17 @@
 #main_content_wrap {
   border: none;
   }
+#second-header {
+  background: #FBBC05;
+  }
 </style>
+
+<div id="second-header">
+  <a href="test">TEST LINK</a>
+  <a href="test">TEST LINK</a>
+  <a href="test">TEST LINK</a>
+  <a href="test">TEST LINK</a>
+</div>
 
 #### Kick Off - Brief Brainstorm:
 To start off by investigating the challenges and opportunities that could be gained by upgrading a wheelchair to a digitally connected one, we began by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. 
@@ -24,9 +34,21 @@ A bit of research taught us that while using a wheelchair, things are often out 
 
 Thinking of smart houses, we envisioned a house where objects move to adjust themselves to a wheelchair user. The door can open automaticly, the mirror could change it's angel to the right position and the heating could turn on.
 
-2 - 
+2 - Getting around
+Can we help people to get around more easily?
+We envisioned "Google maps" for wheelchair users, suggesting routes considering their limitations and best journies. We thought this could be helpful in different environments such as hospitals, big buildings like the TU or other universities, or in general in the city
 
-3 - 
+
+3 - Increasing safety
+Can we make it safer to use a wheelchair on the go?
+Actively monitoring ground quality to signal the user to drive quality on unstable ground
+Accident detection
+Heart attack
+Alarm
+Panic button
+911
+Collision detection
+Driving backwards indicators
 
 4 - 
 
