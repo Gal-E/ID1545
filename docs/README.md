@@ -37,53 +37,65 @@
 
 <div id="#brainstorm">
   <div class="headline">Kick Off - Brief Brainstorm:</div>
-To start off by investigating the challenges and opportunities that could be gained by upgrading a wheelchair to a digitally connected one, we began by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. 
+  <div>
+  To start off by investigating the challenges and opportunities that could be gained by upgrading a wheelchair to a digitally connected one, we began by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. </br>
 
-We used this overview to gather potential applications and map our primary associations. This session helped us form several ideas for a connected wheelchair:
+  We used this overview to gather potential applications and map our primary associations. This session helped us form several ideas for a connected wheelchair:
+  </div>
+  
+  <div class="brainstorm_idea">
+  <h3>1 - Giving the users superpowers</h3>
+  </br>
+  A bit of research taught us that while using a wheelchair, things are often out of reach or missplaced. Some things might be too high for a wheel chair user, for example, a mirror in the bathroom or the heater button.
+  </br>
+  Thinking of smart houses, we envisioned a house where objects move to adjust themselves to a wheelchair user. The door can open automaticly, the mirror could change it's angel to the right position and the heating could turn on.
+  </div>
+  
+  <div class="brainstorm_idea">
+   <h3>2 - Getting around</h3>
+    </br>
+    Can we help people to get around more easily?
+    </br>
+    We envisioned "Google maps" for wheelchair users, suggesting routes considering their limitations and best journies. We   thought this could be helpful in different environments such as hospitals, big buildings like the TU or other universities, or in general in the city
 
-1 - Giving the users superpowers
+  </div>
 
-A bit of research taught us that while using a wheelchair, things are often out of reach or missplaced. Some things might be too high for a wheel chair user, for example, a mirror in the bathroom or the heater button.
+  <div class="brainstorm_idea">
+    <h3>3 - Increasing safety</h3>
+    </br>
+    Can we make it safer to use a wheelchair on the go?
+    </br>
+    Actively monitoring ground quality to signal the user to drive quality on unstable ground
+    Accident detection
+    Heart attack
+    Alarm
+    Panic button
+    911
+    Collision detection
+    Driving backwards indicators
+  </div>
 
-Thinking of smart houses, we envisioned a house where objects move to adjust themselves to a wheelchair user. The door can open automaticly, the mirror could change it's angel to the right position and the heating could turn on.
+  <div class="brainstorm_idea">
+    <h3> 4 - Sports</h3>
+    </br>
+    How can we help wheelchair users to enjoy physical activity more?
+    </br>
+    Distances covered 
+    App with fitness data
+    That actively motivates you to be more active
+    Gloves to help keep your hands clean
+    Measure the amount of force put on the wheels
+    Revalidation?
 
-2 - Getting around
+  </div>
 
-Can we help people to get around more easily?
-
-We envisioned "Google maps" for wheelchair users, suggesting routes considering their limitations and best journies. We thought this could be helpful in different environments such as hospitals, big buildings like the TU or other universities, or in general in the city
-
-
-3 - Increasing safety
-
-Can we make it safer to use a wheelchair on the go?
-
-Actively monitoring ground quality to signal the user to drive quality on unstable ground
-Accident detection
-Heart attack
-Alarm
-Panic button
-911
-Collision detection
-Driving backwards indicators
-
-4 - Sports
-
-How can we help wheelchair users to enjoy physical activity more?
-
-Distances covered 
-App with fitness data
-That actively motivates you to be more active
-Gloves to help keep your hands clean
-Measure the amount of force put on the wheels
-Revalidation?
-
-
-5 - Gamify it
-
-Might especially be fun for kids, or people who are in the wheelchairs for short-term revalidation
-In hospitals? → getting around or over obstacles, finding the best route
-Hide and seek. Inspiration: Pokemon Go
+  <div class="brainstorm_idea">
+    <h3> 5 - Gamify it</h3>
+    </br>
+    Might especially be fun for kids, or people who are in the wheelchairs for short-term revalidation
+    In hospitals? → getting around or over obstacles, finding the best route
+    Hide and seek. Inspiration: Pokemon Go
+  </div>
 </div>
 
 <div id="theidea">
