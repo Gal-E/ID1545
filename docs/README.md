@@ -36,12 +36,12 @@
 </div>
 
 <div id="#brainstorm">
-  <h3>Kick Off - Brief Brainstorm:</h3>
+  <h3 class="headline">Kick Off - Brief Brainstorm:</h3>
   <div>
   To start off by investigating the challenges and opportunities that could be gained by upgrading a wheelchair to a digitally connected one, we began by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. </br>
 
   We used this overview to gather potential applications and map our primary associations. This session helped us form several ideas for a connected wheelchair:
-  </div>
+  </div><br>
   
   <div class="brainstorm_idea">
   <h4>1 - Giving the users superpowers</h4>
@@ -49,7 +49,7 @@
   A bit of research taught us that while using a wheelchair, things are often out of reach or missplaced. Some things might be too high for a wheel chair user, for example, a mirror in the bathroom or the heater button.
   <br>
   Thinking of smart houses, we envisioned a house where objects move to adjust themselves to a wheelchair user. The door can open automaticly, the mirror could change it's angel to the right position and the heating could turn on.
-  </div>
+  </div><br>
   
   <div class="brainstorm_idea">
    <h4>2 - Getting around</h4>
@@ -58,7 +58,7 @@
     <br>
     We envisioned "Google maps" for wheelchair users, suggesting routes considering their limitations and best journies. We   thought this could be helpful in different environments such as hospitals, big buildings like the TU or other universities, or in general in the city
 
-  </div>
+  </div><br>
 
   <div class="brainstorm_idea">
     <h4>3 - Increasing safety</h4>
@@ -73,7 +73,7 @@
     911
     Collision detection
     Driving backwards indicators
-  </div>
+  </div><br>
 
   <div class="brainstorm_idea">
     <h4> 4 - Sports</h4>
@@ -87,7 +87,7 @@
     Measure the amount of force put on the wheels
     Revalidation?
 
-  </div>
+  </div><br>
 
   <div class="brainstorm_idea">
     <h4> 5 - Gamify it</h4>
@@ -96,9 +96,12 @@
     In hospitals? → getting around or over obstacles, finding the best route
     Hide and seek. Inspiration: Pokemon Go
   </div>
-</div>
+</div><br>
 
 <div id="theidea">
+  <h3 class="headline">The chosen concept</div>
+  explaination about idea
+  <br>
   <h3>Target Users:</h3>
 
 - kids age 8-10
