@@ -45,26 +45,26 @@
   
   <div class="brainstorm_idea">
   <h3>1 - Giving the users superpowers</h3>
-  </br>
+  <br>
   A bit of research taught us that while using a wheelchair, things are often out of reach or missplaced. Some things might be too high for a wheel chair user, for example, a mirror in the bathroom or the heater button.
-  </br>
+  <br>
   Thinking of smart houses, we envisioned a house where objects move to adjust themselves to a wheelchair user. The door can open automaticly, the mirror could change it's angel to the right position and the heating could turn on.
   </div>
   
   <div class="brainstorm_idea">
    <h3>2 - Getting around</h3>
-    </br>
+    <br>
     Can we help people to get around more easily?
-    </br>
+    <br>
     We envisioned "Google maps" for wheelchair users, suggesting routes considering their limitations and best journies. We   thought this could be helpful in different environments such as hospitals, big buildings like the TU or other universities, or in general in the city
 
   </div>
 
   <div class="brainstorm_idea">
     <h3>3 - Increasing safety</h3>
-    </br>
+    <br>
     Can we make it safer to use a wheelchair on the go?
-    </br>
+    <br>
     Actively monitoring ground quality to signal the user to drive quality on unstable ground
     Accident detection
     Heart attack
@@ -77,9 +77,9 @@
 
   <div class="brainstorm_idea">
     <h3> 4 - Sports</h3>
-    </br>
+    <br>
     How can we help wheelchair users to enjoy physical activity more?
-    </br>
+    <br>
     Distances covered 
     App with fitness data
     That actively motivates you to be more active
@@ -91,7 +91,7 @@
 
   <div class="brainstorm_idea">
     <h3> 5 - Gamify it</h3>
-    </br>
+    <br>
     Might especially be fun for kids, or people who are in the wheelchairs for short-term revalidation
     In hospitals? → getting around or over obstacles, finding the best route
     Hide and seek. Inspiration: Pokemon Go
