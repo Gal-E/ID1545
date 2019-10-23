@@ -7,8 +7,31 @@
   }
 #project_tagline, #project_title {
   text-shadow: none;
+  font-family: monospace;
+  }
+#main_content_wrap {
+  border: none;
   }
 </style>
+
+#### Kick Off - Brief Brainstorm:
+To start off by investigating the challenges and opportunities that could be gained by upgrading a wheelchair to a digitally connected one, we began by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. 
+
+We used this overview to gather potential applications and map our primary associations. This session helped us form several ideas for a connected wheelchair:
+
+1 - Giving the users superpowers
+A bit of research taught us that while using a wheelchair, things are often out of reach or missplaced. Some things might be too high for a wheel chair user, for example, a mirror in the bathroom or the heater button.
+
+Thinking of smart houses, we envisioned a house where objects move to adjust themselves to a wheelchair user. The door can open automaticly, the mirror could change it's angel to the right position and the heating could turn on.
+
+2 - 
+
+3 - 
+
+4 - 
+
+5 - 
+
 
 #### Target Users:
 
