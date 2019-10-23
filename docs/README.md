@@ -30,6 +30,10 @@
     margin-bottom: 25px;
     font-size: 26px;
   }
+  h4 {
+    font-size: 20px;
+    font-family: monospace;
+  }
 </style>
 
 <div id="second-header">
