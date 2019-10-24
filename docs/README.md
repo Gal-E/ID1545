@@ -80,6 +80,9 @@ html {
   .description {
     text-align: center;
   }
+  #theidea{
+      display: initial;
+  }
 </style>
 
 <div id="second-header">
