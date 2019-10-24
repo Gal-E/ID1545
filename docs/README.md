@@ -51,7 +51,7 @@ html {
     width: 40%;
     float: left;
     margin: 20px;
-    height: 500px;
+    height: 550px;
     box-shadow: 2px 2px 5px grey;
     padding: 16px;
     border-radius: 10px;
