@@ -73,6 +73,9 @@ html {
   b{
     font-weight: 700;
   }
+  .description {
+    text-align: center;
+  }
 </style>
 
 <div id="second-header">
@@ -84,11 +87,9 @@ html {
 
 <div id="#brainstorm">
   <h3 class="headline">Kick Off - Brief Brainstorm:</h3>
-  <div>
-  To start off by investigating the challenges and opportunities that could be gained by upgrading a wheelchair to a digitally connected one, we began by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. <br><br>
-
-  We used this overview to gather potential applications and map our primary associations. This session helped us form several ideas for a connected wheelchair:
-  </div><br>
+  <div class="description">
+  To start off by investigating the challenges and opportunities that could be gained by upgrading a wheelchair to a digitally connected one, we began by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. We used this overview to gather potential applications and map our primary associations. This session helped us form several ideas for a connected wheelchair:
+  </div><br><br>
   
   <div class="brainstorm_idea">
   <h4>Being Superheros</h4>
