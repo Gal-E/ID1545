@@ -67,7 +67,7 @@ html {
     height: 300px;
     margin-bottom: 60px;
   }
-  img {
+  div img {
     display: block;
     margin-left: auto;
     margin-right: auto;
