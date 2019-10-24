@@ -27,6 +27,7 @@
     font-family: monospace;
     font-size: 18px;
     margin: 0 5%;
+    transition: 2s;
  }
  #second-header a:hover {
     text-decoration: none;
