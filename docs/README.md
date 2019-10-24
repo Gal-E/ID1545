@@ -29,7 +29,7 @@ html {
     color: #34A853;
     font-family: monospace;
     font-size: 18px;
-    margin: 0 5%;
+    margin: 0 4%;
  }
  #second-header a:hover {
     text-decoration: none;
