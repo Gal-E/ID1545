@@ -85,7 +85,7 @@ html {
   </div><br>
   
   <div class="brainstorm_idea">
-  <h4>1 - Giving the users superpowers</h4>
+  <h4>1 - Creating superheros</h4>
   <br>
   A bit of research taught us that while using a wheelchair, things are often out of reach or missplaced. Some things might be too high for a wheel chair user, for example, a mirror in the bathroom or the heater button.
   <br>
