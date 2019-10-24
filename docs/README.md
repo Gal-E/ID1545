@@ -126,7 +126,8 @@ html {
     In hospitals? → getting around or over obstacles, finding the best route
     Hide and seek. Inspiration: Pokemon Go
   </div>
-</div><br>
+</div>
+</div>
 
 <div id="theidea">
   <h3 class="headline">The chosen concept</h3>
@@ -138,7 +139,7 @@ html {
 - temporary users in hospital
 - first timers
 
-<h4>Goals:</h4>
+  <h4>Goals:</h4>
 
 - Gamify simple tasks that involve wheelchair skills
 - Encourage kids in wheelchairs to be active and play outside
@@ -161,10 +162,11 @@ The task can become more difficult over time by doing the same thing while going
 - The data collected can teach us about the behaviour of kids when they use a wheelchair for the first time
 - Maybe we can learn about what skills are more challenging for kids to learn when using a wheelchair for the first time
 - Possible stakeholders who can benefit from this information: wheelchairs engineers and designers that could improve functionality based on that, doctors and families of kids with wheelchair that can help kids get easily adjusted to the chair etc
-</div>
+
 
 <h4>Architecture</h4>
 <img src="images/Architecture.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
+</div>
 
 <div id="process">
   <h3 class="headline">The process</h3>
