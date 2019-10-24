@@ -3,7 +3,7 @@
   background: white;
   }
 #header_wrap {
-  background-image: url("images/test.png");
+  background-color: #34A853;
   height: 500px;
   }
 #project_tagline, #project_title {
