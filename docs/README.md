@@ -216,7 +216,7 @@ A possible example for a task: “Create a full circle to the right side”. The
 #### First milestone:
 - Create a system that detects when a user has driven a circle.
 
-<h4>Progress made:</h4>
+<h4 class="secondary">Progress made:</h4>
 Monday 23rd September:
 - Finished tutorial 
 
