@@ -24,7 +24,7 @@
     color: #34A853;
     font-family: monospace;
     font-size: 18px;
-    margin: 0 2%;
+    margin: 0 5%;
   }
 .headline {
     font-family: monospace;
