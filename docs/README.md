@@ -158,43 +158,53 @@ html {
 </div>
 
 <div id="theidea">
-  <h3 class="headline">The chosen concept</h3>
-  explaination about idea
+  <h3 class="headline">The Final Concept: Basic wheelchair skills gamification</h3>
+  For our final conecpt, we chose to use a connected wheelchair to teach basic wheelchair skills, and gamify the wheelchair experience.
   <br>
   <h4 class="secondary">Target Users:</h4>
-
-- kids age 8-10
-- temporary users in hospital
-- first timers
+- Main target: Kids in the age of 6-12
+- Secondary users: Temporary users in hospital or first timers
+- Anyone interested in learning basic wheelchair skills
 
   <h4 class="secondary">Goals:</h4>
-
+The goal of the product is to teach kids the basic wheelchair activities in a fun and playfull manner. A secondary goal is to use the data collected to learn about the way kids adapt to wheelchairs, the speed in which they learn and the level of difficulty of the different activities
+<br>
 - Gamify simple tasks that involve wheelchair skills
 - Encourage kids in wheelchairs to be active and play outside
 - Create a community
 - Teach basic wheelchair skills
+- Learn about wheelchair first timers
+<h4 class="secondary">Architecture</h4>
 
-<img src="images/img1.png" class="img1"/>
+<div>
+The user will receive a task from an app, which he will execute with the wheelchair. The app would indicate how well the task was performed and will enable the user to try again or try a different task <br><br>
+A possible example for a task: “Create a full circle to the right side”. The task would have a timer counting the time it took the user to complete the circle. A visual on the screen will indicate to the user the progress in percents. After the task is complete the user will receive starts to indicate how well he performed the task based on time. 1 star would indicate basic skills and 3 starts would indicate professional skills.The task can become more difficult over time by doing the same thing while going uphill or on a different surface such as grass or sand</div>
+
+<div style="margin: 0 auto;text-align: center;"><img src="images/img2.png" style="width: 60%;border: none;box-shadow: none;"/></div>
+
+
+
+<img src="images/Architecture.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
+</div>
 
 - System: App > User > Physical world > Wheelchair > App
 - Optional Sensors: Movement, Acceleration, Touch, Measure the angle 
 - Optional Actuators: Speakers, LEDs, vibration
+<img src="images/img1.png" class="img1"/>
 
-<div style="color: cadetblue;font-style: italic;">Eg task: “Drive in a circle and use your hands 8 times or less”
-The task can become more difficult over time by doing the same thing while going uphill or on a different surface such as grass or sand</div>
 
-<div style="margin: 0 auto;text-align: center;"><img src="images/img2.png" style="width: 60%;border: none;box-shadow: none;"/></div>
+
+
 
 <h4 class="secondary">Data:</h4>
-- Data collected: Speed on different surfaces, angles
-- The data collected can teach us about the behaviour of kids when they use a wheelchair for the first time
+<b>Data collected:</b> Speed on different surfaces, angles
+<b>The data collected can teach us about: </b> 
+- the behaviour of kids when they use a wheelchair for the first time
 - Maybe we can learn about what skills are more challenging for kids to learn when using a wheelchair for the first time
 - Possible stakeholders who can benefit from this information: wheelchairs engineers and designers that could improve functionality based on that, doctors and families of kids with wheelchair that can help kids get easily adjusted to the chair etc
 
 
-<h4 class="secondary">Architecture</h4>
-<img src="images/Architecture.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
-</div>
+
 
 <div id="process">
   <h3 class="headline">The process</h3>
