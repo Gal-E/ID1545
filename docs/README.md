@@ -88,8 +88,13 @@ html {
   <h4>1 - Creating superheros</h4>
   <br>
   A bit of research taught us that while using a wheelchair, things are often out of reach or missplaced. Some things might be too high for a wheel chair user, for example, a mirror in the bathroom or the heater button.
-  <br>
+  <br><br>
   Thinking of smart houses, we envisioned a house where objects move to adjust themselves to a wheelchair user. The door can open automaticly, the mirror could change it's angel to the right position and the heating could turn on.
+  <br><br>
+System: Chair > Object in Physical world (an App interface to control preferences)
+Optional Sensors: Movement, Voice control, GPS, Touch, Gyroscope 
+Optional Actuators: Speakers, LEDs, vibration
+
   </div>
   
   <div class="brainstorm_idea">
@@ -98,6 +103,10 @@ html {
     Can we help people to get around more easily?
     <br>
     We envisioned "Google maps" for wheelchair users, suggesting routes considering their limitations and best journies. We   thought this could be helpful in different environments such as hospitals, big buildings like the TU or other universities, or in general in the city
+<br><br>
+System: App > Chair > Physical world > App
+Optional Sensors: Touch, Acceleration, GPS, Compass, Distance, Movement
+Optional Actuators: Speakers, LEDs, vibration, screen
 
   </div>
 
