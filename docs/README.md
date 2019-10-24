@@ -171,11 +171,14 @@ html {
   <h4 class="secondary">Goals:</h4>
 The goal of the product is to teach kids the basic wheelchair activities in a fun and playfull manner. A secondary goal is to use the data collected to learn about the way kids adapt to wheelchairs, the speed in which they learn and the level of difficulty of the different activities
 <br>
-- Gamify simple tasks that involve wheelchair skills
-- Encourage kids in wheelchairs to be active and play outside
-- Create a community
-- Teach basic wheelchair skills
-- Learn about wheelchair first timers
+<ul>
+  <li>Gamify simple tasks that involve wheelchair skills</li>
+<li>Encourage kids in wheelchairs to be active and play outside</li>
+<li>Create a community</li>
+<li>Teach basic wheelchair skills</li>
+<li>Learn about wheelchair first timers</li>
+</ul>
+
 <h4 class="secondary">Architecture</h4>
 
 <div>
