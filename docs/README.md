@@ -3,7 +3,8 @@
   background: white;
   }
 #header_wrap {
-  background: #34A853;
+  background-coloe: #34A853;
+  background-image: url("test.png");
   }
 #project_tagline, #project_title {
   text-shadow: none;
