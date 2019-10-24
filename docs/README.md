@@ -4,7 +4,6 @@
   }
 #header_wrap {
   background-color: #34A853;
-  height: 500px;
   }
 #project_tagline, #project_title {
   text-shadow: none;
