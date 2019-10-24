@@ -157,8 +157,8 @@ html {
   </div>
 </div>
 
-<div id="theidea">
-  <h3 class="headline">The Final Concept: Basic wheelchair skills gamification</h3>
+<div id="#theidea">
+  <h3 class="headline">The Final Concept: <br>Basic wheelchair skills gamification</h3>
   For our final conecpt, we chose to use a connected wheelchair to teach basic wheelchair skills, and gamify the wheelchair experience.
   <br>
   <h4 class="secondary">Target Users:</h4>
