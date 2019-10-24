@@ -60,11 +60,10 @@ html {
     width: 88%;
     height: 300px;
   }
-  .img1 {
+  img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
     border: none;
     box-shadow: none;
    }
