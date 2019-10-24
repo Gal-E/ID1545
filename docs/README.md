@@ -162,9 +162,11 @@ html {
   For our final conecpt, we chose to use a connected wheelchair to teach basic wheelchair skills, and gamify the wheelchair experience.
   <br>
   <h4 class="secondary">Target Users:</h4>
-- Main target: Kids in the age of 6-12
-- Secondary users: Temporary users in hospital or first timers
-- Anyone interested in learning basic wheelchair skills
+ <ul>
+   <li>Main target: Kids in the age of 6-12</li>
+  <li>Secondary users: Temporary users in hospital or first timers</li>
+  <li>Anyone interested in learning basic wheelchair skills</li>
+  </ul>
 
   <h4 class="secondary">Goals:</h4>
 The goal of the product is to teach kids the basic wheelchair activities in a fun and playfull manner. A secondary goal is to use the data collected to learn about the way kids adapt to wheelchairs, the speed in which they learn and the level of difficulty of the different activities
@@ -186,10 +188,11 @@ A possible example for a task: “Create a full circle to the right side”. The
 
 <img src="images/Architecture.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
 </div>
-
-- System: App > User > Physical world > Wheelchair > App
-- Optional Sensors: Movement, Acceleration, Touch, Measure the angle 
-- Optional Actuators: Speakers, LEDs, vibration
+<ul>
+<li>System: App > User > Physical world > Wheelchair > App</li>
+<li>Optional Sensors: Movement, Acceleration, Touch, Measure the angle</li> 
+<li>Optional Actuators: Speakers, LEDs, vibration</li>
+ </ul>
 <img src="images/img1.png" class="img1"/>
 
 
