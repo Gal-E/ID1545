@@ -6,7 +6,7 @@
   background: white;
   }
 #header_wrap {
-  background: #34A853;
+  background-image: url("images/background.png");
   }
 #project_tagline, #project_title {
   text-shadow: none;
