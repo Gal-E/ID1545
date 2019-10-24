@@ -1,4 +1,7 @@
 <style>
+body {
+  scroll-behavior: smooth;
+ }
 #main_content{
   max-width: 900px;
   }
