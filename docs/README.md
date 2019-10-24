@@ -56,6 +56,10 @@ html {
     padding: 16px;
     border-radius: 10px;
   }
+  #brainstorm:last-child {
+    width: 88%;
+    height: 300px;
+  }
 </style>
 
 <div id="second-header">
