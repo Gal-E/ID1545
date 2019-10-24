@@ -3,7 +3,7 @@
   background: white;
   }
 #header_wrap {
-  background-color: #34A853;
+  background: #34A853;
   }
 #project_tagline, #project_title {
   text-shadow: none;
