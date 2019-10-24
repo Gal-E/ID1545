@@ -81,7 +81,7 @@ html {
     text-align: center;
   }
   #theidea{
-      display: initial;
+      display: inline-block;
   }
 </style>
 
