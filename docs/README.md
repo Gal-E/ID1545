@@ -8,7 +8,7 @@
 #header_wrap {
   background-image: url("images/background.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   }
 #project_tagline, #project_title {
   text-shadow: none;
@@ -27,7 +27,12 @@
     font-family: monospace;
     font-size: 18px;
     margin: 0 5%;
-  }
+ }
+ #second-header a:hover {
+    text-decoration: none;
+    color: #4285F4;
+    font-weight: 700;
+ }
 .headline {
     font-family: monospace;
     color: #4285F4;
