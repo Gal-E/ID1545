@@ -127,7 +127,6 @@ html {
     Hide and seek. Inspiration: Pokemon Go
   </div>
 </div>
-</div>
 
 <div id="theidea">
   <h3 class="headline">The chosen concept</h3>
