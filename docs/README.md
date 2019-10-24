@@ -1,4 +1,7 @@
 <style>
+#main_content{
+  max-width: 900px;
+  }
 #main_content_wrap {
   background: white;
   }
@@ -33,6 +36,15 @@
   h4 {
     font-size: 20px;
     font-family: monospace;
+  }
+  .brainstorm_idea {
+    width: 40%;
+    float: left;
+    margin: 20px;
+    height: 500px;
+    box-shadow: 2px 2px 5px grey;
+    padding: 16px;
+    border-radius: 10px;
   }
 </style>
 
