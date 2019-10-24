@@ -49,6 +49,10 @@ html {
     text-align: center;
     color: #FBBC05;
   }
+  h4.secondary{
+    text-align: left;
+    color: #34A853;
+  }
   .brainstorm_idea {
     width: 40%;
     float: left;
@@ -157,13 +161,13 @@ html {
   <h3 class="headline">The chosen concept</h3>
   explaination about idea
   <br>
-  <h4>Target Users:</h4>
+  <h4 class="secondary">Target Users:</h4>
 
 - kids age 8-10
 - temporary users in hospital
 - first timers
 
-  <h4>Goals:</h4>
+  <h4 class="secondary">Goals:</h4>
 
 - Gamify simple tasks that involve wheelchair skills
 - Encourage kids in wheelchairs to be active and play outside
@@ -181,14 +185,14 @@ The task can become more difficult over time by doing the same thing while going
 
 <div style="margin: 0 auto;text-align: center;"><img src="images/img2.png" style="width: 60%;border: none;box-shadow: none;"/></div>
 
-<h4>Data:</h4>
+<h4 class="secondary">Data:</h4>
 - Data collected: Speed on different surfaces, angles
 - The data collected can teach us about the behaviour of kids when they use a wheelchair for the first time
 - Maybe we can learn about what skills are more challenging for kids to learn when using a wheelchair for the first time
 - Possible stakeholders who can benefit from this information: wheelchairs engineers and designers that could improve functionality based on that, doctors and families of kids with wheelchair that can help kids get easily adjusted to the chair etc
 
 
-<h4>Architecture</h4>
+<h4 class="secondary">Architecture</h4>
 <img src="images/Architecture.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
 </div>
 
