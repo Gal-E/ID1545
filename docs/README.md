@@ -179,22 +179,24 @@ The goal of the product is to teach kids the basic wheelchair activities in a fu
 <h4 class="secondary">Architecture</h4>
 
 <div>
-The user will receive a task from an app, which he will execute with the wheelchair. The app would indicate how well the task was performed and will enable the user to try again or try a different task <br><br>
+The user will receive a task from an app, which he will execute with the wheelchair. The app would indicate how well the task was performed and will enable the user to try again or try a different task 
+
+<img src="images/img1.png" class="img1"/>
+
 A possible example for a task: “Create a full circle to the right side”. The task would have a timer counting the time it took the user to complete the circle. A visual on the screen will indicate to the user the progress in percents. After the task is complete the user will receive starts to indicate how well he performed the task based on time. 1 star would indicate basic skills and 3 starts would indicate professional skills.The task can become more difficult over time by doing the same thing while going uphill or on a different surface such as grass or sand</div>
 
 <div style="margin: 0 auto;text-align: center;"><img src="images/img2.png" style="width: 60%;border: none;box-shadow: none;"/></div>
 
 
 
-<img src="images/Architecture.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
 </div>
 <ul>
 <li>System: App > User > Physical world > Wheelchair > App</li>
 <li>Optional Sensors: Movement, Acceleration, Touch, Measure the angle</li> 
 <li>Optional Actuators: Speakers, LEDs, vibration</li>
  </ul>
-<img src="images/img1.png" class="img1"/>
 
+<img src="images/Architecture.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
 
 
 
