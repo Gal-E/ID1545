@@ -92,7 +92,7 @@ html {
   <a href="#prototype">The Prototype</a>
 </div>
 
-<div id="#brainstorm">
+<div id="brainstorm">
   <h3 class="headline">Kick Off - Brief Brainstorm:</h3>
   <div class="description">
   To start off by investigating the challenges and opportunities that could be gained by upgrading a wheelchair to a digitally connected one, we began by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. We used this overview to gather potential applications and map our primary associations. This session helped us form several ideas for a connected wheelchair:
@@ -160,7 +160,7 @@ html {
   </div>
 </div>
 
-<div id="#theidea">
+<div id="theidea">
   <h3 class="headline">The Final Concept: <br>Basic wheelchair skills gamification</h3>
   For our final conecpt, we chose to use a connected wheelchair to teach basic wheelchair skills, and gamify the wheelchair experience.
   <br>
