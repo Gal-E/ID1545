@@ -4,7 +4,7 @@
   }
 #header_wrap {
   background-coloe: #34A853;
-  background-image: url("test.png");
+  background-image: url("images/test.png");
   }
 #project_tagline, #project_title {
   text-shadow: none;
