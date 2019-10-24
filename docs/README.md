@@ -1,5 +1,5 @@
 <style>
-body {
+html {
   scroll-behavior: smooth;
  }
 #main_content{
