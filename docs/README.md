@@ -60,6 +60,14 @@ html {
     width: 88%;
     height: 300px;
   }
+  .img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: none;
+    box-shadow: none;
+   }
 </style>
 
 <div id="second-header">
@@ -149,7 +157,7 @@ html {
 - Create a community
 - Teach basic wheelchair skills
 
-<img src="images/img1.png" style="border: none;box-shadow: none;"/>
+<img src="images/img1.png" class="img1"/>
 
 - System: App > User > Physical world > Wheelchair > App
 - Optional Sensors: Movement, Acceleration, Touch, Measure the angle 
