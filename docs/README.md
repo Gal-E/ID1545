@@ -46,6 +46,8 @@ html {
   h4 {
     font-size: 20px;
     font-family: monospace;
+    text-align: center;
+    color: #FBBC05;
   }
   .brainstorm_idea {
     width: 40%;
@@ -59,6 +61,7 @@ html {
   .brainstorm_idea:last-child {
     width: 88%;
     height: 300px;
+    margin-bottom: 60px;
   }
   img {
     display: block;
@@ -82,13 +85,13 @@ html {
 <div id="#brainstorm">
   <h3 class="headline">Kick Off - Brief Brainstorm:</h3>
   <div>
-  To start off by investigating the challenges and opportunities that could be gained by upgrading a wheelchair to a digitally connected one, we began by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. <br>
+  To start off by investigating the challenges and opportunities that could be gained by upgrading a wheelchair to a digitally connected one, we began by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. <br><br>
 
   We used this overview to gather potential applications and map our primary associations. This session helped us form several ideas for a connected wheelchair:
   </div><br>
   
   <div class="brainstorm_idea">
-  <h4>1 - Creating superheros</h4>
+  <h4>Being Superheros</h4>
   <br>
   A bit of research taught us that while using a wheelchair, things are often out of reach or missplaced. Some things might be too high for a wheel chair user, for example, a mirror in the bathroom or the heater button.
   <br><br>
@@ -101,7 +104,7 @@ html {
   </div>
   
   <div class="brainstorm_idea">
-   <h4>2 - Getting around</h4>
+   <h4>Getting Around</h4>
     <br>
     Can we help people to get around more easily?
     <br>
@@ -114,7 +117,7 @@ html {
   </div>
 
   <div class="brainstorm_idea">
-    <h4>3 - Increasing safety</h4>
+    <h4>Increasing Safety</h4>
     <br>
     Can we make it safer to use a wheelchair on the go?
     <br>
@@ -127,7 +130,7 @@ html {
   </div>
 
   <div class="brainstorm_idea">
-    <h4> 4 - Sports</h4>
+    <h4>Be Active</h4>
     <br>
     How can we help wheelchair users to enjoy physical activity more?
     <br>
@@ -139,7 +142,7 @@ html {
   </div>
 
   <div class="brainstorm_idea">
-    <h4> 5 - Gamify it</h4>
+    <h4>Gamify It</h4>
     <br>
     Focusing mostly on kids, or people who are in the wheelchairs for short-term revalidation in hospitals, we were inspired by pokemon go. We envisiones a connected wheelchair that enables overcoming obstacles, finding best routes and using the chair to play games with other wheelchair users
     <br><br>
