@@ -30,7 +30,7 @@
  }
  #second-header a:hover {
     text-decoration: none;
-    color: #4285F4;
+    color: #FBBC05;
     font-weight: 700;
  }
 .headline {
