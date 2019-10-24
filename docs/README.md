@@ -91,9 +91,9 @@ html {
   <br><br>
   Thinking of smart houses, we envisioned a house where objects move to adjust themselves to a wheelchair user. The door can open automaticly, the mirror could change it's angel to the right position and the heating could turn on.
   <br><br>
-System: Chair > Object in Physical world (an App interface to control preferences)
-Optional Sensors: Movement, Voice control, GPS, Touch, Gyroscope 
-Optional Actuators: Speakers, LEDs, vibration
+<b>System:</b> Chair > Object in Physical world (an App interface to control preferences)<br>
+<b>Optional Sensors:</b> Movement, Voice control, GPS, Touch, Gyroscope <br>
+<b>Optional Actuators:</b> Speakers, LEDs, vibration
 
   </div>
   
@@ -104,9 +104,9 @@ Optional Actuators: Speakers, LEDs, vibration
     <br>
     We envisioned "Google maps" for wheelchair users, suggesting routes considering their limitations and best journies. We   thought this could be helpful in different environments such as hospitals, big buildings like the TU or other universities, or in general in the city
 <br><br>
-System: App > Chair > Physical world > App
-Optional Sensors: Touch, Acceleration, GPS, Compass, Distance, Movement
-Optional Actuators: Speakers, LEDs, vibration, screen
+<b>System:</b> App > Chair > Physical world > App<br>
+<b>Optional Sensors:</b> Touch, Acceleration, GPS, Compass, Distance, Movement<br>
+  <b>Optional Actuators:</b> Speakers, LEDs, vibration, screen
 
   </div>
 
@@ -115,14 +115,12 @@ Optional Actuators: Speakers, LEDs, vibration, screen
     <br>
     Can we make it safer to use a wheelchair on the go?
     <br>
-    Actively monitoring ground quality to signal the user to drive quality on unstable ground
-    Accident detection
-    Heart attack
-    Alarm
-    Panic button
-    911
-    Collision detection
-    Driving backwards indicators
+    Insired by different insurance and driving apps, we envisioned an app that actively monitors ground quality to signal the user to drive quality on unstable ground. In addition to that, the app could report selected contacts about possible dangours or accidents to increase safety and independence for the wheelchair user. By applying accident detection, panic button, collision detection and more, we hope to make the wheelchair experience as safe as possible
+    <br><br>
+  <b>System:</b> Physical world > Chair > App<br>
+  <b>Optional Sensors:</b> Touch, Gyroscope, Acceleration, GPS, Distance, temperature, Movement, voice<br>
+  <b>Optional Actuators:</b> Speakers, LEDs, vibration, screen
+    
   </div>
 
   <div class="brainstorm_idea">
@@ -130,13 +128,11 @@ Optional Actuators: Speakers, LEDs, vibration, screen
     <br>
     How can we help wheelchair users to enjoy physical activity more?
     <br>
-    Distances covered 
-    App with fitness data
-    That actively motivates you to be more active
-    Gloves to help keep your hands clean
-    Measure the amount of force put on the wheels
-    Revalidation?
-
+    Inspired bu various fitness apps, we envisioned a product that would enable wheelchair users to become more active and spend more time outside. The app would connect to the chair and collect different fitness data such as amount of fource put on the heels, kilometers driven in different angels etc 
+  <br><br>
+  <b>System:</b> Physical world > Chair > App<br>
+  <b>Optional Sensors:</b> Gyroscope, Acceleration, GPS, Distance<br>
+  <b>Optional Actuators:</b> Speakers, LEDs, vibration, screen
   </div>
 
   <div class="brainstorm_idea">
