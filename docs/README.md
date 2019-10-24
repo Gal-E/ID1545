@@ -7,6 +7,8 @@
   }
 #header_wrap {
   background-image: url("images/background.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
   }
 #project_tagline, #project_title {
   text-shadow: none;
