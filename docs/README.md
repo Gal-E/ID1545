@@ -3,8 +3,8 @@
   background: white;
   }
 #header_wrap {
-  background-coloe: #FFFFFF;
   background-image: url("images/test.png");
+  height: 500px;
   }
 #project_tagline, #project_title {
   text-shadow: none;
