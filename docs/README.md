@@ -67,6 +67,9 @@ html {
     border: none;
     box-shadow: none;
    }
+  b{
+    font-weight: 700;
+  }
 </style>
 
 <div id="second-header">
@@ -138,9 +141,11 @@ html {
   <div class="brainstorm_idea">
     <h4> 5 - Gamify it</h4>
     <br>
-    Might especially be fun for kids, or people who are in the wheelchairs for short-term revalidation
-    In hospitals? → getting around or over obstacles, finding the best route
-    Hide and seek. Inspiration: Pokemon Go
+    Focusing mostly on kids, or people who are in the wheelchairs for short-term revalidation in hospitals, we were inspired by pokemon go. We envisiones a connected wheelchair that enables overcoming obstacles, finding best routes and using the chair to play games with other wheelchair users
+    <br><br>
+  <b>System:</b> App > Chair > Physical world  > App<br>
+  <b>Optional Sensors:</b> Touch, Voice control, GPS, Compass, Distance, Movement<br>
+  <b>Optional Actuators:</b> Speakers, LEDs, vibration, screen
   </div>
 </div>
 
