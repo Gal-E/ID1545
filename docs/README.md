@@ -56,7 +56,7 @@ html {
     padding: 16px;
     border-radius: 10px;
   }
-  #brainstorm:last-child {
+  .brainstorm_idea:last-child {
     width: 88%;
     height: 300px;
   }
