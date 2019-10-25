@@ -219,6 +219,7 @@ A possible example for a task: “Create a full circle to the right side”. The
 
 
 <div id="How to build it">
+  <h3 class="headline">The process</h3>
   <ol>
     <li>Create a new Github project</li>
     <li>Set-up the Raspberry Pi</li>
