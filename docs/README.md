@@ -218,8 +218,6 @@ A possible example for a task: “Create a full circle to the right side”. The
 - Possible stakeholders who can benefit from this information: wheelchairs engineers and designers that could improve functionality based on that, doctors and families of kids with wheelchair that can help kids get easily adjusted to the chair etc
 
 
-
-
 <div id="How to build it">
   <h3 class="headline">The process</h3>
 1. Create a new Github project
