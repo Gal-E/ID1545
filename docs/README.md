@@ -97,7 +97,7 @@ html {
   <div class="description">
   To start off by investigating the challenges and opportunities that could be gained by upgrading a wheelchair to a digitally connected one, we began by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. We used this overview to gather potential applications and map our primary associations. This session helped us form several ideas for a connected wheelchair:
   </div><br><br>
-  
+
   <div class="brainstorm_idea">
   <h4>Being Superheros</h4>
   <br>
@@ -110,7 +110,7 @@ html {
 <b>Optional Actuators:</b> Speakers, LEDs, vibration
 
   </div>
-  
+
   <div class="brainstorm_idea">
    <h4>Getting Around</h4>
     <br>
@@ -134,7 +134,7 @@ html {
   <b>System:</b> Physical world > Chair > App<br>
   <b>Optional Sensors:</b> Touch, Gyroscope, Acceleration, GPS, Distance, temperature, Movement, voice<br>
   <b>Optional Actuators:</b> Speakers, LEDs, vibration, screen
-    
+
   </div>
 
   <div class="brainstorm_idea">
@@ -142,7 +142,7 @@ html {
     <br>
     How can we help wheelchair users to enjoy physical activity more?
     <br>
-    Inspired bu various fitness apps, we envisioned a product that would enable wheelchair users to become more active and spend more time outside. The app would connect to the chair and collect different fitness data such as amount of fource put on the heels, kilometers driven in different angels etc 
+    Inspired bu various fitness apps, we envisioned a product that would enable wheelchair users to become more active and spend more time outside. The app would connect to the chair and collect different fitness data such as amount of fource put on the heels, kilometers driven in different angels etc
   <br><br>
   <b>System:</b> Physical world > Chair > App<br>
   <b>Optional Sensors:</b> Gyroscope, Acceleration, GPS, Distance<br>
@@ -185,7 +185,7 @@ The goal of the product is to teach kids the basic wheelchair activities in a fu
 <h4 class="secondary">Architecture</h4>
 
 <div>
-The user will receive a task from an app, which he will execute with the wheelchair. The app would indicate how well the task was performed and will enable the user to try again or try a different task 
+The user will receive a task from an app, which he will execute with the wheelchair. The app would indicate how well the task was performed and will enable the user to try again or try a different task
 
 <div>
   <img src="images/img1.png" class="img1"/>
@@ -202,7 +202,7 @@ A possible example for a task: “Create a full circle to the right side”. The
 </div>
 <ul>
 <li>System: App > User > Physical world > Wheelchair > App</li>
-<li>Optional Sensors: Movement, Acceleration, Touch, Measure the angle</li> 
+<li>Optional Sensors: Movement, Acceleration, Touch, Measure the angle</li>
 <li>Optional Actuators: Speakers, LEDs, vibration</li>
  </ul>
 
@@ -212,7 +212,7 @@ A possible example for a task: “Create a full circle to the right side”. The
 
 <h4 class="secondary">Data:</h4>
 <b>Data collected:</b> Speed on different surfaces, angles
-<b>The data collected can teach us about: </b> 
+<b>The data collected can teach us about: </b>
 - the behaviour of kids when they use a wheelchair for the first time
 - Maybe we can learn about what skills are more challenging for kids to learn when using a wheelchair for the first time
 - Possible stakeholders who can benefit from this information: wheelchairs engineers and designers that could improve functionality based on that, doctors and families of kids with wheelchair that can help kids get easily adjusted to the chair etc
@@ -220,10 +220,17 @@ A possible example for a task: “Create a full circle to the right side”. The
 
 
 
-<div id="process">
+<div id="How to build it">
   <h3 class="headline">The process</h3>
-#### First milestone:
-- Create a system that detects when a user has driven a circle.
+1. Create a new Github project
+2. Set-up the Raspberry Pi
+3. Build the Adafruit breadboard
+4. Write Arduino code
+5. Install libraries
+6. Write a python file for subscribe_gatt_orientation.py
+7. Add socket code to launch a server
+8. Write html code, download javascript code for interface
+9. Run python script on Raspberry Pi
 
 <h4 class="secondary">Progress made:</h4>
 
