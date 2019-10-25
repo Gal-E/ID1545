@@ -131,7 +131,7 @@ void orientation() {
   
   // Command is sent when \n (\r) or println is called
   // AT+GATTCHAR=CharacteristicID,value
-//  ble.print( F("AT+GATTCHAR=") );
+  ble.print( F("AT+GATTCHAR=") );
   ble.print( orientationCharId );
   ble.print( F(",") );
   ble.print(String(angleX));
@@ -139,13 +139,21 @@ void orientation() {
   ble.print(String(angleY));
   ble.print( F(",") );
   ble.println(String(angleZ));
+
+  Serial.print( orientationCharId );
+  Serial.print( F(",") );
+  Serial.print(String(angleX));
+  Serial.print( F(",") );
+  Serial.print(String(angleY));
+  Serial.print( F(",") );
+  Serial.println(String(angleZ));
 }
 
 
 void loop(void) {
 
   orientation();
-
+  delay (100);
   // Check if command executed OK
   if ( !ble.waitForOK() ) {
     error(F("Failed to get response!"));
