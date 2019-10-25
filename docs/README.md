@@ -226,36 +226,7 @@ A possible example for a task: “Create a full circle to the right side”. The
 - Create a system that detects when a user has driven a circle.
 
 <h4 class="secondary">Progress made:</h4>
-Monday 23rd September:
-- Finished tutorial 
 
-Monday 30th September:
-- Made it possible to communicate data between the raspberry Pi and a connected arduino. The LED seems to be responding to the device, however it is doing so in a very arythmic fashion. Needs some more work then.
-
-Friday 4th October:
-- Almost got our circle detection code to work! :-)
-
-Monday 7th October:
-- Managed to get circle counting code to work in SGO file.
-
-Friday 11th October: 
-- Managed to write circle detection code in Processing! 
-- Created simulator to fully understand how it works. 
-- We translated code to python and we're testing it to make sure it detects circles to both sides
-
-<img src="images/Simulator.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
-
-Monday 14th October:
-- Bluetooth chip is finally working! 
-- We managed to debug the circle detection, and now aim to figure out how to display it on the server
-
-Friday 18th October:
-- We got the circle progress to show on the server running on the Pi, but it is a bit jumpy.
-
-Monday 20th October:
-- Turns out the jumpy data was just a poorly placed send to the server, so that was easily solved.
-
-Friday 
 </div>
 
 <div id="prototype"></div>
