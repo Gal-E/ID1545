@@ -20,6 +20,7 @@ function donut(){
 
   // Method for render/refresh graph
   object.render = function(){
+
     if(!svg){
       arc = d3.svg.arc()
       .outerRadius(radius)
