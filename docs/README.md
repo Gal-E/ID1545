@@ -220,15 +220,17 @@ A possible example for a task: “Create a full circle to the right side”. The
 
 <div id="How to build it">
   <h3 class="headline">The process</h3>
-1. Create a new Github project
-2. Set-up the Raspberry Pi
-3. Build the Adafruit breadboard
-4. Write Arduino code
-5. Install libraries
-6. Write a python file for subscribe_gatt_orientation.py
-7. Add socket code to launch a server
-8. Write html code, download javascript code for interface
-9. Run python script on Raspberry Pi
+  <ol>
+    <li>Create a new Github project</li>
+    <li>Set-up the Raspberry Pi</li>
+    <li>Build the Adafruit breadboard</li>
+    <li>Write Arduino code</li>
+    <li>Install libraries</li>
+    <li>Write a python file for subscribe_gatt_orientation.py</li>
+    <li>Add socket code to launch a server</li>
+    <li>Write html code, download javascript code for interface</li>
+    <li>Run python script on Raspberry Pi</li>
+
 
 <h4 class="secondary">Progress made:</h4>
 
