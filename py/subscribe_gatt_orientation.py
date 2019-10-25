@@ -88,6 +88,8 @@ def handle_orientation_data(handle, value_bytes):
     """
     values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
 
+    print(values)
+
     myCmd = 'clear'
     os.system(myCmd)
     #print(F"BNOvalues {values}")
@@ -280,11 +282,18 @@ def connect_bluetooth():
 
     print("connecting to Bluetooth device...")
     # Use the BLE adapter to connect to our device
-    wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
+
+    try:
+        wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
+    except:
+        connect_bluetooth()
 
     # Subscribe to the GATT service
-    wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
-            callback=handle_orientation_data)
+    try:
+        wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
+                callback=handle_orientation_data)
+    except:
+        connect_bluetooth()
 
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
