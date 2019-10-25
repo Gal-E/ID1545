@@ -6,18 +6,18 @@ body {
   font: 10px sans-serif;
 }
 
-#chart .arc path {
+#chart g .arc path {
   fill: #34A853 !important;
 
-  text{
-    color: #34A853 !important;
-  }
 }
 
-#chart .arc path:last-child {
+#chart g .arc:last-child path {
   fill: #FBBC05 !important;
 }
 
+text{
+  color: #34A853 !important;
+}
 </style>
 <body>
   <button id="refresh">Refresh Data</button>
