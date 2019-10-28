@@ -190,7 +190,7 @@ def calCircle(zAngle):
     try:
         socketio.emit('angle', '{"angle": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
     except:
-        print("No socket?")
+        #print("No socket?")
     return avgAbsoluteAngle
 
 
@@ -200,9 +200,9 @@ def discover_characteristic(device):
     """List characteristics of a device"""
     for uuid in device.discover_characteristics().keys():
         try:
-            print("Read UUID" + str(uuid) + "   " + str(device.char_read(uuid)))
+            #print("Read UUID" + str(uuid) + "   " + str(device.char_read(uuid)))
         except:
-            print("Something wrong with " + str(uuid))
+            #print("Something wrong with " + str(uuid))
 
 
 def read_characteristic(device, characteristic_id):
@@ -275,12 +275,12 @@ def create():
 
 @socketio.on('json')
 def handle_json(json):
-  print('received json: ' + str(json))
+  #print('received json: ' + str(json))
   emit('json', json, broadcast=True)
 
 @socketio.on('angle')
 def handle_orientation(json):
-  print(float(json['angle']))
+  #print(float(json['angle']))
 
 
 
