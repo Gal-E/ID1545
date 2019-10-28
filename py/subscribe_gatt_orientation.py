@@ -293,18 +293,14 @@ def connect_bluetooth():
     print("Starting Bluetooth...")
     # Start a BLE adapter
     bleAdapter = pygatt.GATTToolBackend()
-    bleAdapter.start()
 
     print("connecting to Bluetooth device...")
     # Use the BLE adapter to connect to our device
 
     try:
+        bleAdapter.start()
         wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
-    except:
-        connect_bluetooth()
-
-    # Subscribe to the GATT service
-    try:
+        
         wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
                 callback=handle_orientation_data)
     except:
