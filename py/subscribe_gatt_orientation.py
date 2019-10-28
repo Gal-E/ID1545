@@ -99,8 +99,9 @@ def handle_orientation_data(handle, value_bytes):
     print("Hello world?")
     cur_loc = values
     calCircle(cur_loc[0])
+
     find_or_create("angular_data",
-    PropertyType.ONE_DIMENSION).update_values(cur_loc[0])
+    PropertyType.ONE_DIMENSION).update_values(cur_loc[0],)
     prop = my_thing.properties["angular_data"]
     print(prop)
 
