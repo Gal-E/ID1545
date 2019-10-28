@@ -20,7 +20,7 @@
 			console.log('connected');
 			});
 
-			socket.on('orientation', function(dist_obj) {
+			socket.on('angle', function(dist_obj) {
 			  const json = JSON.parse(dist_obj);
 			  if (json.angle !== undefined) {
 			    console.log(json.angle);
