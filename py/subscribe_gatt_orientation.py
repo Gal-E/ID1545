@@ -283,7 +283,7 @@ def handle_json(json):
 
 @socketio.on('angle')
 def handle_orientation(json):
-  #print(float(json['angle']))
+  print(float(json['angle']))
 
 
 
