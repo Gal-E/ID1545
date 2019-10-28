@@ -249,21 +249,23 @@ def connect_bluetooth():
     except:
         connect_bluetooth()
 
+    print("Connected.")
     # Subscribe to the GATT service
     try:
         wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
                 callback=handle_orientation_data)
     except:
         connect_bluetooth()
-
+    print("Subscribed.")
 # Register our Keyboard handler to exit
 signal.signal(signal.SIGINT, keyboard_interrupt_handler)
 
 #connect_bluetooth()
 
 if __name__ == '__main__':
-    thread = Thread(target=connect_bluetooth)
-    thread.start()
+    #thread = Thread(target=connect_bluetooth)
+    #thread.start()
+    connect_bluetooth()
 
 app.use("/scripts", express.scripts('./scripts/'));
 
