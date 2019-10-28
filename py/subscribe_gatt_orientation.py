@@ -13,13 +13,16 @@ from flask_socketio import SocketIO, emit, send
 
 
 # DCD Hub
-#from dcd.entities.thing import Thing
-#from dcd.entities.property import PropertyType
+from dcd.entities.thing import Thing
+from dcd.entities.property import PropertyType
 
 # The thing ID and access token
 load_dotenv()
-#THING_ID = os.environ['THING_ID']
-#THING_TOKEN = os.environ['THING_TOKEN']
+THING_ID = os.environ['THING_ID']
+THING_TOKEN = os.environ['THING_TOKEN']
+
+my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
+
 BLUETOOTH_DEVICE_MAC = os.environ['BLUETOOTH_DEVICE_IMU']
 
 # UUID of the GATT characteristic to subscribe
@@ -35,7 +38,6 @@ app = Flask(__name__)
 sensors = ['sensor1', 'sensor2', 'sensor3']
 
 app.config['SECRET_KEY'] = 'secret!'
-socketio = SocketIO(app)
 
 # ==== ==== ===== == =====  Initializing Values
 
@@ -93,11 +95,11 @@ def handle_orientation_data(handle, value_bytes):
     myCmd = 'clear'
     os.system(myCmd)
     #print(F"BNOvalues {values}")
-    #find_or_create("Left Wheel Orientation",
-    #PropertyType.THREE_DIMENSIONS).update_values(values)
 
     cur_loc = values
     calCircle(cur_loc[0])
+    find_or_create("Left Wheel Orientation",
+    PropertyType.ONE_DIMENSION).update_values(cur_loc[0])
 
 
 def calCircle(zAngle):
@@ -176,11 +178,16 @@ def calCircle(zAngle):
 
     cur_val = zAngle
 
-    try:
-        socketio.emit('orientation', '{"orientation": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
-    except:
-        print("No socket?")
-    return avgAbsoluteAngle
+    # Use the first element of the list as property id
+    property_id = "angular_data-437f"
+    # Get the property from the thing
+    prop = my_thing.properties[property_id]
+    # If we find the property, we update the values (rest of the list)
+    if prop is not None:
+        prop.update_values(avgAbsoluteAngle)
+    # Otherwise, we show a warning
+    else:
+        print('Warning: unknown property ' + property_id)
 
 
 
@@ -231,48 +238,6 @@ def handle_distance(json):
 
 
 
-
-@app.route('/')
-def home():
-    return render_template('index.html')
-
-@app.route('/gauge')
-def gauge():
-    return render_template('gauge.html')
-
-@app.route('/test')
-def test():
-    return render_template('test.html')
-
-@app.route('/donut')
-def donut():
-    return render_template('donut.html')
-
-@app.route('/api/sensors', methods = ['GET'])
-def list():
-    return str(sensors)
-
-@app.route('/api/sensors/<path:sensor_id>', methods = ['GET'])
-def read(sensor_id):
-    global sensors
-    return sensors[sensor_id]
-
-@app.route('/api/sensors', methods = ['POST'])
-def create():
-    sensors.append(request.json["sensorName"])
-    return 'Added sensor!'
-
-@socketio.on('json')
-def handle_json(json):
-  print('received json: ' + str(json))
-  emit('json', json, broadcast=True)
-
-@socketio.on('orientation')
-def handle_orientation(json):
-  print(float(json['orientation']))
-
-
-
 # Instantiate a thing with its credential, then read its properties from the DCD Hub
 #my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 #my_thing.read()
@@ -307,7 +272,6 @@ signal.signal(signal.SIGINT, keyboard_interrupt_handler)
 if __name__ == '__main__':
     thread = Thread(target=connect_bluetooth)
     thread.start()
-    socketio.run(app, host = '0.0.0.0')
 
 app.use("/scripts", express.scripts('./scripts/'));
 
