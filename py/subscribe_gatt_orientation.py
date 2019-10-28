@@ -95,7 +95,7 @@ def handle_orientation_data(handle, value_bytes):
     myCmd = 'clear'
     os.system(myCmd)
     #print(F"BNOvalues {values}")
-
+    print("Hello world?")
     cur_loc = values
     calCircle(cur_loc[0])
     find_or_create("angular_data",
