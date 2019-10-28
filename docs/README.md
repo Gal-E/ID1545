@@ -88,7 +88,7 @@ html {
 <div id="second-header">
   <a href="#brainstorm">Brief Brainstorm</a>
   <a href="#theidea">The Concept</a>
-  <a href="#process">The Process</a>
+  <a href="#">The Process</a>
   <a href="#prototype">The Prototype</a>
 </div>
 
@@ -221,7 +221,7 @@ A possible example for a task: “Create a full circle to the right side”. The
 
 
 
-<div id="How to build it">
+<div id="process">
   <h3 class="headline">The process</h3>
     <h4 class="secondary">1. Create a new Github project</h4>
     <h4 class="secondary">2. Set-up the Raspberry Pi</h4>
