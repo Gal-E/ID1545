@@ -21,6 +21,7 @@
 			});
 
 			socket.on('angle', function(dist_obj) {
+				console.log('angle');
 			  const json = JSON.parse(dist_obj);
 			  if (json.angle !== undefined) {
 			    console.log(json.angle);
