@@ -199,11 +199,13 @@ def calCircle(zAngle):
 
 def discover_characteristic(device):
     """List characteristics of a device"""
+    '''
     for uuid in device.discover_characteristics().keys():
         try:
             #print("Read UUID" + str(uuid) + "   " + str(device.char_read(uuid)))
         except:
             #print("Something wrong with " + str(uuid))
+    '''
 
 
 def read_characteristic(device, characteristic_id):
