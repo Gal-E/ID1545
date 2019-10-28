@@ -99,8 +99,8 @@ def handle_orientation_data(handle, value_bytes):
 
     print(values)
 
-    myCmd = 'clear'
-    os.system(myCmd)
+    # myCmd = 'clear'
+    # os.system(myCmd)
     #print(F"BNOvalues {values}")
     #find_or_create("Left Wheel Orientation",
     #PropertyType.THREE_DIMENSIONS).update_values(values)
@@ -300,7 +300,7 @@ def connect_bluetooth():
     try:
         bleAdapter.start()
         wheel = bleAdapter.connect(BLUETOOTH_DEVICE_MAC, address_type=ADDRESS_TYPE)
-        
+
         wheel.subscribe(GATT_CHARACTERISTIC_ORIENTATION,
                 callback=handle_orientation_data)
     except:
