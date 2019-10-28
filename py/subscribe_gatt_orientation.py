@@ -244,6 +244,10 @@ def gauge():
 def test():
     return render_template('test.html')
 
+@app.route('/test2')
+def test():
+    return render_template('test2.html')
+
 @app.route('/api/sensors', methods = ['GET'])
 def list():
     return str(sensors)
