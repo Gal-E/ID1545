@@ -27,8 +27,12 @@
 			    console.log(json.angle);
 
 					chart.data.datasets.forEach(function(dataset) {
- 	 					dataset.data = [json.angle, 100 - json.angle];
-					//	dataset.data = [360 - 45, 45];
+						if(json.angle > 0) {
+							dataset.data = [json.angle, 100 - json.angle];
+						}
+						else {
+							dataset.data = [100 - json.angle, json.angle];
+						}
  	 				});
 
 					chart.update();
@@ -41,10 +45,7 @@
 	<div class="content">
 		<div class="wrapper"><canvas id="chart-0"></canvas></div>
 		<div class="toolbar">
-			<button onclick="randomize()">Randomize</button>
-			<button onclick="addDataset()">Add Dataset</button>
-			<button onclick="removeDataset()">Remove Dataset</button>
-			<button onclick="togglePieDoughnut()">Toggle Doughnut View</button>
+			<button onclick="togglePieDoughnut()">Start Circle!</button>
 		</div>
 	</div>
 
@@ -93,11 +94,12 @@
 			tooltips: false,
 			elements: {
 				arc: {
-					backgroundColor: colorize.bind(null, false, false),
+					//backgroundColor: colorize.bind(null, false, false),
+					backgroundColor: 'rgba(52, 168, 83, 1)', 'rgba(147, 216, 163, 1)',
 					hoverBackgroundColor: hoverColorize
 				}
 			}
-		};
+		}; 
 
 		var chart = new Chart('chart-0', {
 			type: 'pie',
