@@ -175,6 +175,7 @@ def calCircle(zAngle):
 
     avgList[avgListCounter] = absoluteAngle
     avgAbsoluteAngle = 100*(sum(avgList)/avgListLength)/360
+    print('this should work')
 
     cur_val = zAngle
 
