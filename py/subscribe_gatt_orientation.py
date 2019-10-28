@@ -98,7 +98,7 @@ def handle_orientation_data(handle, value_bytes):
 
     cur_loc = values
     calCircle(cur_loc[0])
-    find_or_create("Left Wheel Orientation",
+    find_or_create("angular_data",
     PropertyType.ONE_DIMENSION).update_values(cur_loc[0])
 
 
@@ -177,17 +177,6 @@ def calCircle(zAngle):
     avgAbsoluteAngle = 100*(sum(avgList)/avgListLength)/360
 
     cur_val = zAngle
-
-    # Use the first element of the list as property id
-    property_id = "angular_data-437f"
-    # Get the property from the thing
-    prop = my_thing.properties[str(property_id)]
-    # If we find the property, we update the values (rest of the list)
-    if prop is not None:
-        prop.update_values(avgAbsoluteAngle)
-    # Otherwise, we show a warning
-    else:
-        print('Warning: unknown property ' + property_id)
 
 
 
