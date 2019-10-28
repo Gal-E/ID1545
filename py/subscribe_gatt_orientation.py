@@ -13,13 +13,19 @@ from flask_socketio import SocketIO, emit, send
 
 
 # DCD Hub
-#from dcd.entities.thing import Thing
-#from dcd.entities.property import PropertyType
+from dcd.entities.thing import Thing
+from dcd.entities.property import PropertyType
 
 # The thing ID and access token
 load_dotenv()
-#THING_ID = os.environ['THING_ID']
-#THING_TOKEN = os.environ['THING_TOKEN']
+THING_ID = os.environ['THING_ID']
+THING_TOKEN = os.environ['THING_TOKEN']
+
+my_thing.read()
+
+my_property = my_thing.find_or_create_property("angle_data",
+                                               PropertyType.ONE_DIMENSION)
+
 BLUETOOTH_DEVICE_MAC = os.environ['BLUETOOTH_DEVICE_IMU']
 
 # UUID of the GATT characteristic to subscribe
@@ -98,6 +104,8 @@ def handle_orientation_data(handle, value_bytes):
 
     cur_loc = values
     calCircle(cur_loc[0])
+    my_property.update_values((cur_loc[0],))
+
 
 
 def calCircle(zAngle):
