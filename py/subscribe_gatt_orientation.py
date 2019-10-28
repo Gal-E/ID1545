@@ -38,6 +38,7 @@ app = Flask(__name__)
 sensors = ['sensor1', 'sensor2', 'sensor3']
 
 app.config['SECRET_KEY'] = 'secret!'
+socketio = SocketIO(app)
 
 # ==== ==== ===== == =====  Initializing Values
 
@@ -267,9 +268,7 @@ if __name__ == '__main__':
     #thread.start()
     connect_bluetooth()
 
-#app.use("/scripts", express.scripts('./scripts/'));
-
-#let's hope this works...
+app.use("/scripts", express.scripts('./scripts/'));
 
 while True :
     sleep(5)
