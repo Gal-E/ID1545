@@ -190,7 +190,7 @@ def calCircle(zAngle):
     try:
         socketio.emit('angle', '{"angle": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
     except:
-        #print("No socket?")
+        print("No socket?")
 
     return avgAbsoluteAngle
 
