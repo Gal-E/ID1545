@@ -66,11 +66,12 @@ function donut(){
       });
 
       g.on("mouseout", function(obj){
-        svg.select("text.text-tooltip").text("")
+        svg.select("text.text-tooltip")
         .attr("fill", function(d) { return color(obj.data.key); })
         .text(function(d){
-          return d[obj.data.key];;
+          return d[obj.data.key];
       });
+    });
 
     }else{
       g.data(pie(d3.entries(data))).exit().remove();
