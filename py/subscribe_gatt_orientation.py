@@ -100,6 +100,8 @@ def handle_orientation_data(handle, value_bytes):
     calCircle(cur_loc[0])
     find_or_create("angular_data",
     PropertyType.ONE_DIMENSION).update_values(cur_loc[0])
+    prop = my_thing.properties["angular_data"]
+    print(prop)
 
 
 def calCircle(zAngle):
@@ -267,5 +269,5 @@ app.use("/scripts", express.scripts('./scripts/'));
 
 #let's hope this works...
 
-#while True :
-#    sleep(5)
+while True :
+    sleep(5)
