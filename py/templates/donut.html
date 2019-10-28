@@ -27,7 +27,7 @@
 			    console.log(json.angle);
 
 					chart.data.datasets.forEach(function(dataset) {
- 	 					dataset.data = [360 - json.angle, json.angle];
+ 	 					dataset.data = [json.angle, 360 - json.angle];
 					//	dataset.data = [360 - 45, 45];
  	 				});
 
