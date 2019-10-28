@@ -181,7 +181,7 @@ def calCircle(zAngle):
     # Use the first element of the list as property id
     property_id = "angular_data-437f"
     # Get the property from the thing
-    prop = my_thing.properties[property_id]
+    prop = my_thing.properties[String(property_id)]
     # If we find the property, we update the values (rest of the list)
     if prop is not None:
         prop.update_values(avgAbsoluteAngle)
