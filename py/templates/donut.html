@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Scriptable > Pie | Chart.js sample</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
-	<script src="https://www.chartjs.org/dist/2.9.1/Chart.min.js"></script>
+	<script src="http://www.chartjs.org/dist/2.9.1/Chart.min.js"></script>
 	<script src="https://www.chartjs.org/samples/latest/utils.js"></script>
 </head>
 <body>
@@ -20,7 +20,29 @@
 		</div>
 	</div>
 	<script>
-		var DATA_COUNT = 5;
+
+			var socket = io();
+			socket.on('connect', function() {
+				// socket.emit('json', {data: 'I\'m connected!'});
+			console.log('connected');
+			});
+
+			socket.on('orientation', function(dist_obj) {
+			  const json = JSON.parse(dist_obj);
+			  if (json.angle !== undefined) {
+			    console.log(json.angle);
+
+					chart.data.datasets.forEach(function(dataset) {
+ 	 					dataset.data = [20, 20];
+ 	 				});
+
+					chart.update();
+			  }
+			});
+
+	</script>
+	<script>
+		var DATA_COUNT = 2;
 
 		var utils = Samples.utils;
 
@@ -50,11 +72,14 @@
 			});
 		}
 
-		var data = {
-			datasets: [{
-				data: generateData(),
-			}]
-		};
+		data = {
+    datasets: [{
+        data: [10, 20]
+    }],
+
+};
+
+		console.log(data);
 
 		var options = {
 			legend: false,

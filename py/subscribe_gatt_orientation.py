@@ -177,7 +177,7 @@ def calCircle(zAngle):
     cur_val = zAngle
 
     try:
-        socketio.emit('orientation', '{"orientation": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
+        socketio.emit('angle', '{"angle": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
     except:
         print("No socket?")
     return avgAbsoluteAngle
@@ -267,9 +267,9 @@ def handle_json(json):
   print('received json: ' + str(json))
   emit('json', json, broadcast=True)
 
-@socketio.on('orientation')
+@socketio.on('angle')
 def handle_orientation(json):
-  print(float(json['orientation']))
+  print(float(json['angle']))
 
 
 
@@ -307,9 +307,10 @@ signal.signal(signal.SIGINT, keyboard_interrupt_handler)
 if __name__ == '__main__':
     thread = Thread(target=connect_bluetooth)
     thread.start()
+    app.use("/scripts", express.scripts('./scripts/'));
     socketio.run(app, host = '0.0.0.0')
 
-app.use("/scripts", express.scripts('./scripts/'));
+
 
 #let's hope this works...
 

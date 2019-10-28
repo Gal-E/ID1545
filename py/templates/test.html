@@ -41,8 +41,6 @@ socket.on('json', function(msg, cb) {
 socket.on('orientation', function(dist_obj) {
   const json = JSON.parse(dist_obj);
   if (json.orientation !== undefined) {
-    // var bar = document.getElementById("value").ldBar;
-    // bar.set(json.orientation);
     console.log(json.orientation);
     chart.data(getData(json.orientation)).render();
   }

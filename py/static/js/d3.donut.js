@@ -71,12 +71,8 @@ function donut(){
         .attr("fill", function(d) { return color(obj.data.key); })
         .text(function(d){
           return d[obj.data.key];
-<<<<<<< HEAD
-=======
         });
->>>>>>> 32bf1edd0f55911da1194eb542aa21ad9da6d21e
       });
-    });
 
     }else{
       g.data(pie(d3.entries(data))).exit().remove();
