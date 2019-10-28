@@ -267,7 +267,7 @@ if __name__ == '__main__':
     #thread.start()
     connect_bluetooth()
 
-app.use("/scripts", express.scripts('./scripts/'));
+#app.use("/scripts", express.scripts('./scripts/'));
 
 #let's hope this works...
 
