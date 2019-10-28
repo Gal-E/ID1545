@@ -1,158 +1,110 @@
-
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-	<title>Doughnut Chart</title>
-	<script src="https://www.chartjs.org/dist/2.9.1/Chart.min.jss"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Scriptable > Pie | Chart.js sample</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<script src="https://www.chartjs.org/dist/2.9.1/Chart.min.js"></script>
 	<script src="https://www.chartjs.org/samples/latest/utils.js"></script>
-	<style>
-	canvas {
-		-moz-user-select: none;
-		-webkit-user-select: none;
-		-ms-user-select: none;
-	}
-	</style>
 </head>
-
 <body>
-	<div id="canvas-holder" style="width:40%">
-		<canvas id="chart-area"></canvas>
+	<div class="content">
+		<div class="wrapper"><canvas id="chart-0"></canvas></div>
+		<div class="toolbar">
+			<button onclick="randomize()">Randomize</button>
+			<button onclick="addDataset()">Add Dataset</button>
+			<button onclick="removeDataset()">Remove Dataset</button>
+			<button onclick="togglePieDoughnut()">Toggle Doughnut View</button>
+		</div>
 	</div>
-	<button id="randomizeData">Randomize Data</button>
-	<button id="addDataset">Add Dataset</button>
-	<button id="removeDataset">Remove Dataset</button>
-	<button id="addData">Add Data</button>
-	<button id="removeData">Remove Data</button>
-	<button id="changeCircleSize">Semi/Full Circle</button>
 	<script>
-		var randomScalingFactor = function() {
-			return Math.round(Math.random() * 100);
+		var DATA_COUNT = 5;
+
+		var utils = Samples.utils;
+
+		utils.srand(110);
+
+		function colorize(opaque, hover, ctx) {
+			var v = ctx.dataset.data[ctx.dataIndex];
+			var c = v < -50 ? '#D60000'
+				: v < 0 ? '#F46300'
+				: v < 50 ? '#0358B6'
+				: '#44DE28';
+
+			var opacity = hover ? 1 - Math.abs(v / 150) - 0.2 : 1 - Math.abs(v / 150);
+
+			return opaque ? c : utils.transparentize(c, opacity);
+		}
+
+		function hoverColorize(ctx) {
+			return colorize(false, true, ctx);
+		}
+
+		function generateData() {
+			return utils.numbers({
+				count: DATA_COUNT,
+				min: -100,
+				max: 100
+			});
+		}
+
+		var data = {
+			datasets: [{
+				data: generateData(),
+			}]
 		};
 
-		var config = {
-			type: 'doughnut',
-			data: {
-				datasets: [{
-					data: [
-						randomScalingFactor(),
-						randomScalingFactor(),
-						randomScalingFactor(),
-						randomScalingFactor(),
-						randomScalingFactor(),
-					],
-					backgroundColor: [
-						window.chartColors.red,
-						window.chartColors.orange,
-						window.chartColors.yellow,
-						window.chartColors.green,
-						window.chartColors.blue,
-					],
-					label: 'Dataset 1'
-				}],
-				labels: [
-					'Red',
-					'Orange',
-					'Yellow',
-					'Green',
-					'Blue'
-				]
-			},
-			options: {
-				responsive: true,
-				legend: {
-					position: 'top',
-				},
-				title: {
-					display: true,
-					text: 'Chart.js Doughnut Chart'
-				},
-				animation: {
-					animateScale: true,
-					animateRotate: true
+		var options = {
+			legend: false,
+			tooltips: false,
+			elements: {
+				arc: {
+					backgroundColor: colorize.bind(null, false, false),
+					hoverBackgroundColor: hoverColorize
 				}
 			}
 		};
 
-		window.onload = function() {
-			var ctx = document.getElementById('chart-area').getContext('2d');
-			window.myDoughnut = new Chart(ctx, config);
-		};
+		var chart = new Chart('chart-0', {
+			type: 'pie',
+			data: data,
+			options: options
+		});
 
-		document.getElementById('randomizeData').addEventListener('click', function() {
-			config.data.datasets.forEach(function(dataset) {
-				dataset.data = dataset.data.map(function() {
-					return randomScalingFactor();
-				});
+		// eslint-disable-next-line no-unused-vars
+		function randomize() {
+			chart.data.datasets.forEach(function(dataset) {
+				dataset.data = generateData();
 			});
+			chart.update();
+		}
 
-			window.myDoughnut.update();
-		});
-
-		var colorNames = Object.keys(window.chartColors);
-		document.getElementById('addDataset').addEventListener('click', function() {
-			var newDataset = {
-				backgroundColor: [],
-				data: [],
-				label: 'New dataset ' + config.data.datasets.length,
-			};
-
-			for (var index = 0; index < config.data.labels.length; ++index) {
-				newDataset.data.push(randomScalingFactor());
-
-				var colorName = colorNames[index % colorNames.length];
-				var newColor = window.chartColors[colorName];
-				newDataset.backgroundColor.push(newColor);
-			}
-
-			config.data.datasets.push(newDataset);
-			window.myDoughnut.update();
-		});
-
-		document.getElementById('addData').addEventListener('click', function() {
-			if (config.data.datasets.length > 0) {
-				config.data.labels.push('data #' + config.data.labels.length);
-
-				var colorName = colorNames[config.data.datasets[0].data.length % colorNames.length];
-				var newColor = window.chartColors[colorName];
-
-				config.data.datasets.forEach(function(dataset) {
-					dataset.data.push(randomScalingFactor());
-					dataset.backgroundColor.push(newColor);
-				});
-
-				window.myDoughnut.update();
-			}
-		});
-
-		document.getElementById('removeDataset').addEventListener('click', function() {
-			config.data.datasets.splice(0, 1);
-			window.myDoughnut.update();
-		});
-
-		document.getElementById('removeData').addEventListener('click', function() {
-			config.data.labels.splice(-1, 1); // remove the label first
-
-			config.data.datasets.forEach(function(dataset) {
-				dataset.data.pop();
-				dataset.backgroundColor.pop();
+		// eslint-disable-next-line no-unused-vars
+		function addDataset() {
+			chart.data.datasets.push({
+				data: generateData()
 			});
+			chart.update();
+		}
 
-			window.myDoughnut.update();
-		});
+		// eslint-disable-next-line no-unused-vars
+		function removeDataset() {
+			chart.data.datasets.shift();
+			chart.update();
+		}
 
-		document.getElementById('changeCircleSize').addEventListener('click', function() {
-			if (window.myDoughnut.options.circumference === Math.PI) {
-				window.myDoughnut.options.circumference = 2 * Math.PI;
-				window.myDoughnut.options.rotation = -Math.PI / 2;
+		// eslint-disable-next-line no-unused-vars
+		function togglePieDoughnut() {
+			if (chart.options.cutoutPercentage) {
+				chart.options.cutoutPercentage = 0;
 			} else {
-				window.myDoughnut.options.circumference = Math.PI;
-				window.myDoughnut.options.rotation = -Math.PI;
+				chart.options.cutoutPercentage = 50;
 			}
+			chart.update();
+		}
 
-			window.myDoughnut.update();
-		});
 	</script>
 </body>
-
 </html>
