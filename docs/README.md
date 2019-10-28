@@ -88,7 +88,7 @@ html {
 <div id="second-header">
   <a href="#brainstorm">Brief Brainstorm</a>
   <a href="#theidea">The Concept</a>
-  <a href="#">The Process</a>
+  <a href="#process">The Process</a>
   <a href="#prototype">The Prototype</a>
 </div>
 
