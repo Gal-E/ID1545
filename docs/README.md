@@ -218,21 +218,24 @@ A possible example for a task: “Create a full circle to the right side”. The
 - Possible stakeholders who can benefit from this information: wheelchairs engineers and designers that could improve functionality based on that, doctors and families of kids with wheelchair that can help kids get easily adjusted to the chair etc
 
 
-<div id="How to build it">
+
+
+
   <h3 class="headline">The process</h3>
-  <ol>
-    <li>Create a new Github project</li>
-    <li>Set-up the Raspberry Pi</li>
-    <li>Build the Adafruit breadboard</li>
-    <li>Write Arduino code</li>
-    <li>Install libraries</li>
-    <li>Write a python file for subscribe_gatt_orientation.py</li>
-    <li>Add socket code to launch a server</li>
-    <li>Write html code, download javascript code for interface</li>
-    <li>Run python script on Raspberry Pi</li>
-
-
-<h4 class="secondary">Progress made:</h4>
+    <h4 class="secondary">1. Create a new Github project</h4>
+    <h4 class="secondary">2. Set-up the Raspberry Pi</h4>
+  <h4 class="secondary">3. Build the Adafruit breadboard</h4>  
+</div>
+<div id="Breadboard image">
+  <img src="images/Screenshot 2019-10-25 at 16.13.25.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
+</div>
+<div id ="How to build it continued">
+    <h4 class="secondary">4. Write Arduino code</h4>
+    <h4 class="secondary">5. Install libraries</h4>
+    <h4 class="secondary">6. Write a python file for subscribe_gatt_orientation.py</h4>
+    <h4 class="secondary">7. Add socket code to launch a server</h4>
+    <h4 class="secondary">8. Write html code, download javascript code for interface</h4>
+    <h4 class="secondary">9. Run python script on Raspberry Pi</h4>
 
 </div>
 
