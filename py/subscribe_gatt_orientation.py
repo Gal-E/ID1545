@@ -305,9 +305,9 @@ signal.signal(signal.SIGINT, keyboard_interrupt_handler)
 #connect_bluetooth()
 
 if __name__ == '__main__':
-    #thread = Thread(target=connect_bluetooth)
-    #thread.start()
-    #app.use("/scripts", express.scripts('./scripts/'));
+    thread = Thread(target=connect_bluetooth)
+    thread.start()
+
     socketio.run(app, host = '0.0.0.0')
 
 
