@@ -263,13 +263,15 @@ Speed on different surfaces, angles, time it taked to perform various activities
   <li>Occupational therapists</li>
   <li>Families of kids with wheelchair</li>
   <li>Researchers </li>
-  </ul>
+ </ul>
 
 
   <h3 class="headline">The process</h3>
+  <div>
     <h4 class="secondary">1. Create a new Github project</h4>
     <h4 class="secondary">2. Set-up the Raspberry Pi</h4>
-  <h4 class="secondary">3. Build the Adafruit breadboard</h4>  
+  <h4 class="secondary">3. Build the Adafruit breadboard</h4>
+  </div>
 <div id="Breadboard image">
   <img src="images/img5.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
 </div>
