@@ -83,6 +83,9 @@ html {
   #theidea{
       display: inline-block;
   }
+  h5 {
+    font-family: monospace;
+  }
 </style>
 
 <div id="second-header">
