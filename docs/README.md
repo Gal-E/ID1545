@@ -99,7 +99,7 @@ html {
   }
   img.half {
     width: 47%;
-    margin: 0;
+    margin-bottom: 0px;
     display: inline;
   }
 </style>
