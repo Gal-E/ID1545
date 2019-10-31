@@ -89,6 +89,11 @@ html {
     font-style: italic;
     font-size: 21px;
   }
+  video {
+    height: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  }
 </style>
 
 <div id="second-header">
