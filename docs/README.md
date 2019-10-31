@@ -226,7 +226,7 @@ A possible example for a task: “Create a full circle to the right side”. The
     <h4 class="secondary">2. Set-up the Raspberry Pi</h4>
   <h4 class="secondary">3. Build the Adafruit breadboard</h4>  
 <div id="Breadboard image">
-  <img src="images/Screenshot 2019-10-25 at 16.13.25.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
+  <img src="images/img5.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
 </div>
 <div id ="How to build it continued">
     <h4 class="secondary">4. Write Arduino code</h4>
