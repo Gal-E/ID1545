@@ -9,7 +9,6 @@ html {
   background: white;
   }
 #header_wrap {
-  background-image: url("images/background.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   }
@@ -254,7 +253,6 @@ Speed on different surfaces, angles, time it taked to perform various activities
   <li>The time it takes to perform different activities with a wheelchair</li>
   <li>The learning curve of different skills, and how can we improve it</li>
   </ul>
-<br><br>
 <b>Possible stakeholders:</b><br>
 <ul>
   <li>Wheelchairs engineers and designers </li>
