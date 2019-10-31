@@ -272,12 +272,6 @@ A possible example for a task: “Create a full circle to the right side”. The
     <h4 class="secondary">4. Write Arduino code</h4>
     <h4 class="secondary">5. Install libraries</h4>
     <h4 class="secondary">6. Write a python file for subscribe_gatt_orientation.py</h4>
-  <div><br>
-        <video controls autoplay>
-            <source src="images/video.mp4" type="video/mp4">
-        </video>
-        <img class="half" src="images/img6.png" style="border: none;box-shadow: none;"/>
-    </div><br>
     <h4 class="secondary">7. Add socket code to launch a server</h4>
     <h4 class="secondary">8. Write html code, download javascript code for interface</h4>
     <h4 class="secondary">9. Run python script on Raspberry Pi</h4>
@@ -286,3 +280,11 @@ A possible example for a task: “Create a full circle to the right side”. The
 
 <div id="prototype"></div>
 <h3 class="headline">The prototype</h3>
+While developing the prototype we faced many questions: What is the best place on the chair to attach the board? What type of angle should we monitor in order to test a full circle? What should happen when a circle is complete? etc. The ability to physically test the different options helped us make the right decisions.
+<br>
+ <div>
+        <video controls autoplay>
+            <source src="images/video.mp4" type="video/mp4">
+        </video>
+        <img class="half" src="images/img6.png" style="border: none;box-shadow: none;"/>
+</div>
