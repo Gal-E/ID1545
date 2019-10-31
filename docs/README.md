@@ -98,15 +98,14 @@ html {
 <div id="brainstorm">
   <h3 class="headline">Design Brief:</h3>
   <div class="description">
-    To start off the course we received a design brief. We began by investigating the challenges and opportunities that currently exist in wheel chair use, so we could understand what could be gained by creating a connected wheel chair.Our research began online and continues to interviews with two Physiotherapists and an occupational therapist student that volenteers with wheelchair users.
+    To start off the course we received a design brief. We began by investigating the challenges and opportunities that currently exist in wheel chair use, so we could understand what could be gained by creating a connected wheel chair. Our research began online and continues to interviews with two Physiotherapists and an occupational therapist student that volenteers with wheelchair users.
     <br><br>
    <h5> ‘While the population of wheelchair users is growing worldwide, it becomes urgent to design supportive
 technologies that fit their needs. We aim to develop products for improvement of the wheelchair users’ wellbeing. This design is a connected product that collects
 data from sensors, processes it in order to actuate user
 interactions embedded on the wheelchair.’</h5>
     <br><br>
-     <img src="images/Child in a wheelchair 2.jpg" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
-        <br><br>
+    
   We began our design process by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. We used this overview to gather potential applications and map our primary associations. This session helped us form several ideas for a connected wheelchair:
   </div><br><br>
 
@@ -183,6 +182,8 @@ interactions embedded on the wheelchair.’</h5>
   <li>Anyone interested in learning basic wheelchair skills</li>
   </ul>
 
+ <img src="images/Child in a wheelchair 2.jpg" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
+        <br>
   <h4 class="secondary">Goals:</h4>
 The goal of the product is to teach kids the basic wheelchair activities in a fun and playfull manner. A secondary goal is to use the data collected to learn about the way kids adapt to wheelchairs, the speed in which they learn and the level of difficulty of the different activities
 <br>
