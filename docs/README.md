@@ -245,20 +245,25 @@ A possible example for a task: “Create a full circle to the right side”. The
 </div>
 
 <h4 class="secondary">Data:</h4>
-<b>Data collected:</b>Speed on different surfaces, angles, time it taked to perform various activities such as complete a circle, reverse etc<br>
+<b>Data collected:</b><br>
+Speed on different surfaces, angles, time it taked to perform various activities such as complete a circle, reverse etc<br><br>
 <b>The data collected can teach us about: </b>
-- the behaviour of kids when they use a wheelchair for the first time
-- What skills are more challenging for kids to learn when using a wheelchair for the first time
-- The time it takes to perform different activities with a wheelchair
-- The learning curve of different skills, and how can we improve it
-<br>
+<ul>
+  <li>The behaviour of kids when they use a wheelchair for the first time
+  <li>What skills are more challenging for kids to learn when using a wheelchair for the first time
+  <li>The time it takes to perform different activities with a wheelchair
+  <li>The learning curve of different skills, and how can we improve it
+  </ul>
+<br><br>
 <b>Possible stakeholders:</b><br>
-- wheelchairs engineers and designers 
-- doctors
-- physiotherapists
-- occupational therapists
-- families of kids with wheelchair
-- researchers 
+<ul>
+  <li>Wheelchairs engineers and designers 
+  <li>Doctors
+  <li>Physiotherapists
+  <li>Occupational therapists
+  <li>Families of kids with wheelchair
+  <li>Researchers 
+  </ul>
 
 
   <h3 class="headline">The process</h3>
