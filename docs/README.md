@@ -43,6 +43,9 @@ html {
     margin-bottom: 25px;
     font-size: 26px;
   }
+  .highlight {
+    border-bottom: 6px #FBBC05 solid
+  }
   h4 {
     font-size: 20px;
     font-family: monospace;
@@ -189,8 +192,8 @@ interactions embedded on the wheelchair."</h5>
   <h3 class="headline">The Final Concept: <br>Basic wheelchair skills gamification</h3>
   <span>For our final conecpt, we chose to focus on the first experience of a user with a wheel chair. We designed
    a connected wheelchair that helps teach basic wheelchair skills. Our goal is to use the connected prototype in order to test it with kids and perform user research. </span>
-  <span style="border-bottom: 6px #FBBC05 solid;"> We want to test the ability of the gamification of the wheelchair experience to simplify and shorten the learning curve of basic wheel chair skills.</span>
-  <br>
+  <span class="highlight"> We want to test the ability of the gamification of the wheelchair experience to simplify and shorten the learning curve of basic wheel chair skills.</span>
+  <br><br>
   <h4 class="secondary">Target Users:</h4>
  <ul>
    <li>Main target: Kids in the age of 6-12</li>
@@ -265,7 +268,7 @@ A possible example for a task: “Create a full circle to the right side”. The
   <video controls autoplay>
   <source src="images/video.mp4" type="video/mp4">
   </video>
-  <img src="images/img6.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
+  <img class="half" src="images/img6.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
     <div>
     <h4 class="secondary">7. Add socket code to launch a server</h4>
     <h4 class="secondary">8. Write html code, download javascript code for interface</h4>
