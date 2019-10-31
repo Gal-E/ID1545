@@ -286,7 +286,8 @@ Speed on different surfaces, angles, time it taked to perform various activities
 <div id="prototype"></div>
 <h3 class="headline">The prototype</h3>
 While developing the prototype we faced many questions: What is the best place on the chair to attach the board? What type of angle should we monitor in order to test a full circle? What should happen when a circle is complete? etc. The ability to physically test the different options helped us make the right decisions.
-<br>
+<br><br>
+
  <div>
         <video controls autoplay>
             <source src="images/video.mp4" type="video/mp4">
