@@ -205,7 +205,7 @@ interactions embedded on the wheelchair."</h5>
  <img src="images/Child in a wheelchair 2.jpg" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
         <br>
   <h4 class="secondary">Goals:</h4>
-The goal of the product is to teach kids the basic wheelchair activities in a fun and playfull manner. A secondary goal is to use the data collected to learn about the way kids adapt to wheelchairs, the speed in which they learn and the level of difficulty of the different activities
+The goal of the product is to teach kids the basic wheelchair activities in a fun and playfull manner. A secondary goal is to use the data collected to learn about the way kids adapt to wheelchairs, the speed in which they learn and the level of difficulty of the different activities. <span class="highlight">The goal of the prototype is to test the usability of the product. Both the web interface and the physical experience. We aim to learn if this product can create value to its target audience, and make to learning process more enjoyable</span>
 <br><br>
 
 <ul>
