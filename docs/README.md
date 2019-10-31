@@ -93,8 +93,14 @@ html {
 </div>
 
 <div id="brainstorm">
-  <h3 class="headline">Kick Off - Brief Brainstorm:</h3>
-  <div class="description">
+  <h3 class="headline">Brief:</h3>
+  <div class="description">    
+    
+   <h4> ‘While the population of wheelchair users is growing worldwide, it becomes urgent to design supportive
+technologies that fit their needs. We aim to develop products for improvement of the wheelchair users’ wellbeing. This design is a connected product that collects
+data from sensors, processes it in order to actuate user
+interactions embedded on the wheelchair.’</h4>
+    <br><br>
   To start off by investigating the challenges and opportunities that could be gained by upgrading a wheelchair to a digitally connected one, we began by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. We used this overview to gather potential applications and map our primary associations. This session helped us form several ideas for a connected wheelchair:
   </div><br><br>
 
@@ -240,3 +246,4 @@ A possible example for a task: “Create a full circle to the right side”. The
 
 <div id="prototype"></div>
 <h3 class="headline">The prototype</h3>
+ <img src="images/hild in a wheelchair 2.jpg" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
