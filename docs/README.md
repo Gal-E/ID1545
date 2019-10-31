@@ -93,14 +93,15 @@ html {
     font-size: 21px;
   }
   video {
-    width: 37%;
+    width: 39%;
     margin: 0;
     display: inline;
   }
   img.half {
-    width: 47%;
+    width: 50%;
     margin-bottom: 0px;
     display: inline;
+    float: right;
   }
 </style>
 
