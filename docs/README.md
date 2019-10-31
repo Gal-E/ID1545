@@ -85,6 +85,9 @@ html {
   }
   h5 {
     font-family: monospace;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 21px;
   }
 </style>
 
@@ -98,12 +101,13 @@ html {
 <div id="brainstorm">
   <h3 class="headline">Design Brief:</h3>
   <div class="description">
-    To start off the course we received a design brief. We began by investigating the challenges and opportunities that currently exist in wheel chair use, so we could understand what could be gained by creating a connected wheel chair. Our research began online and continues to interviews with two Physiotherapists and an occupational therapist student that volenteers with wheelchair users.
+    To start off the course we received a design brief. We began by investigating the challenges and opportunities that currently exist in wheel chair use, so we could understand what could be gained by creating a connected wheel chair. 
+    Our research began online and continues to interviews with two Physiotherapists and an occupational therapist student that volenteers with wheelchair users.
     <br><br>
-   <h5> ‘While the population of wheelchair users is growing worldwide, it becomes urgent to design supportive
+   <h5> "While the population of wheelchair users is growing worldwide, it becomes urgent to design supportive
 technologies that fit their needs. We aim to develop products for improvement of the wheelchair users’ wellbeing. This design is a connected product that collects
 data from sensors, processes it in order to actuate user
-interactions embedded on the wheelchair.’</h5>
+interactions embedded on the wheelchair."</h5>
     <br><br>
     
   We began our design process by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. We used this overview to gather potential applications and map our primary associations. This session helped us form several ideas for a connected wheelchair:
