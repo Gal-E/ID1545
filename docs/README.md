@@ -206,7 +206,8 @@ interactions embedded on the wheelchair."</h5>
         <br>
   <h4 class="secondary">Goals:</h4>
 The goal of the product is to teach kids the basic wheelchair activities in a fun and playfull manner. A secondary goal is to use the data collected to learn about the way kids adapt to wheelchairs, the speed in which they learn and the level of difficulty of the different activities
-<br>
+<br><br>
+
 <ul>
   <li>Gamify simple tasks that involve wheelchair skills</li>
 <li>Encourage kids in wheelchairs to be active and play outside</li>
@@ -244,14 +245,20 @@ A possible example for a task: “Create a full circle to the right side”. The
 </div>
 
 <h4 class="secondary">Data:</h4>
-<b>Data collected:</b> Speed on different surfaces, angles
+<b>Data collected:</b>Speed on different surfaces, angles, time it taked to perform various activities such as complete a circle, reverse etc<br>
 <b>The data collected can teach us about: </b>
 - the behaviour of kids when they use a wheelchair for the first time
-- Maybe we can learn about what skills are more challenging for kids to learn when using a wheelchair for the first time
-- Possible stakeholders who can benefit from this information: wheelchairs engineers and designers that could improve functionality based on that, doctors and families of kids with wheelchair that can help kids get easily adjusted to the chair etc
-
-
-
+- What skills are more challenging for kids to learn when using a wheelchair for the first time
+- The time it takes to perform different activities with a wheelchair
+- The learning curve of different skills, and how can we improve it
+<br>
+<b>Possible stakeholders:</b><br>
+- wheelchairs engineers and designers 
+- doctors
+- physiotherapists
+- occupational therapists
+- families of kids with wheelchair
+- researchers 
 
 
   <h3 class="headline">The process</h3>
