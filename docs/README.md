@@ -90,10 +90,15 @@ html {
     font-size: 21px;
   }
   video {
-    height: 700px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;  }
+    width: 37%;
+    margin: 0;
+    display: inline;
+  }
+  img.half {
+    width: 47%;
+    margin: 0;
+    display: inline;
+  }
 </style>
 
 <div id="second-header">
