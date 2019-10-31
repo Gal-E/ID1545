@@ -256,9 +256,12 @@ A possible example for a task: “Create a full circle to the right side”. The
     <h4 class="secondary">4. Write Arduino code</h4>
     <h4 class="secondary">5. Install libraries</h4>
     <h4 class="secondary">6. Write a python file for subscribe_gatt_orientation.py</h4>
+  <div>
   <video controls autoplay>
   <source src="images/video.mp4" type="video/mp4">
   </video>
+  <img src="images/img6.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
+    <div>
     <h4 class="secondary">7. Add socket code to launch a server</h4>
     <h4 class="secondary">8. Write html code, download javascript code for interface</h4>
     <h4 class="secondary">9. Run python script on Raspberry Pi</h4>
