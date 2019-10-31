@@ -279,6 +279,7 @@ Speed on different surfaces, angles, time it taked to perform various activities
     <h4 class="secondary">6. Write a python file for subscribe_gatt_orientation.py</h4>
     <h4 class="secondary">7. Add socket code to launch a server</h4>
     <h4 class="secondary">8. Write html code, download javascript code for interface</h4>
+    <p>To create a web interface for the prototype, we decided to use an existing JS library and adjust it to out needs. We wanted to create a circle to indicate the movement that occurs in the physical world with the chair. We tried different libraries until we chose the one that suited our needs most. At first we used a loader JS library. It looked great but we realized that making it work for left and right circles we would have to re-write quite a lot of the code. We decided to try a different library and chose to use a pie chart. That way, both sides of the circle are supported. The angles start at -100 and reach 100. A circle to the left would be with a negative value, and a circle to the right would be with a positive value.</p>
     <h4 class="secondary">9. Run python script on Raspberry Pi</h4>
 
 </div>
