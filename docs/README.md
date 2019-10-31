@@ -179,7 +179,7 @@ interactions embedded on the wheelchair."</h5>
   <h3 class="headline">The Final Concept: <br>Basic wheelchair skills gamification</h3>
   <span>For our final conecpt, we chose to focus on the first experience of a user with a wheel chair. We designed
    a connected wheelchair that helps teach basic wheelchair skills. Our goal is to use the connected prototype in order to test it with kids and perform user research. </span>
-  <mark> We want to test the ability of the gamification of the wheelchair experience to simplify and shorten the learning curve of basic wheel chair skills.</mark>
+  <span style="background-color: #FBBC05"> We want to test the ability of the gamification of the wheelchair experience to simplify and shorten the learning curve of basic wheel chair skills.</span>
   <br>
   <h4 class="secondary">Target Users:</h4>
  <ul>
