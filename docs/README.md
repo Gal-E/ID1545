@@ -43,6 +43,9 @@ html {
     margin-bottom: 25px;
     font-size: 26px;
   }
+  .highlight {
+    border-bottom: 6px #FBBC05 solid
+  }
   h4 {
     font-size: 20px;
     font-family: monospace;
@@ -83,6 +86,23 @@ html {
   #theidea{
       display: inline-block;
   }
+  h5 {
+    font-family: monospace;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 21px;
+  }
+  video {
+    width: 39%;
+    margin: 0;
+    display: inline;
+  }
+  img.half {
+    width: 50%;
+    margin-bottom: 0px;
+    display: inline;
+    float: right;
+  }
 </style>
 
 <div id="second-header">
@@ -93,9 +113,18 @@ html {
 </div>
 
 <div id="brainstorm">
-  <h3 class="headline">Kick Off - Brief Brainstorm:</h3>
+  <h3 class="headline">Design Brief:</h3>
   <div class="description">
-  To start off by investigating the challenges and opportunities that could be gained by upgrading a wheelchair to a digitally connected one, we began by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. We used this overview to gather potential applications and map our primary associations. This session helped us form several ideas for a connected wheelchair:
+    To start off the course we received a design brief. We began by investigating the challenges and opportunities that currently exist in wheel chair use, so we could understand what could be gained by creating a connected wheel chair. 
+    Our research began online and continues to interviews with two Physiotherapists and an occupational therapist student that volenteers with wheelchair users.
+    <br><br>
+   <h5> "While the population of wheelchair users is growing worldwide, it becomes urgent to design supportive
+technologies that fit their needs. We aim to develop products for improvement of the wheelchair users’ wellbeing. This design is a connected product that collects
+data from sensors, processes it in order to actuate user
+interactions embedded on the wheelchair."</h5>
+    <br><br>
+    
+  We began our design process by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. We used this overview to gather potential applications and map our primary associations. This session helped us form several ideas for a connected wheelchair:
   </div><br><br>
 
   <div class="brainstorm_idea">
@@ -162,8 +191,10 @@ html {
 
 <div id="theidea">
   <h3 class="headline">The Final Concept: <br>Basic wheelchair skills gamification</h3>
-  For our final conecpt, we chose to use a connected wheelchair to teach basic wheelchair skills, and gamify the wheelchair experience.
-  <br>
+  <span>For our final conecpt, we chose to focus on the first experience of a user with a wheel chair. We designed
+   a connected wheelchair that helps teach basic wheelchair skills. Our goal is to use the connected prototype in order to test it with kids and perform user research. </span>
+  <span class="highlight"> We want to test the ability of the gamification of the wheelchair experience to simplify and shorten the learning curve of basic wheel chair skills.</span>
+  <br><br>
   <h4 class="secondary">Target Users:</h4>
  <ul>
    <li>Main target: Kids in the age of 6-12</li>
@@ -171,9 +202,12 @@ html {
   <li>Anyone interested in learning basic wheelchair skills</li>
   </ul>
 
+ <img src="images/Child in a wheelchair 2.jpg" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
+        <br>
   <h4 class="secondary">Goals:</h4>
-The goal of the product is to teach kids the basic wheelchair activities in a fun and playfull manner. A secondary goal is to use the data collected to learn about the way kids adapt to wheelchairs, the speed in which they learn and the level of difficulty of the different activities
-<br>
+The goal of the product is to teach kids the basic wheelchair activities in a fun and playfull manner. A secondary goal is to use the data collected to learn about the way kids adapt to wheelchairs, the speed in which they learn and the level of difficulty of the different activities. <span class="highlight">The goal of the prototype is to test the usability of the product. Both the web interface and the physical experience. We aim to learn if this product can create value to its target audience, and make to learning process more enjoyable</span>
+<br><br>
+
 <ul>
   <li>Gamify simple tasks that involve wheelchair skills</li>
 <li>Encourage kids in wheelchairs to be active and play outside</li>
@@ -211,23 +245,36 @@ A possible example for a task: “Create a full circle to the right side”. The
 </div>
 
 <h4 class="secondary">Data:</h4>
-<b>Data collected:</b> Speed on different surfaces, angles
+<b>Data collected:</b><br><br>
+Speed on different surfaces, angles, time it taked to perform various activities such as complete a circle, reverse etc<br><br>
 <b>The data collected can teach us about: </b>
-- the behaviour of kids when they use a wheelchair for the first time
-- Maybe we can learn about what skills are more challenging for kids to learn when using a wheelchair for the first time
-- Possible stakeholders who can benefit from this information: wheelchairs engineers and designers that could improve functionality based on that, doctors and families of kids with wheelchair that can help kids get easily adjusted to the chair etc
-
-
-
+<ul>
+  <li>The behaviour of kids when they use a wheelchair for the first time</li>
+  <li>What skills are more challenging for kids to learn when using a wheelchair for the first time</li>
+  <li>The time it takes to perform different activities with a wheelchair</li>
+  <li>The learning curve of different skills, and how can we improve it</li>
+  </ul>
+<b>Possible stakeholders:</b><br>
+<ul>
+  <li>Wheelchairs engineers and designers </li>
+  <li>Doctors</li>
+  <li>Physiotherapists</li>
+  <li>Occupational therapists</li>
+  <li>Families of kids with wheelchair</li>
+  <li>Researchers </li>
+ </ul>
 
 
   <h3 class="headline">The process</h3>
+  <div>
     <h4 class="secondary">1. Create a new Github project</h4>
+     <p>For managing our collaborative work on this digital project we used an organizational GitHub account, which allowed us to store different versions of our codes and work from different pc's on the same files. An additional added value of using GitHub is that within its interface, an option is built in that allows one to quickly convert code documents into a presentable website. Be careful to create an organizational account instead of a normal user account; you will need the account to be organizational in order to be able to grant everybody administrative permission, so that all your teammembers can edit the GitHub pages if necessary. </p>
     <h4 class="secondary">2. Set-up the Raspberry Pi</h4>
-  <h4 class="secondary">3. Build the Adafruit breadboard</h4>  
-</div>
+      <p>The Raspberry Pi (Pi from now) was meant to serve as the main Hub within our project, collecting the data from the Adafruit bluetooth board, running some calculations on the raw data and then displaying this data on the server it is running. To be able to work with the Pi, beware that you will need a keyboard, a mouse and a screen with HDMI gate. First, the Pi had to be set up to recognize the Eduroam network. Then, through the terminal on the Pi, download a copy of the GitHub project folder. For more indepth instructions, please refer to <a href="https://datacentricdesign.org/docs/2019/04/30/platform-raspberrypi">this tutorial</a>. </p>
+  <h4 class="secondary">3. Build the Adafruit breadboard</h4>
+  </div>
 <div id="Breadboard image">
-  <img src="images/Screenshot 2019-10-25 at 16.13.25.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
+  <img src="images/img5.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
 </div>
 <div id ="How to build it continued">
     <h4 class="secondary">4. Write Arduino code</h4>
@@ -235,9 +282,19 @@ A possible example for a task: “Create a full circle to the right side”. The
     <h4 class="secondary">6. Write a python file for subscribe_gatt_orientation.py</h4>
     <h4 class="secondary">7. Add socket code to launch a server</h4>
     <h4 class="secondary">8. Write html code, download javascript code for interface</h4>
+    <p>To create a web interface for the prototype, we decided to use an existing JS library and adjust it to out needs. We wanted to create a circle to indicate the movement that occurs in the physical world with the chair. We tried different libraries until we chose the one that suited our needs most. At first we used a loader JS library. It looked great but we realized that making it work for left and right circles we would have to re-write quite a lot of the code. We decided to try a different library and chose to use a pie chart. That way, both sides of the circle are supported. The angles start at -100 and reach 100. A circle to the left would be with a negative value, and a circle to the right would be with a positive value.</p>
     <h4 class="secondary">9. Run python script on Raspberry Pi</h4>
 
 </div>
 
 <div id="prototype"></div>
 <h3 class="headline">The prototype</h3>
+While developing the prototype we faced many questions: What is the best place on the chair to attach the board? What type of angle should we monitor in order to test a full circle? What should happen when a circle is complete? etc. The ability to physically test the different options helped us make the right decisions.
+<br><br>
+
+ <div>
+        <video controls autoplay>
+            <source src="images/video.mp4" type="video/mp4">
+        </video>
+        <img class="half" src="images/img6.png" style="border: none;box-shadow: none;"/>
+</div>
