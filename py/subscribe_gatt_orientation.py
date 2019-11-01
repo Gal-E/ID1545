@@ -93,6 +93,8 @@ def reset():
     activator = True
     activator2 = True
     playedOnce = True
+    completionDetectionLeft = False
+    completionDetectionRight = False
 
 def find_or_create(property_name, property_type):
     """Search a property by name, create it if not found, then return it."""
