@@ -192,19 +192,27 @@ def calCircle(zAngle):
         if round(avgAbsoluteAngle/5.0)%20 == 0 and round(avgAbsoluteAngle/5.0) != 0 :
             print("circle to the left complete!!")
             completionDetectionLeft = True
-            play(complete)
     elif absoluteAngle>0:
         if round(avgAbsoluteAngle/5.0)%20 == 0 and round(avgAbsoluteAngle/5.0) != 0 :
             print("circle to the right complete!!")
             completionDetectionRight = True
-            play(complete)
 
     cur_val = zAngle
 
     if completionDetectionRight:
         avgAbsoluteAngle = 999
+        try:
+            socketio.emit('angle', '{"angle": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
+        except:
+            print("No socket?")
+        play(complete)
     if completionDetectionLeft:
         avgAbsoluteAngle = -999
+        try:
+            socketio.emit('angle', '{"angle": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
+        except:
+            print("No socket?")
+        play(complete)
 
     try:
         socketio.emit('angle', '{"angle": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
