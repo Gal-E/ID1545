@@ -267,7 +267,9 @@ Speed on different surfaces, angles, time it taked to perform various activities
   <h3 class="headline">The process</h3>
   <div>
     <h4 class="secondary">1. Create a new Github project</h4>
+     <p>For managing our collaborative work on this digital project we used an organizational GitHub account, which allowed us to store different versions of our codes and work from different pc's on the same files. An additional added value of using GitHub is that within its interface, an option is built in that allows one to quickly convert code documents into a presentable website. Be careful to create an organizational account instead of a normal user account; you will need the account to be organizational in order to be able to grant everybody administrative permission, so that all your teammembers can edit the GitHub pages if necessary. </p>
     <h4 class="secondary">2. Set-up the Raspberry Pi</h4>
+      <p>The Raspberry Pi (Pi from now) was meant to serve as the main Hub within our project, collecting the data from the Adafruit bluetooth board, running some calculations on the raw data and then displaying this data on the server it is running. To be able to work with the Pi, beware that you will need a keyboard, a mouse and a screen with HDMI gate. First, the Pi had to be set up to recognize the Eduroam network. Then, through the terminal on the Pi, download a copy of the GitHub project folder. For more indepth instructions, please refer to <a href="https://datacentricdesign.org/docs/2019/04/30/platform-raspberrypi">this tutorial</a>. </p>
   <h4 class="secondary">3. Build the Adafruit breadboard</h4>
   </div>
 <div id="Breadboard image">
