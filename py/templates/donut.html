@@ -7,6 +7,7 @@
 	<title>Scriptable > Pie | Chart.js sample</title>
 	<link rel="stylesheet" type="text/css"
 				href="{{ url_for('static', filename='css/style.css') }}">
+	<script src="{{ url_for('static', filename='js/confetti.js') }}" language="JavaScript"></script>
 	<script src="http://www.chartjs.org/dist/2.9.1/Chart.min.js" language="JavaScript"></script>
 	<script src="https://www.chartjs.org/samples/latest/utils.js" language="JavaScript"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
@@ -30,12 +31,14 @@
 						if(json.angle > 0) {
 							dataset.data = [json.angle, 100 - json.angle];
 						}
-						else {
-							dataset.data = [100 - json.angle, json.angle];
-						}
+					//	else {
+					//		dataset.data = [100 - json.angle, json.angle];
+					//	}
 
 						if(json.angle == -999 || json.angle == 999)  {
-								alert("full circle!");
+								// full circle
+								startConfetti();
+
 						}
  	 				});
 
@@ -49,7 +52,6 @@
 <body>
 	<div class="content">
 		<h1>Circle Time!</h1>
-		<h4>Can you form a full circle in less than 15 seconds?</h4>
 
 		<div class="wrapper"><canvas id="chart-0"></canvas></div>
 		<div class="toolbar">
