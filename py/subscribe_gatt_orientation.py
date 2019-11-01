@@ -172,16 +172,6 @@ def calCircle(zAngle):
         #print(str(measuredAngle)+" "+str(round(absoluteAngle)*10/10.0))
         activator = True
 
-    if absoluteAngle < 0:
-        if round(absoluteAngle/10.0)%36 == 0 and round(absoluteAngle/10.0) != 0 :
-            print("circle to the left complete!!")
-            completionDetection = True
-    elif absoluteAngle>0:
-        if round(absoluteAngle/10.0)%36 == 0 and round(absoluteAngle/10.0) != 0 :
-            print("circle to the right complete!!")
-            completionDetection = True
-
-
     if avgListCounter < avgListLength - 1:
         avgListCounter = avgListCounter + 1
     else:
@@ -189,6 +179,15 @@ def calCircle(zAngle):
 
     avgList[avgListCounter] = absoluteAngle
     avgAbsoluteAngle = 100*(sum(avgList)/avgListLength)/360
+
+    if avgAbsoluteAngle < 0:
+        if round(avgAbsoluteAngle/5.0)%72 == 0 and round(avgAbsoluteAngle/5.0) != 0 :
+            print("circle to the left complete!!")
+            completionDetection = True
+    elif absoluteAngle>0:
+        if round(avgAbsoluteAngle/5.0)%72 == 0 and round(avgAbsoluteAngle/5.0) != 0 :
+            print("circle to the right complete!!")
+            completionDetection = True
 
     cur_val = zAngle
 
