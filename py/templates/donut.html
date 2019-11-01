@@ -16,6 +16,7 @@
 	<script type="text/javascript" charset="utf-8">
 
 			var socket = io();
+			var active = true;
 			socket.on('connect', function() {
 				// socket.emit('json', {data: 'I\'m connected!'});
 			console.log('connected');
@@ -28,7 +29,7 @@
 			    console.log(json.angle);
 
 					chart.data.datasets.forEach(function(dataset) {
-						if(json.angle > 0) {
+						if(json.angle > 0 && active) {
 							dataset.data = [json.angle, 100 - json.angle];
 						}
 					//	else {
@@ -39,6 +40,7 @@
 								// full circle
 								confetti.start()
 								json.angle = 100;
+								active = false;
 						}
  	 				});
 
