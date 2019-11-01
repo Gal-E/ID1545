@@ -9,6 +9,7 @@ html {
   background: white;
   }
 #header_wrap {
+  background-image: url("images/background.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   }
