@@ -171,13 +171,13 @@ def calCircle(zAngle):
     if absoluteAngle < 0:
         if round(absoluteAngle/10.0)%36 == 0 and round(absoluteAngle/10.0) != 0 :
             print("circle to the left complete!!")
-            #sleep(3)
-            reset()
+            absoluteAngle = 999
+            sleep(5)
     elif absoluteAngle>0:
         if round(absoluteAngle/10.0)%36 == 0 and round(absoluteAngle/10.0) != 0 :
             print("circle to the right complete!!")
-            #sleep(3)
-            reset()
+            absoluteAngle = 999
+            sleep(5)
 
 
     if avgListCounter < avgListLength - 1:
