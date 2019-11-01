@@ -44,7 +44,9 @@
 </head>
 <body>
 	<div class="content">
-		<p> The download will begin in <span id="countdowntimer">10 </span> Seconds</p>
+		<h1>Circle Time!</h1>
+		<h4>Can you form a full circle in less than 15 seconds?</h4>
+		<p class="circleTimer"> You have <span id="countdowntimer">15 </span> seconds left!</p>
 		<div class="wrapper"><canvas id="chart-0"></canvas></div>
 		<div class="toolbar">
 			<button id="startButton" onclick="togglePieDoughnut()">Start Circle!</button>
@@ -144,13 +146,15 @@
 
 	</script>
 	<script type="text/javascript">
-	    var timeleft = 10;
-	    var downloadTimer = setInterval(function(){
-	    timeleft--;
-	    document.getElementById("countdowntimer").textContent = timeleft;
-	    if(timeleft <= 0)
-	        clearInterval(downloadTimer);
-	    },1000);
+
+			  var timeleft = 15;
+		    var downloadTimer = setInterval(function(){
+		    timeleft--;
+		    document.getElementById("countdowntimer").textContent = timeleft;
+		    if(timeleft <= 0)
+		        clearInterval(downloadTimer);
+		    },1000);
+			
 	</script>
 </body>
 </html>
