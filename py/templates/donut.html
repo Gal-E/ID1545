@@ -46,10 +46,11 @@
 	<div class="content">
 		<h1>Circle Time!</h1>
 		<h4>Can you form a full circle in less than 15 seconds?</h4>
-		<p class="circleTimer"> You have <span id="countdowntimer">15 </span> seconds left!</p>
+
 		<div class="wrapper"><canvas id="chart-0"></canvas></div>
 		<div class="toolbar">
-			<button id="startButton" onclick="togglePieDoughnut()">Start Circle!</button>
+			<button id="startButton" onclick="togglePieDoughnut(); document.getElementById('circleTimer').style.display = 'block';">Start Circle!</button>
+			<p id="circleTimer" style="display: none"> You have <span id="countdowntimer">15 </span> seconds left!</p>
 		</div>
 	</div>
 
@@ -147,7 +148,7 @@
 	</script>
 	<script type="text/javascript">
 
-			  var timeleft = 15; 
+			  var timeleft = 15;
 		    var downloadTimer = setInterval(function(){
 		    timeleft--;
 		    document.getElementById("countdowntimer").textContent = timeleft;
