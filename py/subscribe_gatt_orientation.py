@@ -11,6 +11,8 @@ from time import sleep
 from flask import Flask, request, render_template, render_template, request
 from flask_socketio import SocketIO, emit, send
 
+from pydub import AudioSegment
+from pydub.playback import play
 
 # DCD Hub
 from dcd.entities.thing import Thing
@@ -28,6 +30,8 @@ my_thing.read()
 
 my_property = my_thing.find_or_create_property("angle_data",
                                                PropertyType.ONE_DIMENSION)
+
+complete = AudioSegment.from_wav("complete.wav")
 
 BLUETOOTH_DEVICE_MAC = os.environ['BLUETOOTH_DEVICE_IMU']
 
@@ -73,6 +77,8 @@ checkpointCheck = True
 
 completionDetectionLeft = False
 completionDetectionRight = False
+
+playedOnce = True
 
 rotationDirection = "right"
 
@@ -142,6 +148,10 @@ def calCircle(zAngle):
     global completionDetectionRight
     global completionDetectionLeft
 
+    global complete
+
+    global playedOnce
+
     if activator2:
         initialAngle = zAngle
         old_val = zAngle
@@ -193,10 +203,22 @@ def calCircle(zAngle):
 
     cur_val = zAngle
 
-    if completionDetectionRight:
+    if completionDetectionRight and playedOnce:
         avgAbsoluteAngle = 999
-    if completionDetectionLeft:
+        try:
+            socketio.emit('angle', '{"angle": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
+        except:
+            print("No socket?")
+        play(complete)
+        playedOnce = False
+    if completionDetectionLeft and playedOnce:
         avgAbsoluteAngle = -999
+        try:
+            socketio.emit('angle', '{"angle": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
+        except:
+            print("No socket?")
+        play(complete)
+        playedOnce = False
 
     try:
         socketio.emit('angle', '{"angle": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
