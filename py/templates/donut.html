@@ -33,6 +33,12 @@
 						else {
 							dataset.data = [100 - json.angle, json.angle];
 						}
+
+						if(json.angle == -999 || json.angle == 999)  {
+							function circleSucess(){
+								alert("full circle!");
+							}
+						}
  	 				});
 
 					chart.update();
@@ -50,7 +56,6 @@
 		<div class="wrapper"><canvas id="chart-0"></canvas></div>
 		<div class="toolbar">
 			<button id="startButton" onclick="togglePieDoughnut();">Start Circle!</button>
-			<p id="circleTimer" style="display: none"> You have <span id="countdowntimer">15 </span> seconds left!</p>
 		</div>
 	</div>
 
