@@ -205,9 +205,9 @@ def discover_characteristic(device):
 
     for uuid in device.discover_characteristics().keys():
         try:
-            #print("Read UUID" + str(uuid) + "   " + str(device.char_read(uuid)))
+            print("Read UUID" + str(uuid) + "   " + str(device.char_read(uuid)))
         except:
-            #print("Something wrong with " + str(uuid))
+            print("Something wrong with " + str(uuid))
 
 
 
