@@ -185,11 +185,11 @@ def calCircle(zAngle):
     if avgAbsoluteAngle < 0:
         if round(avgAbsoluteAngle/5.0)%20 == 0 and round(avgAbsoluteAngle/5.0) != 0 :
             print("circle to the left complete!!")
-            completionDetectionRight = True
+            completionDetectionLeft = True
     elif absoluteAngle>0:
         if round(avgAbsoluteAngle/5.0)%20 == 0 and round(avgAbsoluteAngle/5.0) != 0 :
             print("circle to the right complete!!")
-            completionDetectionLeft = True
+            completionDetectionRight = True
 
     cur_val = zAngle
 
