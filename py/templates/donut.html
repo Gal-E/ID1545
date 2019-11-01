@@ -16,29 +16,30 @@
 	<script type="text/javascript" charset="utf-8">
 
 			var socket = io();
-			var active = true;
+		//	var active = true;
 			socket.on('connect', function() {
 				// socket.emit('json', {data: 'I\'m connected!'});
 			console.log('connected');
 			});
 
 			socket.on('angle', function(dist_obj) {
-				console.log('angle');
+			//	console.log('angle');
 			  const json = JSON.parse(dist_obj);
 			  if (json.angle !== undefined) {
 			    console.log(json.angle);
 
 					chart.data.datasets.forEach(function(dataset) {
-						if(json.angle > 0 && active) {
+						if(json.angle > 0) {
 							dataset.data = [json.angle, 100 - json.angle];
 						}
 					//	else {
 					//		dataset.data = [100 - json.angle, json.angle];
 					//	}
 
-						if(json.angle == -999 || json.angle == 999)  {
+						if(json.angle == 100 || json.angle == -100)  {
 								// full circle
 								confetti.start();
+								setTimeout(function () { location.reload(1); }, 5000);
 						}
  	 				});
 
