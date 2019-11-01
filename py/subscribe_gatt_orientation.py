@@ -22,9 +22,9 @@ THING_ID = os.environ['THING_ID']
 THING_TOKEN = os.environ['THING_TOKEN']
 
 # Instantiate a thing with its credential
-#my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
+my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 
-#my_thing.read()
+my_thing.read()
 
 my_property = my_thing.find_or_create_property("angle_data",
                                                PropertyType.ONE_DIMENSION)
@@ -102,8 +102,8 @@ def handle_orientation_data(handle, value_bytes):
 
     print(values)
 
-    # myCmd = 'clear'
-    # os.system(myCmd)
+    myCmd = 'clear'
+    os.system(myCmd)
     #print(F"BNOvalues {values}")
     #find_or_create("Left Wheel Orientation",
     #PropertyType.THREE_DIMENSIONS).update_values(values)
@@ -202,13 +202,13 @@ def calCircle(zAngle):
 
 def discover_characteristic(device):
     """List characteristics of a device"""
-    '''
+
     for uuid in device.discover_characteristics().keys():
         try:
             #print("Read UUID" + str(uuid) + "   " + str(device.char_read(uuid)))
         except:
             #print("Something wrong with " + str(uuid))
-    '''
+
 
 
 def read_characteristic(device, characteristic_id):
@@ -291,8 +291,8 @@ def handle_orientation(json):
 
 
 # Instantiate a thing with its credential, then read its properties from the DCD Hub
-#my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
-#my_thing.read()
+my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
+my_thing.read()
 
 
 def connect_bluetooth():
