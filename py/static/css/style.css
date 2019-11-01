@@ -23,13 +23,19 @@ h1 {
 .startWrapper{
   text-align: center;
 }
-#start{
+.toolbar{
+  width: 100%;
+}
+#startButton{
   height: 50px;
   width: 180px;
   margin-top: 50px;
-  background: lightblue;
+  background: rgba(52, 168, 83, 1);
   font-size: 18px;
   font-family: monospace;
   border: none;
   border-radius: 10px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
