@@ -71,6 +71,9 @@ avgListCounter = 0
 checkpoint = 0
 checkpointCheck = True
 
+completionDetectionLeft = False
+completionDetectionRight = False
+
 rotationDirection = "right"
 
 def reset():
@@ -136,6 +139,9 @@ def calCircle(zAngle):
     global avgListCounter
     global avgAbsoluteAngle
 
+    global completionDetectionRight
+    global completionDetectionLeft
+
     if activator2:
         initialAngle = zAngle
         old_val = zAngle
@@ -168,18 +174,6 @@ def calCircle(zAngle):
         #print(str(measuredAngle)+" "+str(round(absoluteAngle)*10/10.0))
         activator = True
 
-    if absoluteAngle < 0:
-        if round(absoluteAngle/10.0)%36 == 0 and round(absoluteAngle/10.0) != 0 :
-            print("circle to the left complete!!")
-            #sleep(3)
-            reset()
-    elif absoluteAngle>0:
-        if round(absoluteAngle/10.0)%36 == 0 and round(absoluteAngle/10.0) != 0 :
-            print("circle to the right complete!!")
-            #sleep(3)
-            reset()
-
-
     if avgListCounter < avgListLength - 1:
         avgListCounter = avgListCounter + 1
     else:
@@ -188,7 +182,21 @@ def calCircle(zAngle):
     avgList[avgListCounter] = absoluteAngle
     avgAbsoluteAngle = 100*(sum(avgList)/avgListLength)/360
 
+    if avgAbsoluteAngle < 0:
+        if round(avgAbsoluteAngle/5.0)%20 == 0 and round(avgAbsoluteAngle/5.0) != 0 :
+            print("circle to the left complete!!")
+            completionDetectionLeft = True
+    elif absoluteAngle>0:
+        if round(avgAbsoluteAngle/5.0)%20 == 0 and round(avgAbsoluteAngle/5.0) != 0 :
+            print("circle to the right complete!!")
+            completionDetectionRight = True
+
     cur_val = zAngle
+
+    if completionDetectionRight:
+        avgAbsoluteAngle = 999
+    if completionDetectionLeft:
+        avgAbsoluteAngle = -999
 
     try:
         socketio.emit('angle', '{"angle": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
