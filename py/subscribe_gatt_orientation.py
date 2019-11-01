@@ -90,6 +90,8 @@ def reset():
     absoluteAngle = 0
     circleCounter = 0
     checkpoint = 0
+    activator = True
+    activator2 = True
 
 def find_or_create(property_name, property_type):
     """Search a property by name, create it if not found, then return it."""
@@ -211,7 +213,7 @@ def calCircle(zAngle):
             print("No socket?")
         play(complete)
         playedOnce = False
-    if completionDetectionLeft and playedOnce:
+    elif completionDetectionLeft and playedOnce:
         avgAbsoluteAngle = -100
         try:
             socketio.emit('angle', '{"angle": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
@@ -219,11 +221,15 @@ def calCircle(zAngle):
             print("No socket?")
         play(complete)
         playedOnce = False
-
-    try:
-        socketio.emit('angle', '{"angle": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
-    except:
+    elif playedOnce:
+        try:
+            socketio.emit('angle', '{"angle": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
+        except:
         print("No socket?")
+
+    if playedOnce == False:
+        sleep(5)
+        reset()
 
     return avgAbsoluteAngle
 
