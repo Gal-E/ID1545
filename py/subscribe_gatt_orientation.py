@@ -26,9 +26,9 @@ THING_TOKEN = os.environ['THING_TOKEN']
 
 #my_thing.read()
 
-"""my_property = my_thing.find_or_create_property("angle_data",
+my_property = my_thing.find_or_create_property("angle_data",
                                                PropertyType.ONE_DIMENSION)
-"""
+
 BLUETOOTH_DEVICE_MAC = os.environ['BLUETOOTH_DEVICE_IMU']
 
 # UUID of the GATT characteristic to subscribe
