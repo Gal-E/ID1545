@@ -22,13 +22,13 @@ THING_ID = os.environ['THING_ID']
 THING_TOKEN = os.environ['THING_TOKEN']
 
 # Instantiate a thing with its credential
-my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
+#my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 
-my_thing.read()
+#my_thing.read()
 
-my_property = my_thing.find_or_create_property("angle_data",
+"""my_property = my_thing.find_or_create_property("angle_data",
                                                PropertyType.ONE_DIMENSION)
-
+"""
 BLUETOOTH_DEVICE_MAC = os.environ['BLUETOOTH_DEVICE_IMU']
 
 # UUID of the GATT characteristic to subscribe

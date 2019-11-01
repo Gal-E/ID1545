@@ -40,9 +40,21 @@
 			});
 
 	</script>
+	<script>
+		var seconds = 0;
+		var el = document.getElementById('seconds-counter');
+
+		function incrementSeconds() {
+		seconds += 1;
+		el.innerText = "You have been here for " + seconds + " seconds.";
+		}
+
+		var cancel = setInterval(incrementSeconds, 1000);
+	</script>
 </head>
 <body>
 	<div class="content">
+		<div id='seconds-counter'> </div>
 		<div class="wrapper"><canvas id="chart-0"></canvas></div>
 		<div class="toolbar">
 			<button onclick="togglePieDoughnut()">Start Circle!</button>
