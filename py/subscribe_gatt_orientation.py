@@ -92,6 +92,7 @@ def reset():
     checkpoint = 0
     activator = True
     activator2 = True
+    playedOnce = True
 
 def find_or_create(property_name, property_type):
     """Search a property by name, create it if not found, then return it."""
