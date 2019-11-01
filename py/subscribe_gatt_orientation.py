@@ -181,11 +181,11 @@ def calCircle(zAngle):
     avgAbsoluteAngle = 100*(sum(avgList)/avgListLength)/360
 
     if avgAbsoluteAngle < 0:
-        if round(avgAbsoluteAngle/5.0)%72 == 0 and round(avgAbsoluteAngle/5.0) != 0 :
+        if round(avgAbsoluteAngle/5.0)%20 == 0 and round(avgAbsoluteAngle/5.0) != 0 :
             print("circle to the left complete!!")
             completionDetection = True
     elif absoluteAngle>0:
-        if round(avgAbsoluteAngle/5.0)%72 == 0 and round(avgAbsoluteAngle/5.0) != 0 :
+        if round(avgAbsoluteAngle/5.0)%20 == 0 and round(avgAbsoluteAngle/5.0) != 0 :
             print("circle to the right complete!!")
             completionDetection = True
 
