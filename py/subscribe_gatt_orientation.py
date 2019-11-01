@@ -204,7 +204,7 @@ def calCircle(zAngle):
     cur_val = zAngle
 
     if completionDetectionRight and playedOnce:
-        avgAbsoluteAngle = 999
+        avgAbsoluteAngle = 100
         try:
             socketio.emit('angle', '{"angle": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
         except:
@@ -212,7 +212,7 @@ def calCircle(zAngle):
         play(complete)
         playedOnce = False
     if completionDetectionLeft and playedOnce:
-        avgAbsoluteAngle = -999
+        avgAbsoluteAngle = -100
         try:
             socketio.emit('angle', '{"angle": "%s"}' % str(round(avgAbsoluteAngle)), broadcast=True)
         except:
