@@ -41,20 +41,19 @@
 
 	</script>
 	<script>
-		var seconds = 0;
-		var el = document.getElementById('seconds-counter');
-
-		function incrementSeconds() {
-		seconds += 1;
-		el.innerText = "You have been here for " + seconds + " seconds.";
-		}
-
-		var cancel = setInterval(incrementSeconds, 1000);
+			window.setInterval((function(){
+		   var start = Date.now();
+		   var textNode = document.createTextNode('0');
+		   document.getElementById('seconds').appendChild(textNode);
+		   return function() {
+		        textNode.data = Math.floor((Date.now()-start)/1000);
+		        };
+		   }()), 1000);
 	</script>
 </head>
 <body>
 	<div class="content">
-		<div id="seconds-counter"> </div>
+		<p>You've been on this page for <span id=seconds></span> seconds.</p>
 		<div class="wrapper"><canvas id="chart-0"></canvas></div>
 		<div class="toolbar">
 			<button onclick="togglePieDoughnut()">Start Circle!</button>
