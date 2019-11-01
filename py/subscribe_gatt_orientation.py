@@ -11,6 +11,8 @@ from time import sleep
 from flask import Flask, request, render_template, render_template, request
 from flask_socketio import SocketIO, emit, send
 
+from pydub import AudioSegment
+from pydub.playback import play
 
 # DCD Hub
 from dcd.entities.thing import Thing
@@ -28,6 +30,8 @@ my_thing.read()
 
 my_property = my_thing.find_or_create_property("angle_data",
                                                PropertyType.ONE_DIMENSION)
+
+complete = AudioSegment.from_wav("complete.wav")
 
 BLUETOOTH_DEVICE_MAC = os.environ['BLUETOOTH_DEVICE_IMU']
 
@@ -142,6 +146,8 @@ def calCircle(zAngle):
     global completionDetectionRight
     global completionDetectionLeft
 
+    global complete
+
     if activator2:
         initialAngle = zAngle
         old_val = zAngle
@@ -186,10 +192,12 @@ def calCircle(zAngle):
         if round(avgAbsoluteAngle/5.0)%20 == 0 and round(avgAbsoluteAngle/5.0) != 0 :
             print("circle to the left complete!!")
             completionDetectionLeft = True
+            play(complete)
     elif absoluteAngle>0:
         if round(avgAbsoluteAngle/5.0)%20 == 0 and round(avgAbsoluteAngle/5.0) != 0 :
             print("circle to the right complete!!")
             completionDetectionRight = True
+            play(complete)
 
     cur_val = zAngle
 
