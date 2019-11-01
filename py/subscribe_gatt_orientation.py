@@ -73,7 +73,6 @@ avgListLength = 10
 avgListCounter = 0
 
 checkpoint = 0
-checkpointCheck = True
 
 completionDetectionLeft = False
 completionDetectionRight = False
@@ -88,9 +87,9 @@ def reset():
     measuredAngle = 0
     initialAngle = 30
     absoluteAngle = 0
+    avgAbsoluteAngle = 0
     circleCounter = 0
     checkpoint = 0
-    activator = True
     activator2 = True
     playedOnce = True
     completionDetectionLeft = False
