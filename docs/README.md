@@ -104,7 +104,7 @@ html {
     float: right;
   }
   video.protoVideo {
-    width: 100%%;
+    width: 100%;
   }
 </style>
 
@@ -309,7 +309,7 @@ Speed on different surfaces, angles, time it taked to perform various activities
 <br><br>
 
  <div>
-    <video controls autoplay class="firstVideo">
+    <video controls autoplay muted class="firstVideo">
         <source src="images/video.mp4" type="video/mp4">
     </video>
     <img class="half" src="images/img6.png" style="border: none;box-shadow: none;"/>
