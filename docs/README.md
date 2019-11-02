@@ -339,8 +339,9 @@ The final prototype consists of a web interface that demonstrates the circle don
     <br>
 
   <div>
-  <span class="textNearImg">In the console log you can see how we track every angle, and the visual on the screen changes to reflect that to the user (The numbers 0 - 100 indicate angle 0 untill angle 360). In the second video, you can see how the prototype is being used, while the web app appears on the users phone.</span>
+ 
    <video controls autoplay muted class="smallVid">
       <source src="images/video3.mp4" type="video/mp4">
   </video>
+   <span class="textNearImg">In the console log you can see how we track every angle, and the visual on the screen changes to reflect that to the user (The numbers 0 - 100 indicate angle 0 untill angle 360). In the second video, you can see how the prototype is being used, while the web app appears on the users phone.</span>
   </div>
