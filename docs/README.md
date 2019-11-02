@@ -293,7 +293,7 @@ Speed on different surfaces, angles, time it taked to perform various activities
           <li>GND on IMU to GND on Adafruit - grounding the IMU sensor</li>
         </ul>
 <div id="Breadboard image">
-  <img src="images/img5.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
+  <img src="images/Breadboard Adafruit.png" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
 </div>
 <div id ="How to build it continued">
     <h4 class="secondary">4. Download Arduino and install libraries</h4>
