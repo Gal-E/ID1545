@@ -103,6 +103,9 @@ html {
     display: inline;
     float: right;
   }
+  video.protoVideo {
+    width: 48%;
+  }
 </style>
 
 <div id="second-header">
@@ -323,6 +326,8 @@ The final prototype consists of a web interface that demonstrates the circle don
       <source src="images/video4.mp4" type="video/mp4">
   </video>
   
-   <video controls autoplay muted class="protoVideo">
+   <video controls autoplay muted class="firstVideo">
       <source src="images/video3.mp4" type="video/mp4">
   </video>
+  
+  <img class="half" src="images/img7.png" style="border: none;box-shadow: none;"/>
