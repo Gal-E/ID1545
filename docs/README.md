@@ -92,7 +92,7 @@ html {
     font-style: italic;
     font-size: 21px;
   }
-  video {
+  video.firstVideo {
     width: 39%;
     margin: 0;
     display: inline;
@@ -302,12 +302,22 @@ Speed on different surfaces, angles, time it taked to perform various activities
 
 <div id="prototype"></div>
 <h3 class="headline">The prototype</h3>
-While developing the prototype we faced many questions: What is the best place on the chair to attach the board? What type of angle should we monitor in order to test a full circle? What should happen when a circle is complete? etc. The ability to physically test the different options helped us make the right decisions.
+<p>While developing the prototype we faced many questions: What is the best place on the chair to attach the board? What type of angle should we monitor in order to test a full circle? What should happen when a circle is complete? etc. The ability to physically test the different options helped us make the right decisions.</p>
 <br><br>
 
  <div>
-        <video controls autoplay>
-            <source src="images/video.mp4" type="video/mp4">
-        </video>
-        <img class="half" src="images/img6.png" style="border: none;box-shadow: none;"/>
+    <video controls autoplay class="firstVideo">
+        <source src="images/video.mp4" type="video/mp4">
+    </video>
+    <img class="half" src="images/img6.png" style="border: none;box-shadow: none;"/>
 </div>
+<p>
+The final prototype consists of a web interface that demonstrates the circle done with the wheelchair. As the chair rotates, the circle in the web application gets fuller, thus indicating the percents of the circle that have been complete. Once the circle is complete, there is a confetti animation and a success sound, letting the user know he completed the exercise. This can be seen in the video bellow.
+</p><br>
+
+  <video controls autoplay class="protoVideo">
+      <source src="images/video2.mp4" type="video/mp4">
+  </video>
+  <video controls autoplay class="protoVideo">
+      <source src="images/video3.mp4" type="video/mp4">
+  </video>
