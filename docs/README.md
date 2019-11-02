@@ -330,4 +330,3 @@ The final prototype consists of a web interface that demonstrates the circle don
       <source src="images/video3.mp4" type="video/mp4">
   </video>
   
-  <img class="half" src="images/img7.png" style="border: none;box-shadow: none;"/>
