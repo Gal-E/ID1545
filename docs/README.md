@@ -106,6 +106,15 @@ html {
   video.protoVideo {
     width: 100%;
   }
+  span.textNearImg {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+  }
+  video.smallVid {
+    display: inline-block;
+    width: 50%;
+  }
 </style>
 
 <div id="second-header">
@@ -326,9 +335,11 @@ The final prototype consists of a web interface that demonstrates the circle don
   <video controls autoplay muted class="protoVideo">
       <source src="images/video4.mp4" type="video/mp4">
   </video>
+    <br>
+
   <div>
-  <span>In the console log you can see how we track every angle, and the visual on the screen changes to reflect that to the user (The numbers 0 - 100 indicate angle 0 untill angle 360). In the second video, you can see how the prototype is being used, while the web app appears on the users phone.</span>
-   <video controls autoplay muted>
+  <span class="textNearImg">In the console log you can see how we track every angle, and the visual on the screen changes to reflect that to the user (The numbers 0 - 100 indicate angle 0 untill angle 360). In the second video, you can see how the prototype is being used, while the web app appears on the users phone.</span>
+   <video controls autoplay muted class="smallVid">
       <source src="images/video3.mp4" type="video/mp4">
   </video>
   </div>
