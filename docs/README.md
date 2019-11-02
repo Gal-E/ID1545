@@ -104,7 +104,7 @@ html {
     float: right;
   }
   video.protoVideo {
-    width: 48%;
+    width: 100%%;
   }
 </style>
 
@@ -325,8 +325,9 @@ The final prototype consists of a web interface that demonstrates the circle don
   <video controls autoplay muted class="protoVideo">
       <source src="images/video4.mp4" type="video/mp4">
   </video>
-  
-   <video controls autoplay muted class="firstVideo">
+  <div>
+  <span>While</span>
+   <video controls autoplay muted>
       <source src="images/video3.mp4" type="video/mp4">
   </video>
-  
+  </div>
