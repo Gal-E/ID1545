@@ -316,7 +316,7 @@ Speed on different surfaces, angles, time it taked to perform various activities
 </div><br><br>
 <h5 style="text-align: center;">The Final Prototype</h5>
 <p>
-The final prototype consists of a web interface that demonstrates the circle done with the wheelchair. As the chair rotates, the circle in the web application gets fuller, thus indicating the percents of the circle that have been complete. Once the circle is complete, there is a confetti animation and a success sound, letting the user know he completed the exercise. This can be seen in the video bellow. The first video records the activity on the screen. In the console log you can see how we track every angle, and the visual on the screen changes to reflect that to the user (The numbers 0 - 100 indicate angle 0 untill angle 360). In the second video, you can see how the prototype is being used, while the web app appears on the users phone.
+The final prototype consists of a web interface that demonstrates the circle done with the wheelchair. As the chair rotates, the circle in the web application gets fuller, thus indicating the percents of the circle that have been complete. Once the circle is complete, there is a confetti animation and a success sound, letting the user know he completed the exercise. This can be seen in the video bellow. The first video records the activity on the screen. 
 </p><br><br>
 
   <video controls autoplay muted class="protoVideo">
@@ -326,7 +326,7 @@ The final prototype consists of a web interface that demonstrates the circle don
       <source src="images/video4.mp4" type="video/mp4">
   </video>
   <div>
-  <span>While</span>
+  <span>In the console log you can see how we track every angle, and the visual on the screen changes to reflect that to the user (The numbers 0 - 100 indicate angle 0 untill angle 360). In the second video, you can see how the prototype is being used, while the web app appears on the users phone.</span>
    <video controls autoplay muted>
       <source src="images/video3.mp4" type="video/mp4">
   </video>
