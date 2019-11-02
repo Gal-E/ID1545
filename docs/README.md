@@ -108,7 +108,8 @@ html {
   }
   span.textNearImg {
     display: inline-block;
-    width: 48%;
+    width: 45%;
+    padding: 20px;
     vertical-align: top;
   }
   video.smallVid {
