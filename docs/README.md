@@ -304,7 +304,7 @@ Speed on different surfaces, angles, time it taked to perform various activities
         </ul>
   <p>Then, go to 'preferences' and next to the field "Additional Boards Manager URLs:" click on the button with two overlapping rectangles, all the way to the right. Copy-paste “https://adafruit.github.io/arduino-board-index/package_adafruit_index.json" into this window, then click 'OK' in this screen and in the 'Preferences' window. </p>
     <h4 class="secondary">5. Upload arduino code to Adafruit</h4>
-  <p>Download <a href="https://github.com/Gal-E/ID1545/tree/master/arduino/IMU_detector">the following arduino file</a> and open it in the arduino software. Push the arrow in the top bar of the Arduino interface to </p>
+  <p>Now connect the Adafruit board to your PC using an micro-usb cable. In the topbar of the Arduino osooftware, go to 'tools' and make sure that 'board' is set to "Adafruit 32u4" and that, under 'port' a usb-port is selected with "Adafruit 32u4" in the name, as well. Download <a href="https://github.com/Gal-E/ID1545/tree/master/arduino/IMU_detector">the following arduino file</a> and open it in the arduino software. Then, push the arrow in the top bar of the Arduino interface to upload the file to the Adafruit board. Now, when connected to power, the Adafruit should be visible by bluetooth devices.</p>
     <h4 class="secondary">6. Write a python file for subscribe_gatt_orientation.py</h4>
     <h4 class="secondary">7. Add socket code to launch a server</h4>
     <h4 class="secondary">8. Write html code, download javascript code for interface</h4>
