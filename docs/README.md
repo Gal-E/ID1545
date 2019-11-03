@@ -333,11 +333,10 @@ Speed on different surfaces, angles, time it taked to perform various activities
 The final prototype consists of a web interface that demonstrates the circle done with the wheelchair. As the chair rotates, the circle in the web application gets fuller, thus indicating the percents of the circle that have been complete. Once the circle is complete, there is a confetti animation and a success sound, letting the user know he completed the exercise. This can be seen in the video bellow. The first video records the activity on the screen. 
 </p><br><br>
 
-  <video controls autoplay muted class="protoVideo">
+  <video controls autoplay muted class="protoVideo" style="width: 35%;float: left;">
       <source src="images/video5.mp4" type="video/mp4">
   </video>
-  <br>
-  <video controls autoplay muted class="protoVideo">
+  <video controls autoplay muted class="protoVideo" style="width: 64%;float: right;">
       <source src="images/video4.mp4" type="video/mp4">
   </video>
     <br>
