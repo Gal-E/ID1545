@@ -108,14 +108,10 @@ html {
   }
   span.textNearImg {
     display: inline-block;
-    width: 45%;
-    padding: 20px;
-    vertical-align: top;
-  }
-  video.smallVid {
-    display: inline-block;
-    width: 50%;
-  }
+    width: 100%;
+    margin-top: 20px;
+ }
+
   #BreadboardImage {
     float: right;
     width: 30%;
