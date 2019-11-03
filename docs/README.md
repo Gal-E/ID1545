@@ -116,6 +116,11 @@ html {
     display: inline-block;
     width: 50%;
   }
+  #BreadboardImage {
+    float: right;
+    width: 30%;
+    margin: 10px 0 10px 20px;
+  }
 </style>
 
 <div id="second-header">
@@ -292,8 +297,8 @@ Speed on different surfaces, angles, time it taked to perform various activities
           <li>SCL on IMU to SCL on Adafruit - clockline to synchronise the communicated data</li>
           <li>GND on IMU to GND on Adafruit - grounding the IMU sensor</li>
         </ul>
-<div id="Breadboard image">
-  <img src="images/Breadboard Adafruit.png" style="border: none;box-shadow: none; margin-bottom: 25px; width: 35%;"/>
+<div id="BreadboardImage">
+  <img src="images/Breadboard Adafruit.png" style="border: none;box-shadow: none; width: 100%;"/>
 </div>
 <div id ="How to build it continued">
     <h4 class="secondary">4. Download Arduino and install libraries</h4>
