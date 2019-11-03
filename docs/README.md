@@ -290,6 +290,9 @@ Speed on different surfaces, angles, time it taked to perform various activities
     <h4 class="secondary">2. Set-up the Raspberry Pi</h4>
       <p>The Raspberry Pi (Pi from now) serves as the most important node within our project, collecting the data from the Adafruit bluetooth board, doing calculations on the raw data in a python file and then displaying this data on the server it is running. <br> We started working with a clean install of Raspbian. To be able to work with the Pi, beware that you will need a keyboard, a mouse and a screen with HDMI gate. First, the Pi had to be set up to recognize the Eduroam network. Then, through the terminal on the Pi, download a copy of the GitHub project folder. For more indepth instructions, please refer to <a href="https://datacentricdesign.org/docs/2019/04/30/platform-raspberrypi">this tutorial</a>. </p>
   <h4 class="secondary">3. Build the Adafruit breadboard</h4>
+  <div id="BreadboardImage">
+  <img src="images/Breadboard Adafruit.png" style="border: none;box-shadow: none; width: 100%;"/>
+</div>
       <p>The core sensor to our project was the BNO055 IMU sensor; this is a 9 axes accelerometer that can detect movement, rotation and accelerations. For now, we're only referring to one axis: the vertical rotation. This IMU sensor is connected to the Adafruit Sensor according to the schematic that can be seen below:</p>
         <ul>
           <li>3V on Adafruit to Vin on IMU - power supply for the IMU sensor</li>
@@ -297,9 +300,7 @@ Speed on different surfaces, angles, time it taked to perform various activities
           <li>SCL on IMU to SCL on Adafruit - clockline to synchronise the communicated data</li>
           <li>GND on IMU to GND on Adafruit - grounding the IMU sensor</li>
         </ul>
-<div id="BreadboardImage">
-  <img src="images/Breadboard Adafruit.png" style="border: none;box-shadow: none; width: 100%;"/>
-</div>
+
 <div id ="How to build it continued">
     <h4 class="secondary">4. Download Arduino and install libraries</h4>
   <p>In order to be able to work with the Adafruit, we need to do some quick setup. First of all, one is required to install <a href="https://www.arduino.cc/">the Arduino software</a> and install the following libraries within the Arduino code, by going to Sketch -> Include Library -> Manage Libraries:</p>
