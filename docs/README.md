@@ -119,7 +119,7 @@ html {
   #BreadboardImage {
     float: right;
     width: 30%;
-    margin: 10px 0 10px 20px;
+    margin: 0 0 10px 30px;
   }
 </style>
 
