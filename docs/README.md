@@ -297,7 +297,7 @@ Speed on different surfaces, angles, time it taked to perform various activities
 </div>
 <div id ="How to build it continued">
     <h4 class="secondary">4. Download Arduino and install libraries</h4>
-  <p>In order to be able to work with the adafruit, we need to do some quick setup. First of all, one is required to install <a href="https://www.arduino.cc/">the Arduino software</a> and install the following libraries within the arduino code, by going to Sketch -> Include Library -> Manage Libraries:</p>
+  <p>In order to be able to work with the Adafruit, we need to do some quick setup. First of all, one is required to install <a href="https://www.arduino.cc/">the Arduino software</a> and install the following libraries within the Arduino code, by going to Sketch -> Include Library -> Manage Libraries:</p>
         <ul>
           <li>Bluefruit nRF51</li>
           <li>Adafruit Unified Sensor</li>
