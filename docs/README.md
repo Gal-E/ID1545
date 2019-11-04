@@ -140,6 +140,9 @@ html {
   #myBtn:hover {
     background-color: #555;
   }
+  #briefEx {
+    padding: 0 200px;
+  }
 </style>
 <script>
 
@@ -173,7 +176,7 @@ var mybutton = document.getElementById("myBtn");
 </div>
 
 <div id="brainstorm">
-  <h3 class="headline">Enhancing the connection between a human and a smart device</h3>
+  <h3 id="briefEx" class="headline">Enhancing the connection between a human and a smart device</h3>
   <div class="description">
     To start off the course we received a design brief. We began by investigating the challenges and opportunities that currently exist in wheel chair use, so we could understand what could be gained by creating a connected wheel chair. 
     Our research began online and continues to interviews with two Physiotherapists and an occupational therapist student that volenteers with wheelchair users.
