@@ -279,7 +279,7 @@ Speed on different surfaces, angles, time it taked to perform various activities
  </ul>
 
 
-<h3 class="headline">The process</h3>
+<h3 id="process" class="headline">The process</h3>
   <div>
     <h4 class="secondary">1. Create a new Github project</h4>
      <p>For managing our collaborative work on this digital project we used an organizational GitHub account, which allowed us to store different versions of our codes and work from different pc's on the same files. An additional added value of using GitHub is that within its interface, an option is built in that allows one to quickly convert code documents into a presentable website. Be careful to create an organizational account instead of a normal user account; you will need the account to be organizational in order to be able to grant everybody administrative permission, so that all your teammembers can edit the GitHub pages if necessary. </p>
