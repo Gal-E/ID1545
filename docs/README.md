@@ -379,7 +379,7 @@ The final prototype consists of a web interface that demonstrates the circle don
       <source src="images/video5.mp4" type="video/mp4">
   </video>
   <video controls autoplay muted class="protoVideo" style="width: 64%;float: right;">
-      <source src="images/video4.mp4" type="video/mp4">
+      <source src="images/video8.mp4" type="video/mp4">
   </video>
     <br>
 
