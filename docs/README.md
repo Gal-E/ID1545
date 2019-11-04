@@ -123,7 +123,6 @@ html {
     bottom: 40px;
     right: 50px;
     z-index: 99;
-    font-size: 18px;
     border: none;
     outline: none;
     background-color: #34A853;
@@ -131,6 +130,11 @@ html {
     padding: 15px;
     border-radius: 4px;
     background-image: url("images/arrow-up.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    width: 50px;
+    height: 50px;
   }
 
   #myBtn:hover {
