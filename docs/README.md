@@ -127,10 +127,10 @@ html {
     border: none;
     outline: none;
     background-color: #34A853;
-    color: white;
     cursor: pointer;
     padding: 15px;
     border-radius: 4px;
+    background-image: url("images/arrow-up.png");
   }
 
   #myBtn:hover {
@@ -159,7 +159,7 @@ var mybutton = document.getElementById("myBtn");
   }
 </script>
 
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
 
 <div id="second-header">
   <a href="#brainstorm">Brief Brainstorm</a>
