@@ -93,7 +93,7 @@ void setup(void) {
   ble.echo(false);
 
   // Print Bluefruit information
-  
+
   ble.info();
   ble.verbose(true);
 
@@ -128,9 +128,10 @@ void orientation() {
   float angleX = euler_vector.x();
   float angleY = euler_vector.y();
   float angleZ = euler_vector.z();
-  
+
   // Command is sent when \n (\r) or println is called
   // AT+GATTCHAR=CharacteristicID,value
+  // These values are the once we send over Bluetooth to the Raspberry Pi
   ble.print( F("AT+GATTCHAR=") );
   ble.print( orientationCharId );
   ble.print( F(",") );
