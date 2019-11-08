@@ -178,8 +178,8 @@ var mybutton = document.getElementById("myBtn");
 <div id="brainstorm">
   <h3 id="briefEx" class="headline">Enhancing the connection between a human and a smart device</h3>
   <div class="description">
-    To start off the course we received a design brief. We began by investigating the challenges and opportunities that currently exist in wheel chair use, so we could understand what could be gained by creating a connected wheel chair. 
-    Our research began online and continues to interviews with two Physiotherapists and an occupational therapist student that volenteers with wheelchair users.
+    At the start off this course we received the design brief to add value to a wheelchair by designing and prototyping an IoT solution. We began by investigating the challenges and opportunities that currently exist in wheel chair use, so we could understand what could be gained by creating a connected wheel chair. 
+    Through online research and interviews with two [hysiotherapists and an occupational therapist student that volenteers with wheelchair users, we increased our understanding of the problem scenario and came to the following design challenge:
     <br><br>
    <h5> "While the population of wheelchair users is growing worldwide, it becomes urgent to design supportive
 technologies that fit their needs. We aim to develop products for improvement of the wheelchair users’ wellbeing. This design is a connected product that collects
@@ -187,15 +187,15 @@ data from sensors, processes it in order to actuate user
 interactions embedded on the wheelchair."</h5>
     <br><br>
     
-  We began our design process by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. We used this overview to gather potential applications and map our primary associations. This session helped us form several ideas for a connected wheelchair:
+  We started our design process by creating an overview of our initial associations and the potential sensors and actuators that we could come up with. We used this overview to gather potential applications and map our primary associations. This session helped us form several ideas for a connected wheelchair:
   </div><br><br>
 
   <div class="brainstorm_idea">
   <h4>Being Superheros</h4>
   <br>
-  A bit of research taught us that while using a wheelchair, things are often out of reach or missplaced. Some things might be too high for a wheel chair user, for example, a mirror in the bathroom or the heater button.
+  Research has shown that while using a wheelchair, items are often out of reach or misplaced. Some might be placed too high for a wheel chair user, like for example a mirror in the bathroom, or the heater button.
   <br><br>
-  Thinking of smart houses, we envisioned a house where objects move to adjust themselves to a wheelchair user. The door can open automaticly, the mirror could change it's angel to the right position and the heating could turn on.
+  With the growing interest in building smart houses, we envisioned a house where objects could move to adjust themselves to the wheelchair user. Examples hereof could be doors that open automaticly, a mirror that could change it's angle to the right position and the heating could turn on.
   <br><br>
 <b>System:</b> Chair > Object in Physical world (an App interface to control preferences)<br>
 <b>Optional Sensors:</b> Movement, Voice control, GPS, Touch, Gyroscope <br>
@@ -208,7 +208,7 @@ interactions embedded on the wheelchair."</h5>
     <br>
     Can we help people to get around more easily?
     <br>
-    We envisioned "Google maps" for wheelchair users, suggesting routes considering their limitations and best journies. We   thought this could be helpful in different environments such as hospitals, big buildings like the TU or other universities, or in general in the city
+    We realized that "Google maps" could in some scenarios not suffice for wheelchair users. Instead, we deemed it potentially valuable to suggest routes considering their limitations and provide them with the optimal traveladvice. This could be helpful in different environments such as hospitals, big buildings like the TU or other universities, or in general in the city.
 <br><br>
 <b>System:</b> App > Chair > Physical world > App<br>
 <b>Optional Sensors:</b> Touch, Acceleration, GPS, Compass, Distance, Movement<br>
@@ -221,7 +221,7 @@ interactions embedded on the wheelchair."</h5>
     <br>
     Can we make it safer to use a wheelchair on the go?
     <br>
-    Insired by different insurance and driving apps, we envisioned an app that actively monitors ground quality to signal the user to drive quality on unstable ground. In addition to that, the app could report selected contacts about possible dangours or accidents to increase safety and independence for the wheelchair user. By applying accident detection, panic button, collision detection and more, we hope to make the wheelchair experience as safe as possible
+    Insired by different insurance and driving apps, we also envisioned an app that actively monitors ground quality, to signal the user to drive more carefully on potentially unstable ground. In addition to that, this app could report selected contacts about possible dangours or accidents to increase safety and independence for the wheelchair user. By applying accident detection, a panic button, collision detection and more, we would hope to make the wheelchair experience as safe as possible
     <br><br>
   <b>System:</b> Physical world > Chair > App<br>
   <b>Optional Sensors:</b> Touch, Gyroscope, Acceleration, GPS, Distance, temperature, Movement, voice<br>
@@ -234,7 +234,7 @@ interactions embedded on the wheelchair."</h5>
     <br>
     How can we help wheelchair users to enjoy physical activity more?
     <br>
-    Inspired bu various fitness apps, we envisioned a product that would enable wheelchair users to become more active and spend more time outside. The app would connect to the chair and collect different fitness data such as amount of fource put on the heels, kilometers driven in different angels etc
+    Inspired by various fitness apps, we envisioned a product that would enable wheelchair users to become more active and spend more time outside. The app would connect to the chair and collect different fitness data such as amount of force put on the wheels, kilometers driven, road incline, meters climbed, etc.
   <br><br>
   <b>System:</b> Physical world > Chair > App<br>
   <b>Optional Sensors:</b> Gyroscope, Acceleration, GPS, Distance<br>
@@ -244,7 +244,7 @@ interactions embedded on the wheelchair."</h5>
   <div class="brainstorm_idea">
     <h4>Gamify It</h4>
     <br>
-    Focusing mostly on kids, or people who are in the wheelchairs for short-term revalidation in hospitals, we were inspired by pokemon go. We envisiones a connected wheelchair that enables overcoming obstacles, finding best routes and using the chair to play games with other wheelchair users
+    Focusing mostly on kids, or people who are in the wheelchairs for short-term revalidation in hospitals, we were inspired by Pokemon Go to consider a connected wheelchair that empowers users to overcome obstacles, find the best routes and using the chair to play games with other wheelchair users. This would serve helping users get better at using their chair.
     <br><br>
   <b>System:</b> App > Chair > Physical world  > App<br>
   <b>Optional Sensors:</b> Touch, Voice control, GPS, Compass, Distance, Movement<br>
@@ -254,9 +254,9 @@ interactions embedded on the wheelchair."</h5>
 
 <div id="theidea">
   <h3 class="headline">The Final Concept: <br>Basic wheelchair skills gamification</h3>
-  <span>For our final conecpt, we chose to focus on the first experience of a user with a wheel chair. We designed
-   a connected wheelchair that helps teach basic wheelchair skills. Our goal is to use the connected prototype in order to test it with kids and perform user research. </span>
-  <span class="highlight"> We want to test the ability of the gamification of the wheelchair experience to simplify and shorten the learning curve of basic wheel chair skills.</span>
+  <span>For our final conecpt, we chose to focus on the first experience of a user with a wheelchair. We designed
+   a connected wheelchair that helps teach basic wheelchair skills. Since being confined to this chair can be quite impactful and in worst case scenario lifechanging, we wanted to help these children to get used to this extension of their body in a fun way. Our goal with this prototype is to use the connected prototype in order to test it with kids and perform user research. </span>
+  <span class="highlight"> We want to test the posibility of gamifying the first time use of a wheelchair, in order to simplify and shorten the learning curve of basic wheel chair skills.</span>
   <br><br>
   <h4 class="secondary">Target Users:</h4>
  <ul>
@@ -268,7 +268,7 @@ interactions embedded on the wheelchair."</h5>
  <img src="images/Child in a wheelchair 2.jpg" style="border: none;box-shadow: none; margin-bottom: 25px;"/>
         <br>
   <h4 class="secondary">Goals:</h4>
-The goal of the product is to teach kids the basic wheelchair activities in a fun and playfull manner. A secondary goal is to use the data collected to learn about the way kids adapt to wheelchairs, the speed in which they learn and the level of difficulty of the different activities. <span class="highlight">The goal of the prototype is to test the usability of the product. Both the web interface and the physical experience. We aim to learn if this product can create value to its target audience, and make to learning process more enjoyable</span>
+The goal of the product is to teach kids basic wheelchair activities in a fun and playful manner. A secondary goal is to use the data collected to learn more about how kids adapt to using wheelchairs, the speed at which they learn and the level of difficulty of different activities. <span class="highlight">The goal of this prototype is to test the usability of both the web interface, and the physical product and experience. Our aim is to learn whether this product can create value for its target audience and whether it can make the learning process more enjoyable.</span>
 <br><br>
 
 <ul>
@@ -288,7 +288,7 @@ The user will receive a task from an app, which he will execute with the wheelch
   <img src="images/img1.png" class="img1"/>
 </div>
 
-A possible example for a task: “Create a full circle to the right side”. The task would have a timer counting the time it took the user to complete the circle. A visual on the screen will indicate to the user the progress in percents. After the task is complete the user will receive starts to indicate how well he performed the task based on time. 1 star would indicate basic skills and 3 starts would indicate professional skills.The task can become more difficult over time by doing the same thing while going uphill or on a different surface such as grass or sand</div>
+A possible example of a task would be: “Drive a full circle to your right!”. The task would have a timer counting the time it took the user to complete the circle. A visual on the screen will indicate to the user the progress in percentages. After the task is complete the user will receive starts to indicate how well he performed the task based on time. 1 star would indicate basic skills and 3 starts would indicate professional skills. At completion, a sound and action on the visual will indicated how well the user performed. The task can become more difficult over time by doing the same thing while going uphill or on a different surface such as grass or sand.</div>
 
 <div style="margin: 0 auto;text-align: center;">
   <img src="images/img2.png" style="width: 60%;border: none;box-shadow: none;"/>
