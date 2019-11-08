@@ -395,5 +395,5 @@ The final prototype consists of a web interface that demonstrates the circle don
       <source src="images/video2.mov" type="video/mp4">
   </video>
   <br>
-  <p>For any further questions related to reproducing this project, please contact n.j.a.weggeman@student.tudelft.nl. Thanks for reading!</p>
+  <p>For any further questions related to reproducing this project, please contact n.j.a.weggeman@student.tudelft.nl. Thanks for reading!!</p>
 
